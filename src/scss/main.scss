@@ -1,8 +1,33 @@
+@import "@material/button/mdc-button";
+@import "@material/toolbar/mdc-toolbar";
+@import "@material/theme/mdc-theme";
+@import "@material/elevation/mdc-elevation";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: blue;
 }
 
-@import "@material/button/mdc-button";
+// Nav bar styles
+.mdc-toolbar__section {
+  padding: 0;
+}
+
+.nav-tab {
+  height: 64px;
+}
+
+.reg-button {
+  margin: 8px;
+  height: 48px;
+}
 
 .foo-button {
   @include mdc-button-ink-color(teal);
