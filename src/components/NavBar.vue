@@ -2,8 +2,8 @@
   <header class="mdc-toolbar mdc-theme--background mdc-theme--primary mdc-elevation--z2">
     <div class="mdc-toolbar__row">
       <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-        <div style="width: 40px;padding: 10px">
-          <img class="img-responsive" src="img/NOI_LOGO_ORG_small-2.png" alt>
+        <div style="width: 56px;padding-left: 16px">
+          <img class="img-responsive" src="img/NOI_LOGO_ORG_small.png" alt>
         </div>
       </section>
       <section class="mdc-toolbar__section mdc-toolbar__section--align-end mdc-toolbar__section--shrink-to-fit">
