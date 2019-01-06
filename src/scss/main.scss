@@ -8,6 +8,9 @@
 @import "@material/tab-scroller/mdc-tab-scroller";
 @import "@material/tab-indicator/mdc-tab-indicator";
 @import "@material/tab/mdc-tab";
+@import "@material/card/mdc-card";
+@import "@material/icon-button/mdc-icon-button";
+@import "@material/image-list/mdc-image-list";
 
 * {
   margin: 0;
@@ -39,7 +42,46 @@ a {
   height: 48px;
 }
 
-.foo-button {
-  @include mdc-button-ink-color(teal);
-  @include mdc-states(teal);
+/* Main section */
+.main-section {
+  margin-top: 48px;
+}
+
+/* Home */
+.history-card {
+  margin-top: 16px;
+  border-radius: 8px;
+}
+
+.history-card_2016 {
+  background-image: url("../img/team-2016.png");
+}
+
+.history-card_2017 {
+  background-image: url("../img/team-2017.png");
+}
+
+.history-card_2018 {
+  background-image: url("../img/team-2018.png");
+}
+
+.history-card_content {
+  padding: 16px;
+}
+
+/* Gallery */
+.gallery {
+  padding-bottom: 54px;
+}
+
+.gallery-section-image-list {
+  @include mdc-image-list-masonry-columns(3);
+}
+
+.gallery-section {
+  margin-top: 48px;
+}
+
+.gallery-section h2 {
+  margin-bottom: 18px;
 }
