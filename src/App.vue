@@ -1,15 +1,17 @@
 <template>
-	<div id="app">
-		<nav-bar v-bind:current-tab="1"/>
-	</div>
+  <div id="app">
+    <nav-bar/>
+
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
+import NavBar from "./components/NavBar.vue";
 
 export default {
-	components: {
-		NavBar
-	}
-}
+  components: {
+    NavBar
+  }
+};
 </script>

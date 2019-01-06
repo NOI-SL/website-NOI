@@ -6,16 +6,18 @@
           <img class="img-responsive" src="img/NOI_LOGO_ORG_small-2.png" alt>
         </div>
       </section>
-      <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+      <section class="mdc-toolbar__section mdc-toolbar__section--align-end mdc-toolbar__section--shrink-to-fit">
         <div class="mdc-tab-bar" role="tablist">
           <div class="mdc-tab-scroller">
             <div class="mdc-tab-scroller__scroll-area">
               <div class="mdc-tab-scroller__scroll-content">
-                <nav-bar-item v-for="nav in navs" :key="nav.id" :nav="nav" :isSelected="currentTab == nav.id"/>
-                <button
-                  class="mdc-button mdc-button--raised reg-button"
-                  tabindex="0"
-                >
+                <nav-bar-item
+                  v-for="nav in navs"
+                  :key="nav.id"
+                  :nav="nav"
+                  :isSelected="nav.route == $route.path"
+                />
+                <button class="mdc-button mdc-button--raised reg-button" tabindex="0">
                   <span class="material-icons mdc-button__icon" aria-hidden="true">new_releases</span>
                   <span>Register</span>
                 </button>
@@ -41,23 +43,23 @@ export default {
         {
           id: 0,
           icon: "home",
+          route: "/",
           text: "Home"
         },
         {
           id: 1,
           icon: "favorite",
+          route: "/gallery",
           text: "Gallery"
         },
         {
           id: 2,
           icon: "info",
+          route: "/about",
           text: "About"
         }
       ]
     };
-  },
-  props: {
-    currentTab: Number
   },
   methods: {}
 };
