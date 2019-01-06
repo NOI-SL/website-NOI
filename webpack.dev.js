@@ -1,29 +1,25 @@
 const autoprefixer = require('autoprefixer');
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const path = require('path');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     entry: ['./src/scss/main.scss', './src/main.js'],
+    devServer: {
+        contentBase: path.join(__dirname, 'src'),
+        compress: true,
+        port: 9000
+    },
     output: {
-        path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist/',
-        filename: 'build.js'
+        filename: '[name].min.js',
+        path: path.resolve(__dirname, 'dist')
     },
     module: {
         rules: [
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
-                options: {
-                    loaders: {
-                        // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-                        // the "scss" and "sass" values for the lang attribute to the right configs here.
-                        // other preprocessors should work out of the box, no loader config like this necessary.
-                        'scss': 'vue-style-loader!css-loader!sass-loader',
-                        'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-                    }
-                    // other vue-loader options go here
-                }
             },
             {
                 test: /\.js$/,
@@ -70,6 +66,15 @@ module.exports = {
     },
     devtool: '#eval-source-map',
     plugins: [
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new CopyWebpackPlugin([
+            { context: 'src', from: '**/*.html' },
+            { from: 'src/**/*.ttf', to: 'fonts/', flatten: true },
+            { from: 'src/**/*.png', to: 'img/', flatten: true },
+            { from: 'src/**/*.svg', to: 'img/', flatten: true },
+            { from: 'src/LICENSE', flatten: true },
+            { from: 'src/README.md', flatten: true }
+        ]),
+        new OptimizeCssAssetsPlugin()
     ]
 };

@@ -21,9 +21,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-.nav-tab {
-  height: 64px;
-}
-</style>
