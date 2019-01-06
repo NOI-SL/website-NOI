@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<nav-bar/>
+		<nav-bar v-bind:current-tab="1"/>
 	</div>
 </template>
 

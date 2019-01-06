@@ -11,8 +11,11 @@
           <div class="mdc-tab-scroller">
             <div class="mdc-tab-scroller__scroll-area">
               <div class="mdc-tab-scroller__scroll-content">
-                <nav-bar-item v-for="nav in navs" :key="nav.id" :nav="nav"/>
-                <button class="mdc-button mdc-button--raised reg-button" tabindex="0">
+                <nav-bar-item v-for="nav in navs" :key="nav.id" :nav="nav" :isSelected="currentTab == nav.id"/>
+                <button
+                  class="mdc-button mdc-button--raised reg-button"
+                  tabindex="0"
+                >
                   <span class="material-icons mdc-button__icon" aria-hidden="true">new_releases</span>
                   <span>Register</span>
                 </button>
@@ -52,6 +55,9 @@ export default {
         }
       ]
     };
+  },
+  props: {
+    currentTab: Number
   },
   methods: {}
 };

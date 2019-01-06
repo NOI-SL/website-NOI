@@ -5,7 +5,7 @@
       <span class="mdc-tab__text-label">{{ nav.text }}</span>
     </span>
     <span class="mdc-tab-indicator mdc-tab-indicator--active">
-      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+      <span class="mdc-tab-indicator__content" :class="{'mdc-tab-indicator__content--underline': isSelected}"></span>
     </span>
     <span class="mdc-tab__ripple"></span>
   </button>
@@ -14,6 +14,7 @@
 <script>
 export default {
   props: {
+    isSelected: Boolean,
     nav: {
       type: Object,
       required: true
