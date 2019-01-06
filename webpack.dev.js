@@ -37,6 +37,14 @@ module.exports = {
                             includePaths: ['./node_modules'],
                         },
                     }],
+            },
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                query: {
+                  presets: ['es2015'],
+                  plugins: ['transform-object-assign']
+                },
             }
         ],
     },
