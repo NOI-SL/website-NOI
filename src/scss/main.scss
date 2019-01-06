@@ -1,3 +1,5 @@
+@import "./theme.scss";
+
 @import "@material/button/mdc-button";
 @import "@material/toolbar/mdc-toolbar";
 @import "@material/theme/mdc-theme";
@@ -12,9 +14,6 @@
   padding: 0;
 }
 
-body {
-  color: blue;
-}
 
 // Image reponsive
 .img-responsive {
