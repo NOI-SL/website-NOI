@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <nav-bar/>
-
-    <router-view></router-view>
+    <main class="mdc-toolbar-fixed-adjust">
+      <router-view></router-view>
+    </main>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <header class="mdc-toolbar mdc-theme--background mdc-theme--primary mdc-elevation--z2">
+  <header class="mdc-toolbar mdc-toolbar--fixed mdc-theme--background mdc-theme--primary mdc-elevation--z2">
     <div class="mdc-toolbar__row">
       <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
         <div style="width: 56px;padding-left: 16px">
