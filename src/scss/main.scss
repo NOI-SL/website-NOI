@@ -53,6 +53,7 @@ $mdc-theme-secondary: #26A69A;
 
       position: relative;
       justify-content: right;
+      display: grid;
 
       .mobile-responsive-button {
 
@@ -76,77 +77,8 @@ $mdc-theme-secondary: #26A69A;
 
 }
 
-
-
-
-
-
-
-
-
-
-
 .foo-button {
   @include mdc-button-ink-color(teal);
   @include mdc-states(teal);
-}
-
-@media (max-width:1486px) {
-  .mdc-toolbar__section--logo-content {
-    max-width: 500px;
-  }
-}
-
-@media (max-width:1240px) {
-  .mdc-toolbar__section--logo-content {
-    max-width: 300px;
-  }
-}
-
-@media (max-width:1046px) {
-  .mdc-toolbar__section--logo-content {
-    max-width: 100px;
-  }
-}
-
-@media (max-width:842px) {
-  .mdc-toolbar__section--logo-content {
-    max-width: 75px;
-  }
-}
-
-// .mdc-toolbar__section--nav-mobile-content {
-//   display: none;
-
-//   .mdc-tab-bar {
-//     .mdc-tab-scroller {
-//       .mdc-tab-scroller__scroll-area {
-//         .mdc-tab-scroller__scroll-content {
-
-//           position: relative;
-//           justify-content: right;
-
-//           .mobile-responsive-button {
-
-//             width: 64px;
-//             display: unset;
-//             flex: unset;
-
-//           }
-
-//         }
-//       }
-//     }
-//   }
-// }
-
-
-@media (max-width:816px) {
-  .mdc-toolbar__section--nav-content {
-    display: none;
-  }
-  .mdc-toolbar__section--nav-mobile-content { 
-    display: block;
-  }
 }
 
