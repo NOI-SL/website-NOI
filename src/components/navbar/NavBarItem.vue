@@ -2,7 +2,7 @@
   <router-link :to="nav.route">
     <button class="mdc-tab nav-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
       <span class="mdc-tab__content">
-        <span class="mdc-tab__icon material-icons" aria-hidden="true">{{ nav.icon }}</span>
+        <!-- <span class="mdc-tab__icon material-icons" aria-hidden="true">{{ nav.icon }}</span> -->
         <span class="mdc-tab__text-label">{{ nav.text }}</span>
       </span>
       <span class="mdc-tab-indicator mdc-tab-indicator--active">

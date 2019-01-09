@@ -1,0 +1,99 @@
+<template>
+    <aside id="noi-drawer" class="mdc-drawer mdc-drawer--modal">
+        <div class="mdc-drawer__content"> <!-- for open mdc-drawer--open -->
+            <nav class="mdc-list">
+                <nav-drawer-item
+                
+                    v-for="nav in navs"
+                    :key="nav.id"
+                    :nav="nav"
+                    :isSelected="nav.route == $route.path"
+                    :dropDowns="dropDowns"
+                
+                />
+            </nav>
+        </div>
+    </aside>
+</template>
+
+<script>
+
+import NavDrawerItem from "./NavDrawerItem.vue"
+
+export default {
+  components: {
+    NavDrawerItem
+  },
+  data() {
+    return {
+      navs: [
+        {
+          id: 0,
+          icon: "",
+          route: "/",
+          text: "Home"
+        },
+        {
+          id: 1,
+          icon: "",
+          route: "/noi",
+          text: "NOI Programme"
+        },
+        {
+          id: 2,
+          icon: "",
+          route: "/news",
+          text: "News"
+        },
+        {
+          id: 3,
+          icon: "",
+          route: "/resources",
+          text: "Resources"
+        },
+        {
+          id:4,
+          icon:"",
+          route:"/ioi",
+          text:"IOI"
+        },
+        {
+          id:5,
+          icon:"",
+          route:"/about",
+          text:"About"
+        },
+        {
+          id:6,
+          icon:"",
+          route:"/contact",
+          text:"Contact"
+        }
+      ],
+      dropDowns: [
+          {
+              id: 0,
+              dropDownFor: 1,
+              dropDownItems : [
+                  {
+                    id: 0,
+                    icon: "",
+                    route: "/noi/rulesandregulations",
+                    text: "Rules and regulations"
+                  },
+                  {
+                    id: 1,
+                    icon: "",
+                    route: "/noi/awards",
+                    text: "Awards"
+                  }
+              ]
+          }
+      ]
+    };
+  },
+  methods: {}
+};
+
+
+</script>
