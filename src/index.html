@@ -18,22 +18,39 @@
 </head>
 
 <body>
-  <header class="mdc-toolbar mdc-theme--background mdc-theme--primary	mdc-elevation--z2">
-    <div class="mdc-toolbar__row">
-      <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+
+  <header class="mdc-toolbar mdc-theme--background mdc-theme--primary	mdc-elevation--z2 mdc-toolbar--fixed" id="noi-nav-bar">
+    <div class="mdc-toolbar__row ">
+      <section class="mdc-toolbar__section mdc-toolbar__section--align-start mdc-toolbar__section--shrink-to-fit">
         <!-- <span class="mdc-toolbar__title">NOI</span> -->
-        <div  style="width: 40px;padding: 10px">
-          <img class="img-responsive" src="img/NOI_LOGO_ORG_small-2.png" alt="">
+        <div  style="width: 50px;padding: 5px">
+          <img class="img-responsive" src="img/NOI_LOGO_ORG_small.svg" alt="">
         </div>
       </section>
-      <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+      <section class="mdc-toolbar__section mdc-toolbar__section--align-end mdc-toolbar__section--nav-mobile-content">
+          <div class="mdc-tab-bar" role="tablist">
+            <div class="mdc-tab-scroller">
+              <div class="mdc-tab-scroller__scroll-area">
+                <div class="mdc-tab-scroller__scroll-content">
+                  <button class="mdc-tab nav-tab mobile-responsive-button" role="tab" aria-selected="true" tabindex="0">
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__icon material-icons" aria-hidden="true">dehaze</span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section class="mdc-toolbar__section mdc-toolbar__section--align-end mdc-toolbar__section--nav-content mdc-toolbar__section--shrink-to-fit">
         <div class="mdc-tab-bar" role="tablist">
           <div class="mdc-tab-scroller">
             <div class="mdc-tab-scroller__scroll-area">
               <div class="mdc-tab-scroller__scroll-content">
                 <button class="mdc-tab nav-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
                   <span class="mdc-tab__content">
-                    <span class="mdc-tab__icon material-icons" aria-hidden="true">home</span>
+                    <!-- <span class="mdc-tab__icon material-icons" aria-hidden="true">home</span> -->
                     <span class="mdc-tab__text-label">Home</span>
                   </span>
                   <span class="mdc-tab-indicator mdc-tab-indicator--active">
@@ -41,29 +58,69 @@
                   </span>
                   <span class="mdc-tab__ripple"></span>
                 </button>
-                <button class="mdc-tab nav-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                <button class="mdc-tab nav-tab" role="tab" aria-selected="true" tabindex="0">
                   <span class="mdc-tab__content">
-                    <span class="mdc-tab__icon material-icons" aria-hidden="true">favorite</span>
-                    <span class="mdc-tab__text-label">Gallery</span>
+                    <!-- <span class="mdc-tab__icon material-icons" aria-hidden="true">favorite</span> -->
+                    <span class="mdc-tab__text-label">NOI Programme</span>
                   </span>
-                  <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                  <span class="mdc-tab-indicator">
                     <span class="mdc-tab-indicator__content"></span>
                   </span>
                   <span class="mdc-tab__ripple"></span>
                 </button>
-                <button class="mdc-tab nav-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                <button class="mdc-tab nav-tab" role="tab" aria-selected="true" tabindex="0">
                   <span class="mdc-tab__content">
-                    <span class="mdc-tab__icon material-icons" aria-hidden="true">info</span>
+                    <!-- <span class="mdc-tab__icon material-icons" aria-hidden="true">favorite</span> -->
+                    <span class="mdc-tab__text-label">News</span>
+                  </span>
+                  <span class="mdc-tab-indicator">
+                    <span class="mdc-tab-indicator__content"></span>
+                  </span>
+                  <span class="mdc-tab__ripple"></span>
+                </button>
+                <button class="mdc-tab nav-tab" role="tab" aria-selected="true" tabindex="0">
+                  <span class="mdc-tab__content">
+                    <!-- <span class="mdc-tab__icon material-icons" aria-hidden="true">favorite</span> -->
+                    <span class="mdc-tab__text-label">Resources</span>
+                  </span>
+                  <span class="mdc-tab-indicator">
+                    <span class="mdc-tab-indicator__content"></span>
+                  </span>
+                  <span class="mdc-tab__ripple"></span>
+                </button>
+                <button class="mdc-tab nav-tab" role="tab" aria-selected="true" tabindex="0">
+                  <span class="mdc-tab__content">
+                    <!-- <span class="mdc-tab__icon material-icons" aria-hidden="true">favorite</span> -->
+                    <span class="mdc-tab__text-label">IOI</span>
+                  </span>
+                  <span class="mdc-tab-indicator">
+                    <span class="mdc-tab-indicator__content"></span>
+                  </span>
+                  <span class="mdc-tab__ripple"></span>
+                </button>
+                <button class="mdc-tab nav-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
+                  <span class="mdc-tab__content">
+                    <!-- <span class="mdc-tab__icon material-icons" aria-hidden="true">info</span> -->
                     <span class="mdc-tab__text-label">About</span>
                   </span>
-                  <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                  <span class="mdc-tab-indicator">
+                    <span class="mdc-tab-indicator__content"></span>
+                  </span>
+                  <span class="mdc-tab__ripple"></span>
+                </button>
+                <button class="mdc-tab nav-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
+                  <span class="mdc-tab__content">
+                    <!-- <span class="mdc-tab__icon material-icons" aria-hidden="true">info</span> -->
+                    <span class="mdc-tab__text-label">Contact</span>
+                  </span>
+                  <span class="mdc-tab-indicator">
                     <span class="mdc-tab-indicator__content"></span>
                   </span>
                   <span class="mdc-tab__ripple"></span>
                 </button>
                 <button class="mdc-button mdc-button--raised reg-button" tabindex="0">
-                  <span class="material-icons mdc-button__icon" aria-hidden="true">new_releases</span>
-                  <span>Register</span>
+                  <span class="material-icons mdc-button__icon" aria-hidden="true">person</span>
+                  <span>Sing up</span>
                 </button>
               </div>
             </div>
@@ -72,10 +129,27 @@
       </section>
     </div>
   </header>
-  <!-- <h1>Hello World</h1>
-  <button class="foo-button mdc-button">
-    Button
-  </button> -->
+<!-- 
+  <aside class="mdc-drawer mdc-drawer--modal">
+      <div class="mdc-drawer__content">
+        <nav class="mdc-list">
+          <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
+            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+            <span class="mdc-list-item__text">Inbox</span>
+          </a>
+          <a class="mdc-list-item" href="#">
+            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+            <span class="mdc-list-item__text">Outgoing</span>
+          </a>
+          <a class="mdc-list-item" href="#">
+            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+            <span class="mdc-list-item__text">Drafts</span>
+          </a>
+        </nav>
+      </div>
+    </aside> -->
+
+  <div style="height: 800px;"></div>
 
   <script src="main.min.js" async></script>
 </body>
