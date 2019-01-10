@@ -1,5 +1,5 @@
 <template>
-  <div class="container-flud main-section about">
+  <div class="container-flud main-section about" id="page-ioi">
 
     <section id="section-1">
       <div class="container-flud">
