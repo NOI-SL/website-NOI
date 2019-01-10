@@ -1,11 +1,24 @@
 #c-footer {
     position: relative;
     min-height: 500px;
+<<<<<<< HEAD
     background-color: $theme-white-primary-bg;
 
     .back {
         position: absolute;
         z-index: 0;
+=======
+
+    @mixin  width972max  {
+        @media (max-width:972px) {
+            @content;
+        }
+    }
+
+    .back {
+        position: absolute;
+        z-index: -1;
+>>>>>>> vue
         width: 100%;
         height: 100%;
         background-color: $mdc-theme-primary;
