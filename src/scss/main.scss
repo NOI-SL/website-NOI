@@ -15,6 +15,18 @@
 @import "@material/drawer/mdc-drawer";
 @import "@material/menu-surface/mdc-menu-surface";
 @import "@material/menu/mdc-menu";
+@import "@material/card/mdc-card";
+@import "@material/typography/mdc-typography";
+
+// fontawsom
+// @import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+// @import "@fortawesome/fontawesome-free/scss/solid.scss";
+// @import "@fortawesome/fontawesome-free/scss/brands.scss";
+
+@import "./custom_mixin";
+@import "./page_ioi";
+@import "./cfooter";
+@import "./page_resources";
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 

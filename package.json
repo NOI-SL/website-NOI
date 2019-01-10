@@ -48,6 +48,7 @@
     "@material/tab-bar": "^0.42.0",
     "@material/theme": "^0.41.0",
     "@material/toolbar": "^0.42.0",
+    "@material/typography": "^0.43.0",
     "autoprefixer": "^9.4.4",
     "vue": "^2.5.21",
     "vue-router": "^3.0.2"
