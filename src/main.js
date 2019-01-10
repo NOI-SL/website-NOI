@@ -5,6 +5,9 @@ import VueRouter from 'vue-router'
 // import {MDCList} from "@material/list";
 import {MDCDrawer} from "@material/drawer";
 
+// Smooth scroll
+import SmoothScroll from 'smooth-scroll';
+
 import App from './App.vue'
 import Home from './components/home/Home.vue'
 import NOI from './components/noi/NOI.vue'
@@ -69,3 +72,5 @@ document.querySelector('.mobile-responsive-button').addEventListener('click', fu
     console.log(error);
   }
 });
+
+var scroll = new SmoothScroll('a[href*="#"]');

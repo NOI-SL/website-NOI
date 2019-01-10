@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 522.7 276.8" style="enable-background:new 0 0 522.7 276.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:#5E35B1;}
+	.st2{display:inline;fill:#FFFFFF;}
+	.st3{fill:#FFFFFF;}
+</style>
+<g id="Layer_1" class="st0">
+	
+		<image style="display:inline;overflow:visible;" width="324" height="216" xlink:href="int@ioi.gif"  transform="matrix(1 0 0 1 100 30.3333)">
+	</image>
+	<rect x="-135.4" y="-93" class="st1" width="794.7" height="463.3"/>
+</g>
+<g id="Layer_4" class="st0">
+	<path class="st2" d="M262,99.2c-25.3,0-45.7,20.5-45.7,45.7s20.5,45.7,45.7,45.7s45.7-20.5,45.7-45.7S287.3,99.2,262,99.2z
+		 M261.6,166.2c-7.9,0-14.4-9.4-14.4-20.9s6.4-20.9,14.4-20.9s14.4,9.4,14.4,20.9S269.6,166.2,261.6,166.2z"/>
+	<ellipse class="st3" cx="261.6" cy="145.3" rx="14.4" ry="20.9"/>
+</g>
+<g id="Layer_5">
+	<g>
+		<g>
+			<path class="st3" d="M152.9,106.1V47.2h-33.4c-3.1,18-18.7,31.7-37.6,31.7S47.4,65.2,44.3,47.2H8.1v58.9h33.9v106.1H8.1v57.6
+				h144.8v-57.6h-31.8V106.1H152.9z"/>
+			<circle class="st3" cx="81.9" cy="40.7" r="36.1"/>
+		</g>
+		<g>
+			<path class="st3" d="M515.8,106.1V47.2h-33.4c-3.1,18-18.7,31.7-37.6,31.7c-18.9,0-34.5-13.7-37.6-31.7H371v58.9h33.9v106.1H371
+				v57.6h144.8v-57.6H484V106.1H515.8z"/>
+			<circle class="st3" cx="444.8" cy="40.7" r="36.1"/>
+		</g>
+		<path class="st3" d="M262,40.9c-65.1,0-117.9,52.8-117.9,117.9S196.9,276.8,262,276.8S379.9,224,379.9,158.9S327.1,40.9,262,40.9z
+			 M261,213.7c-20.5,0-37.1-24.1-37.1-53.9s16.6-53.9,37.1-53.9c20.5,0,37.1,24.1,37.1,53.9S281.5,213.7,261,213.7z"/>
+	</g>
+</g>
+<g id="Layer_2" class="st0">
+	<path class="st2" d="M219.8,126v-22.8h-13c-1.2,7-7.3,12.3-14.6,12.3s-13.4-5.3-14.6-12.3h-14V126h13.2v41.2h-13.2v22.3h56.2v-22.3
+		h-12.3V126H219.8z"/>
+	<circle class="st2" cx="192.3" cy="100.7" r="14"/>
+</g>
+<g id="Layer_3" class="st0">
+	<path class="st2" d="M360.6,126v-22.8h-13c-1.2,7-7.3,12.3-14.6,12.3s-13.4-5.3-14.6-12.3h-14V126h13.2v41.2h-13.2v22.3h56.2v-22.3
+		h-12.3V126H360.6z"/>
+	<circle class="st2" cx="333" cy="100.7" r="14"/>
+</g>
+</svg>
