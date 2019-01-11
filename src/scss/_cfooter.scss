@@ -1,6 +1,7 @@
 #c-footer {
     position: relative;
     min-height: 500px;
+    background-color: $theme-white-primary-bg;
 
     @mixin  width972max  {
         @media (max-width:972px) {
@@ -10,7 +11,7 @@
 
     .back {
         position: absolute;
-        z-index: -1;
+        z-index: 0;
         width: 100%;
         height: 100%;
         background-color: $mdc-theme-primary;
@@ -73,13 +74,13 @@
 
             }
 
-            .contact {
+            // .contact {
             
-            }
+            // }
 
-            .navigation {
+            // .navigation {
 
-            }
+            // }
         }
         
     }
