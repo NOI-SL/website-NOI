@@ -26,6 +26,7 @@
 @import "./custom_mixin";
 @import "./page_ioi";
 @import "./page_resources";
+@import "./page_about";
 @import "./page_contact";
 @import "./cfooter";
 
@@ -34,15 +35,6 @@
 // @import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
 // @import "@fortawesome/fontawesome-free/scss/solid.scss";
 // @import "@fortawesome/fontawesome-free/scss/brands.scss";
-
-@import "./page_ioi";
-@import "./cfooter";
-
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
-body, html {
-  font-family: 'Roboto', sans-serif;
-}
 
 * {
   margin: 0;

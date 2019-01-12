@@ -405,6 +405,8 @@
                 max-width: 450px;
                 margin: 0 auto 0 auto;
                 color:$theme-white-primary;
+                position: relative;
+                z-index: 2;
 
                 @include width568max {
                     font-size: 0.8em;
