@@ -64,6 +64,7 @@
               <p class="desc-text"><span class="material-icons">code</span><span>The University of Colombo School of Computing (UCSC) is the Higher Educational Institute affiliated to the University of Colombo providing Computer Science and Information and Communication Technology education. </span></p>
               <p class="desc-text"><span class="material-icons">code</span><span>In striving for excellence in education, UCSC has always attempted to foresee the needs of the country as a whole.</span></p>
               <p class="desc-text"><span class="material-icons">code</span><span>Introducing Computer Science as a field of specialization as early as in 1985, UCSC produced Software Engineers for the emerging software industry in Sri Lanka in addition to making fit the best of these for research and higher education. </span></p>
+              <p class="button-cont"><a target="_blank" href="https://ucsc.cmb.ac.lk/"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">For more information</button></a></p>
             </div>
           </div>
         </div>

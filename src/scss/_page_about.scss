@@ -274,6 +274,15 @@
                             }
 
                         }
+
+                        .button-cont {
+                            padding-left: 50px;
+
+                            button {
+                                @include mdc-button-filled-accessible($mdc-theme-secondary);
+                                @include mdc-button-ink-color($mdc-theme-primary)
+                            }
+                        }
                     }
                 }
             }
