@@ -17,8 +17,8 @@
             <p class="heading-text">NOI Programme</p>
             <p class="desc-text">Timeline of the NOI programme.</p>
             <p class="button-container">
-              <a href=""><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Rules and Regulations</button></a>
-              <a href=""><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Awards</button></a>
+              <router-link :to="'/noi/rulesandregulations'"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Rules and Regulations</button></router-link>
+              <router-link :to="'/noi/awards'"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Awards</button></router-link>
             </p>
           </div>
         </div>

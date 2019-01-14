@@ -17,6 +17,7 @@
 @import "@material/menu/mdc-menu";
 @import "@material/card/mdc-card";
 @import "@material/typography/mdc-typography";
+@import "@material/top-app-bar/mdc-top-app-bar";
 
 // fontawsom
 // @import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
@@ -25,6 +26,7 @@
 
 @import "./custom_mixin";
 @import "./page_noi";
+@import "./page_noi_awards";
 @import "./page_ioi";
 @import "./page_resources";
 @import "./page_about";

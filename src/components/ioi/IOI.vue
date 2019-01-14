@@ -116,7 +116,7 @@
         <div class="back"></div>
         <div class="content">
           <p class="text-1"><span class="material-icons">code</span><span>IOI 2019 will be held in Azerbaijan from 4th to 11th of August 2019.</span></p>
-          <p class="button-container"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Official website</button></p>
+          <p class="button-container"><a target="_blank" href="http://www.ioi2019.az/"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Official website</button></a></p>
         </div>
       </div>
     </section>

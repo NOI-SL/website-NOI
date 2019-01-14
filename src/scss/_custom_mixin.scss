@@ -124,3 +124,9 @@
         @content;
     }
 }
+
+@mixin width841Max {
+    @media (max-width:841px) {
+        @content;
+    }
+}

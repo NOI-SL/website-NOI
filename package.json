@@ -49,6 +49,7 @@
     "@material/tab-bar": "^0.42.0",
     "@material/theme": "^0.41.0",
     "@material/toolbar": "^0.42.0",
+    "@material/top-app-bar": "^0.43.0",
     "@material/typography": "^0.43.0",
     "autoprefixer": "^9.4.4",
     "smooth-scroll": "^15.0.0",
