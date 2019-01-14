@@ -112,3 +112,15 @@
         @content;
     }
 }
+
+@mixin width1156Max {
+    @media (max-width:1156px) {
+        @content;
+    }
+}
+
+@mixin width1157Min {
+    @media (min-width:1157px) {
+        @content;
+    }
+}
