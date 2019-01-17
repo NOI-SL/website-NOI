@@ -1,0 +1,41 @@
+#page-singup-response {
+    background-color: $theme-white-primary-bg;
+    #section-1 {
+        .content {
+            height: 100vh;
+            .container {
+                height: 100%;
+                .response-container {
+                    background-color: $theme-white-primary;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+
+                    .heading-success {
+                        background-color: $mdc-theme-primary;
+                        text-align: center;
+                        font-size: 2em;
+                        color: $theme-white-primary;
+                        padding: 1em 0 1em 0;
+                    }
+
+                    .content-message {
+                        .thank-you {
+                            text-align: center;
+                            color:$mdc-theme-primary;
+                            font-size: 1.5em;
+                            margin: 1em 0 1em 0;
+                        }
+
+                        .text {
+                            padding: 1.5em 0.5em 1.5em 0.5em;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

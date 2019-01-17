@@ -130,3 +130,9 @@
         @content;
     }
 }
+
+@mixin  width992Max {
+    @media (max-width:992px) {
+        @content;
+    }
+}

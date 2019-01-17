@@ -18,6 +18,9 @@
 @import "@material/card/mdc-card";
 @import "@material/typography/mdc-typography";
 @import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/textfield/mdc-text-field";
+@import "@material/textfield/helper-text/mdc-text-field-helper-text";
+@import "@material/select/mdc-select";
 
 // fontawsom
 // @import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
@@ -31,6 +34,8 @@
 @import "./page_resources";
 @import "./page_about";
 @import "./page_contact";
+@import "./page_singup";
+@import "./page_singup_response";
 @import "./cfooter";
 
 
