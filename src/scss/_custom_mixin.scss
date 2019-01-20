@@ -1,0 +1,138 @@
+
+@mixin width-change-max-width($width) {
+    @media (max-width:$width) {
+        @content;
+    }
+}
+
+@mixin width-change-min-width($width) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
+@mixin backChangeMaxWidth {
+    @media (max-width:980px) {
+        @content;
+    }
+}
+
+@mixin backChangeMinWidth {
+    @media (min-width:981px) {
+        @content;
+    }
+}
+
+@mixin galaxyS9 {
+    @media (max-width:394px) {
+        @content;
+    }
+}
+
+@mixin width778max {
+    @media (max-width: 778px) {
+        @content;
+    }
+}
+
+@mixin width546max {
+    @media (max-width:546px) {
+        @content;
+    }
+}
+
+@mixin width1292Min {
+    @media (min-width:1292px) {
+        @content;
+    }
+}
+
+@mixin width594Max {
+    @media (max-width:594px) {
+        @content;
+    }
+}
+
+@mixin width558Max {
+    @media (max-width:558px) {
+        @content;
+    }
+}
+
+@mixin width558min {
+    @media (min-width:558px) {
+        @content;
+    }
+}
+
+@mixin  width972max  {
+    @media (max-width:972px) {
+        @content;
+    }
+}
+
+@mixin width568max {
+    @media (max-width:568px) {
+        @content;
+    }
+}
+
+@mixin width642Min {
+    @media (min-width:642px) {
+        @content;
+    }
+}
+
+@mixin width1003Max {
+    @media (max-width:1003px) {
+        @content;
+    }
+}
+
+@mixin width713Max {
+    @media (max-width:713px) {
+        @content;
+    }
+}
+
+@mixin width605Max {
+    @media (max-width:605px) {
+        @content;
+    }
+}
+
+@mixin width520Max {
+    @media (max-width:520px) {
+        @content;
+    }
+}
+
+@mixin width450Max {
+    @media (max-width:450px) {
+        @content;
+    }
+}
+
+@mixin width1156Max {
+    @media (max-width:1156px) {
+        @content;
+    }
+}
+
+@mixin width1157Min {
+    @media (min-width:1157px) {
+        @content;
+    }
+}
+
+@mixin width841Max {
+    @media (max-width:841px) {
+        @content;
+    }
+}
+
+@mixin  width992Max {
+    @media (max-width:992px) {
+        @content;
+    }
+}

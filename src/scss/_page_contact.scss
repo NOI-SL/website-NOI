@@ -1,0 +1,49 @@
+#page-contact {
+
+    background-color: $theme-white-primary-bg;
+
+    .back-style {
+        height: 100vh;
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        background-color: $mdc-theme-primary;
+    }
+
+    #section-1 {
+
+        position: relative;
+        margin-bottom: -100px;
+
+        .back {
+            @extend .back-style;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            -webkit-clip-path: polygon(0% 15%, 0 0, 18% 0, 85% 0%, 59% 43%, 85% 55%, 68% 82%, 29% 30%, 100% 29%, 22% 75%, 11% 36%, 0% 85%);
+            clip-path: polygon(0% 15%, 0 0, 18% 0, 85% 0%, 59% 43%, 85% 55%, 68% 82%, 29% 30%, 100% 29%, 22% 75%, 11% 36%, 0% 85%);
+        }
+
+        .content {
+            height: auto;
+            padding-top: 100px;
+
+            .form-content {
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr;
+                width: 100%;
+                padding: 0;
+                -webkit-overflow-scrolling: touch;
+                height: auto;
+
+                iframe {
+                    width: 100%;
+                    border: 0;
+                    justify-self: center;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}

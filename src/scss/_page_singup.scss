@@ -1,0 +1,352 @@
+#page-singup {
+    background-color: $theme-white-primary-bg;
+    #section-1 {
+
+        // .back {
+
+        // }
+
+        .content {
+            height: auto;
+            padding-top: 100px;
+            padding-bottom: 20px;
+
+            .singup-form-container {
+                min-height: 200px;
+                background-color: $theme-white-primary;
+
+                .heading {
+                    padding: 1em;
+                    background-color: $mdc-theme-primary;
+                    color: $theme-white-primary;
+
+                    .heading-text {
+                        font-size: 2em;
+                        text-align: center;
+                    }
+                }
+
+                .desc {
+                    padding: 1em;
+
+                    .desc-text {
+                        margin-bottom: 10px;
+                    }
+
+                    .required-text {
+                        color: rgb(185, 26, 26)
+                    }
+                }
+
+                .section-heading-text {
+                    padding: 0.5em;
+                    margin: 0 -1em 0 -1em;
+                    background-color: $mdc-theme-primary;
+                    color: $theme-white-primary;
+                    @include width992Max {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .form-content {
+                    padding: 1em;
+
+                    .form-content-item {
+                        padding: 1em 0 0 0;
+                        margin-bottom: 1em;
+                        @include width568max { 
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .form-content-item--coluumns-1 {
+                        .form-content-subitem {
+                            width: 100%;
+
+                            .demo-text-field {
+                                width: 100%;
+                            }
+                        }
+
+                    }
+
+                    .form-content-item--coluumns-2 {
+                        display: grid;
+                        grid-template-columns: 50% auto;
+                        grid-column-gap: 1em;
+
+                        @include width992Max {
+                            display: unset;
+                            grid-template-columns: unset;
+                            grid-column-gap: unset;
+                        }
+
+                        .form-content-subitem {
+                            width: 100%;
+
+                            .demo-text-field {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .form-content-subitem {
+                        @include width992Max {
+                            padding-top: 10px;
+                        }
+                    }
+
+                    .birthday-section {
+                        .birthday-section-inner {
+                            display: grid;
+                            grid-template-areas: 'lb bd';
+                            grid-template-columns: 120px auto;
+                            width: 100%;
+
+                            @include width568max { 
+                                grid-template-areas: 'lb''bd';
+                                grid-template-columns: unset;
+                            }
+
+                            .label-text {
+                                grid-area: lb;
+                                p {
+                                    width: 100%;
+                                    position: relative;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                            } 
+                            .birthday {
+                                grid-area: bd;
+                                .birthday-inner {
+                                    display: grid;
+                                    width: 100%;
+                                    grid-template-areas: 'day month year';
+                                    grid-template-columns: 20% 40% auto;
+                                    grid-column-gap: 5px;
+                                    .day {
+                                        grid-area: day;
+                                        .text-field-birthday-day {
+                                            width: 100%;
+                                        }
+                                    }
+                                    .month {
+                                        grid-area: month;
+                                        .demo-width-class {
+                                            width: 100%;
+                                            position: relative;
+                                        }
+                                        .mdc-floating-label {
+                                            &::after {
+                                                content: "*";
+                                                margin-left: 1px;
+                                            }
+                                        }
+                                        .mdc-select--focused, .mdc-select--invalid {
+                                            .mdc-floating-label {
+                                                &::after {
+                                                    content: "*";
+                                                    margin-left: 1px;
+                                                    color: #b00020;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .year {
+                                        grid-area: year;
+                                        .text-field-birthday-year {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .form-content-subitem {
+                        // position: relative;
+
+                        .gend {
+                            width:100%;
+                            margin: auto;
+                            @include width568max { 
+                                padding-top: 10px;
+                            }
+                            .singup-form-select-gender {
+                                .mdc-floating-label {
+                                    &::after {
+                                        content: "*";
+                                        margin-left: 1px;
+                                    }
+                                }
+                                .mdc-select--focused, .mdc-select--invalid {
+                                    .mdc-floating-label {
+                                        &::after {
+                                            content: "*";
+                                            margin-left: 1px;
+                                            color: #b00020;
+                                        }
+                                    }
+                                }
+                            }
+                            .demo-width-class {
+                                width: 100%;
+                            }
+                        }
+
+                        .address-container {
+                            display: grid;
+                            grid-template-areas: 'lb fields';
+                            grid-template-columns: 100px auto; 
+
+                            @include width568max {
+                                grid-template-areas: 'lb''fields';
+                                grid-template-columns:unset;
+                                grid-row-gap: 5px;
+                            }
+                            .label-text {
+                                grid-area: lb;
+                                p {
+                                    text-align: left;
+                                    padding-top: 1em;
+                                    @include width568max {
+                                        padding-top: 0;
+                                    }
+                                }
+                            }
+                            .address-fields {
+                                grid-area: fields;
+                            }
+                        }
+                        
+                    }
+
+                    .form-content-item--coluumns-2.contact {
+                        grid-template-columns: 30% auto;
+                    }
+
+                    .form-content-item--coluumns-2.document {
+                        grid-template-columns: repeat(3, 1fr);
+
+                        .demo-width-class {
+                            width: 100%;
+                        }
+
+                        .singup-form-select-document-type {
+                            .mdc-floating-label {
+                                &::after {
+                                    content: "*";
+                                    margin-left: 1px;
+                                }
+                            }
+                            .mdc-select--focused, .mdc-select--invalid {
+                                .mdc-floating-label {
+                                    &::after {
+                                        content: "*";
+                                        margin-left: 1px;
+                                        color: #b00020;
+                                    }
+                                }
+                            }
+                        }
+
+                        .file-upload-section {
+                            .file-upload-container {
+                                height: 56px;
+                                border: 1px solid rgba(0,0,0,.24);
+                                border-radius: 4px;
+                                padding: 5px;
+
+                                .uploaded-file-container {
+                                    height: 100%;
+
+                                    #singup-form-file-document {
+                                        display: none;
+                                    }
+
+                                    #file-upload-action-button {
+                                        position: relative;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%,-50%);
+                                        .mdc-button__label {
+                                            &::after {
+                                                content: "*";
+                                                margin-left: 1px;
+                                                color: #b00020;
+                                            }
+                                        }
+                                    }
+                                    #uploaded-file-container-i {
+                                        height: 100%;
+                                    }
+                                    .uploaded-file-container-inner {
+                                        height: 100%;
+                                        display: grid;
+                                        grid-template-areas: 'ic nm del';
+                                        grid-template-columns: 40px auto 30px;
+                                        background-color: #dbdbdb;
+                                        border-radius: 4px; 
+
+                                        .icon {
+                                            grid-area: ic;
+                                            span {
+                                                position: relative;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translate(-50%,-50%);
+                                            }
+                                        }
+                                        .name {
+                                            grid-area: nm;
+                                            p {
+                                                position: relative;
+                                                width: 100%;
+                                                top: 50%;
+                                                transform: translateY(-50%);
+                                                margin: 0;
+                                                font-size: 0.7em
+                                            }
+                                        }
+                                        .delet-icon {
+                                            grid-area: del;
+                                            button {
+                                                border: 0;
+                                                margin: 0;
+                                                padding: 0;
+                                                width: 100%;
+                                                height: 100%;
+                                                padding: 4px 0 0 1px;
+                                                background-color: transparent;
+                                                transition: 0.3s;
+
+                                                &:hover {
+                                                    color: #b00020;
+                                                    cursor: pointer;
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                                    
+                                }
+
+                                
+                            }
+
+                            .file-upload-container.file-upload-container--invlid {
+                                border: 2px solid #b00020;
+
+                                #file-upload-action-button {
+                                    @include mdc-button-ink-color($theme-error-primary)
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

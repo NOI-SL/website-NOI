@@ -1,0 +1,25 @@
+// Material theme
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+// $mdc-theme-primary: #6164aa;
+$mdc-theme-primary: #5e35b1;
+$mdc-theme-primary-dark: #412579;
+$mdc-theme-secondary: #38bfae;
+$mdc-theme-on-primary: #ffffff;
+$mdc-theme-on-secondary: #442b2d;
+$theme-white-primary:#ffffff;
+$theme-white-primary-dark:#dddddd;
+$theme-white-primary-bg:rgb(239, 239, 240);
+$theme-white-secondary:rgb(92, 92, 92);
+$theme-white-secondary-2:rgb(68, 68, 68);
+$mdc-theme-color-1: #b18aff;
+
+$theme-error-primary:#b00020;
+
+$mdc-typography-font-family: 'Roboto', sans-serif;
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+}
+

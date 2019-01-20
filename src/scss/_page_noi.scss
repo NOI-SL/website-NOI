@@ -1,0 +1,792 @@
+#page-noi {
+
+    background-color: $theme-white-primary-bg;
+
+    .back-style {
+        height: 100vh;
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        background-color: $mdc-theme-primary;
+    }
+
+    @keyframes arrow-animate {
+        0% {
+            height: 0;
+            top: 0;
+            opacity: 1;
+        }
+        50% {
+            height: 50px;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            height: 50px;
+            transform: translateY(-100%);
+            top: 100%;
+            bottom: 0;
+            height: 0;
+        }
+    }
+
+    #section-1 {
+
+        .back {
+            @extend .back-style;
+            // -webkit-clip-path: polygon(0 0, 0 100%, 49.75% 100%, 49.75% 50%, 50.25% 50%, 50.25% 100%, 100% 100%, 100% 0);
+            // clip-path: polygon(0 0, 0 100%, 49.75% 100%, 49.75% 50%, 50.25% 50%, 50.25% 100%, 100% 100%, 100% 0);
+
+            -webkit-clip-path: polygon(0 100%, 0 100%, 49.75% 100%, 49.75% 50%, 50.25% 50%, 50.25% 100%, 100% 100%, 100% 100%);
+            clip-path: polygon(0 100%, 0 100%, 49.75% 100%, 49.75% 50%, 50.25% 50%, 50.25% 100%, 100% 100%, 100% 100%);
+
+            // -webkit-clip-path: polygon(0 100%, 0 100%, 47% 100%, 47% 50%, 53% 50%, 53% 100%, 100% 100%, 100% 100%);
+            // clip-path: polygon(0 100%, 0 100%, 47% 100%, 47% 50%, 53% 50%, 53% 100%, 100% 100%, 100% 100%);
+
+            @include width1156Max {
+
+                -webkit-clip-path: polygon(37.5px 0,42.5px 0,42.5px 100%,37.5px 100%);
+                clip-path: polygon(37.5px 0,42.5px 0,42.5px 100%,37.5px 100%)
+
+            }
+
+            .arrow {
+                position: absolute;
+                background-color: $mdc-theme-secondary;
+               animation: arrow-animate 2s ease-in-out infinite .65s;
+                width: 100%;
+                opacity: 1;
+                // -webkit-clip-path: polygon(0 100%, 0 100%, 49.875% 100%, 49.875% 0%, 50.125% 0%, 50.125% 100%, 100% 100%, 100% 100%);
+                // clip-path: polygon(0 100%, 0 100%, 49.875% 100%, 49.875% 0%, 50.125% 0%, 50.125% 100%, 100% 100%, 100% 100%);
+                -webkit-clip-path: polygon(0 100%, 0 100%, 50% 100%, 49.875% 0%, 50.125% 0%, 50% 100%, 100% 100%, 100% 100%);
+                clip-path: polygon(0 100%, 0 100%, 50% 100%, 49.875% 0%, 50.125% 0%, 50% 100%, 100% 100%, 100% 100%);
+
+                @include width1156Max {
+
+                    -webkit-clip-path: polygon(37.5px 0,42.5px 0,42.5px 100%,37.5px 100%);
+                    clip-path: polygon(37.5px 0,42.5px 0,40px 100%,40px 100%)
+    
+                }
+            }
+
+        }
+
+        .content {
+            height: 100vh;
+
+            .content-back-style {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: $mdc-theme-primary;
+            }
+
+            .content-back-large {
+                @extend .content-back-style;
+                -webkit-clip-path: polygon(0% 0%, 0 89%, 14% 51%, 24% 71%, 37% 57%, 50% 78%, 64% 51%, 74% 70%, 85% 60%, 100% 94%, 100% 0%);
+                clip-path: polygon(0% 0%, 0 89%, 14% 51%, 24% 71%, 37% 57%, 50% 78%, 64% 51%, 74% 70%, 85% 60%, 100% 94%, 100% 0%);
+
+                // -webkit-clip-path: polygon(38% 91%, 10% 77%, 16% 51%, 11% 21%, 46% 12%, 84% 22%, 94% 69%, 59% 79%);
+                // clip-path: polygon(38% 91%, 10% 77%, 16% 51%, 11% 21%, 46% 12%, 84% 22%, 94% 69%, 59% 79%);
+                // -webkit-clip-path: polygon(0% 0%, 0 50%, 0 84%, 17% 51%, 24% 71%, 37% 57%, 50% 78%, 64% 48%, 74% 70%, 85% 53%, 100% 89%, 100% 26%, 100% 0%);
+                // clip-path: polygon(0% 0%, 0 50%, 0 84%, 17% 51%, 24% 71%, 37% 57%, 50% 78%, 64% 48%, 74% 70%, 85% 53%, 100% 89%, 100% 26%, 100% 0%);
+
+                @include width1156Max {
+                    // -webkit-clip-path: polygon(0 0, 0 91%, 4% 48%, 13% 70%, 23% 61%, 35% 84%, 48% 52%, 65% 73%, 73% 57%, 89% 79%, 100% 66%, 100% 0);
+                    // clip-path: polygon(0 0, 0 91%, 4% 48%, 13% 70%, 23% 61%, 35% 84%, 48% 52%, 65% 73%, 73% 57%, 89% 79%, 100% 66%, 100% 0);
+                    -webkit-clip-path: polygon(0 0, 0 57%, 39px 79%, 15% 63%, 30% 89%, 40% 72%, 55% 95%, 64% 58%, 79% 89%, 87% 65%, 100% 72%, 100% 0);
+                    clip-path: polygon(0 0, 0 57%, 39px 79%, 15% 63%, 30% 89%, 40% 72%, 55% 95%, 64% 58%, 79% 89%, 87% 65%, 100% 72%, 100% 0);
+                }
+
+            }
+
+            .content-back-normal {
+                @extend .content-back-style;
+                -webkit-clip-path: polygon(0% 0%, 0 89%, 14% 51%, 24% 71%, 37% 57%, 50% 78%, 64% 51%, 74% 70%, 85% 60%, 100% 94%, 100% 0%);
+                clip-path: polygon(0% 0%, 0 88.75%, 14% 50.75%, 24% 70.75%, 37% 56.75%, 50% 77.75%, 64% 50.75%, 74% 69.75%, 85% 59.75%, 100% 93.75%, 100% 0%);
+            
+                @include width1156Max {
+                    -webkit-clip-path: polygon(0 0,0 56.5%,39.5px 78.5%,15% 62.5%,30% 88.5%,40% 71.5%,54.9% 94.5%,63.8% 56.5%,79% 88.5%,86.8% 64.5%,100% 71.5%,100% 0);
+                    clip-path: polygon(0 0,0 56.5%,39.5px 78.5%,15% 62.5%,30% 88.5%,40% 71.5%,54.9% 94.5%,63.8% 56.5%,79% 88.5%,86.8% 64.5%,100% 71.5%,100% 0);
+                }
+
+                @include width1156Max {
+                    display: grid;
+                    grid-template-columns: 40px auto;
+                }
+
+                .arrow-style {
+                    position: absolute;
+                    height: 100%;
+                    width: 50%;
+                    background-color: $mdc-theme-secondary;
+
+                    @include width1156Max {
+                        width: unset;
+                        position: unset;
+                    }
+                }
+
+                .arrow-1 {
+                    @extend .arrow-style;
+                   animation: arrow-style-animate-1 2s ease-out infinite;
+
+                   @include width1156Max {
+                        animation: arrow-style-animate-11 2s ease-out infinite;
+                   }
+
+                }
+
+                .arrow-2 {
+                    @extend .arrow-style;
+                    right: 0;
+                   animation: arrow-style-animate-2 2s ease-out infinite;
+                }
+
+                @keyframes arrow-style-animate-2 {
+                    0% {
+                        -webkit-clip-path: polygon(97% 0, 100% 0, 100% 100%, 97% 100%);
+                        clip-path: polygon(97% 0, 100% 0, 100% 100%, 97% 100%);
+                    }
+                    100% {
+                        -webkit-clip-path: polygon(0 0, 3% 0, 3% 100%, 0 100%);
+                        clip-path: polygon(0 0, 3% 0, 3% 100%, 0 100%);
+                    }
+                }
+
+                @keyframes arrow-style-animate-1 {
+                    0% {
+                        -webkit-clip-path: polygon(0 0, 3% 0, 3% 100%, 0 100%);
+                        clip-path: polygon(0 0, 3% 0, 3% 100%, 0 100%);
+                    }
+                    100% {
+                        -webkit-clip-path: polygon(97% 0, 100% 0, 100% 100%, 97% 100%);
+                        clip-path: polygon(97% 0, 100% 0, 100% 100%, 97% 100%);
+                    }
+                }
+
+                @keyframes arrow-style-animate-11 {
+                    0% {
+                        -webkit-clip-path: polygon(0 0, 10% 0, 10% 100%, 0 100%);
+                        clip-path: polygon(0 0, 10% 0, 10% 100%, 0 100%);
+                    }
+                    100% {
+                        -webkit-clip-path: polygon(90% 0, 100% 0, 100% 100%, 90% 100%);
+                        clip-path: polygon(90% 0, 100% 0, 100% 100%, 90% 100%);
+                    }
+                }
+
+            
+            
+            }
+
+            .content-back-small {
+                @extend .content-back-style;
+                -webkit-clip-path: polygon(0% 0%, 0 89%, 14% 51%, 24% 71%, 37% 57%, 50% 78%, 64% 51%, 74% 70%, 85% 60%, 100% 94%, 100% 0%);
+                clip-path: polygon(0% 0%, 0 88.25%, 14% 50.25%, 24% 70.25%, 37% 56.25%, 50% 77.25%, 64% 50.25%, 74% 69.25%, 85% 59.25%, 100% 93.25%, 100% 0%);
+                
+                @include width1156Max {
+                    -webkit-clip-path: polygon(0 0,0 55.5%,40px 77.75%,15% 61.75%,30% 87.75%,40% 70.75%,54.8% 93.75%,63.7% 55.5%,79% 87.75%,86.5% 63.7%,100% 71%,100% 0);
+                    clip-path: polygon(0 0,0 55.5%,40px 77.75%,15% 61.75%,30% 87.75%,40% 70.75%,54.8% 93.75%,63.7% 55.5%,79% 87.75%,86.5% 63.7%,100% 71%,100% 0);
+                }
+            }
+
+            .content-inner {
+                padding-top: 180px;
+                position: relative;
+                z-index: 2;
+                .heading {
+
+                    .heading-text {
+                        color: $theme-white-primary;
+                        font-size: 2em;
+                        text-align: center;
+                        font-weight: bold;
+                    }
+
+                    .desc-text{
+                        color: $theme-white-primary;
+                        text-align: center;
+                        color: $mdc-theme-color-1;
+                    }
+
+                    .button-container {
+                        text-align: center;
+                        margin-top: 20px;
+                        a {
+                            button {
+                                @include mdc-button-filled-accessible($mdc-theme-secondary);
+                                @include mdc-button-ink-color($mdc-theme-primary)
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    #section-2 {
+        position: relative;
+
+        .back {
+            @extend .back-style;
+            -webkit-clip-path: polygon(0 100%, 0 100%, 49.75% 100%, 49.75% 0%, 50.25% 0%, 50.25% 100%, 100% 100%, 100% 100%);
+            clip-path: polygon(0 100%, 0 100%, 49.75% 100%, 49.75% 0%, 50.25% 0%, 50.25% 100%, 100% 100%, 100% 100%);
+            // -webkit-clip-path: polygon(0 0, 0 100%, 49.75% 100%, 49.75% 0%, 50.25% 0%, 50.25% 100%, 100% 100%, 100% 0);
+            // clip-path: polygon(0 0, 0 100%, 49.75% 100%, 49.75% 0%, 50.25% 0%, 50.25% 100%, 100% 100%, 100% 0);
+            top: 0;
+            bottom: 0;
+            height: 100%;
+
+            @include width1156Max {
+
+                -webkit-clip-path: polygon(37.5px 0,42.5px 0,42.5px 100%,37.5px 100%);
+                clip-path: polygon(37.5px 0,42.5px 0,42.5px 100%,37.5px 100%)
+
+            }
+
+            .arrow {
+                position: absolute;
+                background-color: $mdc-theme-secondary;
+                animation: arrow-animate 10s ease-in-out infinite;
+                width: 100%;
+                opacity: 1;
+                -webkit-clip-path: polygon(0 100%, 0 100%, 50% 100%, 49.875% 0%, 50.125% 0%, 50% 100%, 100% 100%, 100% 100%);
+                clip-path: polygon(0 100%, 0 100%, 50% 100%, 49.875% 0%, 50.125% 0%, 50% 100%, 100% 100%, 100% 100%);
+
+                @include width1156Max {
+
+                    -webkit-clip-path: polygon(37.5px 0,42.5px 0,42.5px 100%,37.5px 100%);
+                    clip-path: polygon(37.5px 0,42.5px 0,40px 100%,40px 100%)
+    
+                }
+            }
+
+            .arrow:nth-child(1){
+                animation-delay: 2s
+            }
+
+            .arrow:nth-child(2){
+                animation-delay: 4s
+            }
+
+            .arrow:nth-child(3){
+                animation-delay: 6s
+            }
+
+            .arrow:nth-child(4){
+                animation-delay: 8s
+            }
+
+            .arrow:nth-child(5){
+                animation-delay: 10s
+            }
+            
+        }
+
+        .content {
+            height: auto;
+            position: relative;
+            z-index: 2;
+            
+
+            .content-inner {
+
+                .timeline {
+                    display: grid;
+                    grid-template-rows: repeat(9,1fr);
+                    grid-row-gap: 100px;
+                    grid-auto-rows: minmax(min-content, max-content);
+
+                    .timeline-item {
+                        // min-height: 200px;
+
+                        .timeline-item-inner {
+                            display: grid;
+                            grid-template-areas: 'container-left container-middle container-right';
+                            grid-template-columns: 33% 34% 33%;
+                            // min-height: 200px;
+                            grid-auto-rows: minmax(min-content, max-content);
+
+                            .container-left {
+                                grid-area: container-left;
+
+                                .container-left-inner {
+                                    padding-left: 1em;
+                                    width: 100%;
+
+                                    .demo-card__primary {
+                                        padding: 1em;
+                                        background-color: $theme-white-primary-dark;
+                                    }
+
+                                    .demo-card__secondary {
+                                        padding: 1em 1em 1em 0.5em;
+                                    }
+
+                                    .demo-card__secondary {
+                                        ul {
+                                            margin: 0;
+                                            padding: 0;
+                                            list-style: none;
+                                            li{ 
+                                                margin-bottom: 10px;
+                                                padding-left: 5px;
+                                                border-left: 3px solid $mdc-theme-primary;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .container-middle {
+                                grid-area: container-middle;
+
+                                
+                                // Gradient mixin for Sweep button
+                                @mixin sweepButtonGradient(){
+                                    background: #402375;
+                                    background: -moz-linear-gradient(90deg,  #402375 0%, rgba(255, 255, 255, 0.507) 94%, #402375 100%);
+                                    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#402375), color-stop(94%,rgba(255, 255, 255, 0.507)), color-stop(100%,#402375));
+                                    background: -webkit-linear-gradient(90deg,  #402375 0%,rgba(255, 255, 255, 0.507) 94%,#402375 100%);
+                                    background: -o-linear-gradient(90deg,  #402375 0%,rgba(255, 255, 255, 0.507) 94%,#402375 100%);
+                                    background: -ms-linear-gradient(90deg,  #402375 0%,rgba(255, 255, 255, 0.507) 94%,#402375 100%);
+                                    background: linear-gradient(90deg,  #402375 0%,rgba(255, 255, 255, 0.507) 94%,#402375 100%);
+                                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 );
+                                }
+                                    
+                                // Transform mixin
+                                @mixin transform($property){	
+                                    -webkit-transform: $property;
+                                    -moz-transform: $property;
+                                    transform: $property; 
+                                }
+                                                    
+
+                                .container-middle-inner{
+                                    display: grid;
+                                    grid-template-areas:'line-left circle-middle line-right';
+                                    grid-template-columns:auto 20% auto;
+                                    position: relative;
+                                    z-index: 1;
+
+                                    // @include width1156Max {
+                                    //     grid-template-areas:'circle-middle line-left line-right';
+                                    //     grid-template-columns:20% auto auto;
+                                    // }
+
+                                    .line-left {
+                                        grid-area: line-left;
+
+                                        .line-inner {
+                                            position: relative;
+                                            height: 100%;
+                                            width: 100%;
+
+                                            .line {
+                                                height: 5px;
+                                                background-color: $mdc-theme-primary;
+                                                position: relative;
+                                                top: 50%;
+                                                transform: translateY(-50%);
+                                                overflow: hidden;
+
+                                                .line-animating {
+                                                    display: block;
+                                                        position: absolute;
+                                                        top: 0;
+                                                        right: 0;
+                                                        width: 300%;
+                                                        height: 100%;
+                                                        bottom: auto;
+                                                        margin: auto;   
+                                                        @include sweepButtonGradient();
+                                                        // Transition out for gradient
+                                                        animation: circle-progress-back-animation-f 2s ease-out infinite 0.2s;
+                                                        @include transform(translateX(-35%));
+                                                }
+                                            }
+                                        }
+                                    }
+        
+                                    .circle {
+                                        grid-area: circle-middle;
+                                        height: 100%;
+        
+                                        .circle-inner {
+                                            display: block;
+                                            width: 100%;
+                                            height: auto;
+                                            padding-top: 100%;
+                                            position: relative;
+        
+                                            .circle-style {
+                                                position: absolute;
+                                                border-radius: 50%;
+                                            }
+        
+                                            .circle-l {
+                                                @extend .circle-style;
+                                                top: 0;
+                                                bottom: 0;
+                                                left: 0;
+                                                right: 0;
+                                                background-color: $mdc-theme-primary;
+                                                box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)
+                                            }
+        
+                                            .circle-progress-back {
+                                                @extend .circle-style;
+                                                top: 5px;
+                                                bottom: 5px;
+                                                left: 5px;
+                                                right: 5px;
+                                                background-color: #402375;
+                                                overflow: hidden;
+        
+        
+                                                .circle-progress-back-animate {
+                                                    position: absolute;
+                                                    top: 0;
+                                                    bottom: 0;
+                                                    left: 0;
+                                                    right: 0;
+                                                    transform: rotate(90deg);
+        
+                                                    .circle-progress-back-animating{
+                                                        display: block;
+                                                        position: absolute;
+                                                        top: 0;
+                                                        right: 0;
+                                                        width: 300%;
+                                                        height: 100%;
+                                                        bottom: auto;
+                                                        margin: auto;   
+                                                        @include sweepButtonGradient();
+                                                        // Transition out for gradient
+                                                        animation: circle-progress-back-animation 2s ease-out infinite;
+                                                        @include transform(translateX(-35%));
+                                                    }
+                                                
+        
+                                                    @keyframes circle-progress-back-animation {
+                                                        0% {
+                                                            @include transform(translateX(-35%));
+                                                            opacity: 1;
+                                                        }
+                                                        80%{
+                                                            @include transform(translateX(100%));
+                                                            opacity: 1;
+                                                        }
+                                                        81% {
+                                                            opacity: 0;
+                                                        }
+                                                        100% {
+                                                            @include transform(translateX(-35%));
+                                                            opacity: 0;
+                                                        }
+                                                    }
+
+                                                    @keyframes circle-progress-back-animation-f {
+                                                        100% {
+                                                            @include transform(translateX(-35%));
+                                                            opacity: 1;
+                                                        }
+                                                        81%{
+                                                            @include transform(translateX(100%));
+                                                            opacity: 1;
+                                                        }
+                                                        80% {
+                                                            opacity: 0;
+                                                        }
+                                                        0% {
+                                                            @include transform(translateX(-35%));
+                                                            opacity: 0;
+                                                        }
+                                                    }
+        
+                                                }
+        
+                                                .circle-progress-inner {
+                                                    position: absolute;
+                                                    // height: 11.11111%;
+                                                    left: 0;
+                                                    right: 0;
+                                                    background-color: $mdc-theme-secondary;
+                                                    z-index: 2;
+                                                }
+                                            }
+        
+                                            .circle-content {
+                                                @extend .circle-style;
+                                                bottom: 10px;
+                                                left: 10px;
+                                                right: 10px;
+                                                top: 10px;
+                                                z-index: 3;
+                                                background-color: $mdc-theme-primary;
+                                            }
+                                        }
+                                    }
+        
+                                    .line-right {
+                                        grid-area: line-right;
+        
+                                        .line-inner {
+                                            position: relative;
+                                            height: 100%;
+                                            width: 100%;
+
+                                            .line {
+                                                height: 5px;
+                                                background-color: $mdc-theme-primary;
+                                                position: relative;
+                                                top: 50%;
+                                                transform: translateY(-50%);
+                                                overflow: hidden;
+
+                                                .line-animating {
+                                                    display: block;
+                                                        position: absolute;
+                                                        top: 0;
+                                                        right: 0;
+                                                        width: 300%;
+                                                        height: 100%;
+                                                        bottom: auto;
+                                                        margin: auto;   
+                                                        @include sweepButtonGradient();
+                                                        // Transition out for gradient
+                                                        animation: circle-progress-back-animation 2s ease-out infinite 0.2s;
+                                                        @include transform(translateX(-35%));
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+
+                            .container-right {
+                                grid-area: container-right;
+
+                                .container-right-inner {
+                                    padding-right: 1em;
+                                    width: 100%;
+
+                                    .demo-card__primary {
+                                        padding: 1em;
+                                        background-color: $theme-white-primary-dark;
+                                    }
+
+                                    .demo-card__secondary {
+                                        padding: 1em 1em 1em 0.5em;
+                                    }
+
+                                    .demo-card__secondary {
+                                        ul {
+                                            margin: 0;
+                                            padding: 0;
+                                            list-style: none;
+                                            li{ 
+                                                margin-bottom: 10px;
+                                                padding-left: 5px;
+                                                border-left: 3px solid $mdc-theme-primary;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @include width1157Min {
+                        .timeline-item:nth-child(odd) {
+                            .timeline-item-inner { 
+                                .container-middle {
+                                    .container-middle-inner {
+                                        .line-left {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .timeline-item:nth-child(even) {
+                            .timeline-item-inner { 
+                                .container-middle {
+                                    .container-middle-inner {
+                                        .line-right {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @include width1156Max {
+                        display: unset;
+                        grid-template-rows: unset;
+                        grid-row-gap: unset;
+                        grid-auto-rows: unset;
+                        
+                        .timeline-item {
+                            padding-bottom: 50px;
+                        }
+
+                        .timeline-item:nth-child(odd) {
+                            .timeline-item-inner { 
+                                grid-template-areas: 'container-middle container-right container-left';
+                                grid-template-columns: 34% 66% 0%;
+                                .container-middle {
+                                    .container-middle-inner {
+                                        grid-template-areas:'circle-middle line-right line-left';
+                                        grid-template-columns:70px auto 0%;
+                                        padding-left: 5px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .timeline-item:nth-child(even) {
+                            .timeline-item-inner { 
+                                grid-template-areas: 'container-middle container-left container-right';
+                                grid-template-columns: 34% 66% 0%;
+                                .container-middle {
+                                    .container-middle-inner {
+                                        grid-template-areas:'circle-middle line-right line-left';
+                                        grid-template-columns:70px auto 0%;
+                                        padding-left: 5px;
+                                    }
+                                }
+
+                                .container-left {
+                                    .container-left-inner {
+                                        padding-left: 0;
+                                        padding-right: 1em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+
+                    .timeline-item.active {
+                        .timeline-item-inner {
+                            .container-left {
+                                .container-left-inner {
+
+                                    .demo-card {
+                                        background-color:  $mdc-theme-primary;
+
+                                        .demo-card__title {
+                                            color: $theme-white-primary;
+                                        }
+    
+                                        .demo-card__primary {
+                                            background-color: $mdc-theme-primary-dark;
+                                        }
+
+                                        .demo-card__secondary {
+                                            ul {
+                                                li {
+                                                    border-left: 3px solid $mdc-theme-secondary;
+                                                    color: $theme-white-primary;
+    
+                                                    button {
+                                                        @include mdc-button-filled-accessible($mdc-theme-secondary);
+                                                        @include mdc-button-ink-color($mdc-theme-primary)
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                    }
+                                    
+                                }
+                            }
+                            // .container-middle {
+
+                            // }
+                            .container-right {
+                                .container-right-inner {
+
+                                    .demo-card {
+                                        background-color:  $mdc-theme-primary;
+
+                                        .demo-card__title {
+                                            color: $theme-white-primary;
+                                        }
+    
+                                        .demo-card__primary {
+                                            background-color: $mdc-theme-primary-dark;
+                                        }
+
+                                        .demo-card__secondary {
+                                            ul {
+                                                li {
+                                                    border-left: 3px solid $mdc-theme-secondary;
+                                                    color: $theme-white-primary;
+    
+                                                    button {
+                                                        @include mdc-button-filled-accessible($mdc-theme-secondary);
+                                                        @include mdc-button-ink-color($mdc-theme-primary)
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+
+                    .timeline-item:nth-child(1) .circle-progress-inner {
+                        height: 11.111111%;
+                    }
+
+                    .timeline-item:nth-child(2) .circle-progress-inner {
+                        height: 22.222222%;
+                    }
+
+                    .timeline-item:nth-child(3) .circle-progress-inner {
+                        height: 33.333333%;
+                    }
+
+                    .timeline-item:nth-child(4) .circle-progress-inner {
+                        height: 44.444444%;
+                    }
+
+                    .timeline-item:nth-child(5) .circle-progress-inner {
+                        height: 55.555555%;
+                    }
+
+                    .timeline-item:nth-child(6) .circle-progress-inner {
+                        height: 66.666666%;
+                    }
+
+                    .timeline-item:nth-child(7) .circle-progress-inner {
+                        height: 77.777777%;
+                    }
+
+                    .timeline-item:nth-child(8) .circle-progress-inner {
+                        height: 88.888888%;
+                    }
+
+                    .timeline-item:nth-child(9) .circle-progress-inner {
+                        height: 100%;
+                    }
+
+                    .timeline-item:nth-child(9) {
+                        background-color: $theme-white-primary-bg;
+                    }
+                }
+            }
+        }
+    }
+}
