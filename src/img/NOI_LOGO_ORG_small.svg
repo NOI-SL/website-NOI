@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:#38BFAE;}
+	.st2{display:inline;fill:#6164AA;}
+	.st3{font-family:'MicrosoftSansSerif';}
+	.st4{font-size:16.9221px;}
+	.st5{fill:#38BFAE;}
+	.st6{fill:#6164AA;}
+</style>
+<g class="st0">
+	<polygon class="st1" points="252.1,55.5 252.1,255.7 212,255.7 68.6,112.2 68.6,255.8 28.6,255.8 28.6,55.7 68.6,55.7 68.6,55.7 
+		68.6,55.7 212,199.1 212,55.5 	"/>
+	<path class="st2" d="M140.3,85.6c-38.7,0-70.1,31.4-70.1,70.1s31.4,70.1,70.1,70.1s70.1-31.4,70.1-70.1S179,85.6,140.3,85.6z
+		 M140.3,196.6c-22.6,0-40.9-18.3-40.9-40.9s18.3-40.9,40.9-40.9s40.9,18.3,40.9,40.9S162.9,196.6,140.3,196.6z"/>
+	<polygon class="st2" points="252.1,55.5 252.1,255.7 271.4,244.5 271.4,44.4 	"/>
+	<circle class="st2" cx="239" cy="26.8" r="19.8"/>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 28.2185 282.6637)" class="st3 st4">National Olympiad in Informatics</text>
+	<g>
+		<polygon class="st5" points="252.4,61.5 252.4,261.6 212.4,261.6 69.1,118.2 69.1,261.7 29.1,261.7 29.1,61.6 69.1,61.6 
+			69.1,61.7 69.1,61.6 212.4,205 212.4,61.5 		"/>
+		<path class="st6" d="M140.8,91.5c-38.7,0-70.1,31.4-70.1,70.1s31.4,70.1,70.1,70.1s70.1-31.4,70.1-70.1S179.5,91.5,140.8,91.5z
+			 M140.8,202.5c-22.6,0-40.9-18.3-40.9-40.9s18.3-40.9,40.9-40.9s40.9,18.3,40.9,40.9S163.4,202.5,140.8,202.5z"/>
+		<polygon class="st6" points="252.4,61.5 252.4,261.6 271.8,250.4 271.8,50.3 		"/>
+		<circle class="st6" cx="239.4" cy="32.8" r="19.8"/>
+	</g>
+</g>
+</svg>
