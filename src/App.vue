@@ -2,6 +2,7 @@
   <div id="app">
     <nav-bar/>
     <nav-drawer/>
+    <div class="mdc-drawer-scrim"></div>
     <main class="mdc-toolbar-fixed-adjust">
       <router-view></router-view>
     </main>

@@ -1,0 +1,23 @@
+#page-home {
+    background-color: $theme-white-primary-bg;
+
+    .back-style {
+        height: 100vh;
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        background-color: $mdc-theme-primary;
+    }
+
+    #section-1 {
+
+        .back {
+            @extend .back-style;
+            -webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+        }
+        .content {
+            height: 100vh;
+        }
+    }
+}

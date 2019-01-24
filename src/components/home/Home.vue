@@ -1,8 +1,14 @@
 <template>
-  <div class="container main-section home">
-    <div class="row">
-      <div class="col" v-for="history in histories" :key="history.id">
-        <history-card :history="history"/>
+  <div class="container-flud main-section home" id="page-home">
+    <section id="section-1">
+      <!-- <div class="back"></div> -->
+      <div class="content"></div>
+    </section>
+    <div class="container">
+      <div class="row">
+        <div class="col" v-for="history in histories" :key="history.id">
+          <history-card :history="history"/>
+        </div>
       </div>
     </div>
   </div>

@@ -13,7 +13,7 @@
                             <p class="required-text">* Required</p>
                         </div>
                         <div class="form-content">
-                            <form action="" method="post" id="singup-form" enctype="multipart/form-data">
+                            <form action="" method="post" id="singup-form" enctype="multipart/form-data" onload="formLoad()">
                                 <p class="section-heading-text">Basic information</p>
                                 <div class="form-content-item form-content-item--coluumns-2">
                                     <div class="form-content-subitem">
@@ -84,7 +84,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="month">
-                                                            <div class="mdc-select demo-width-class mdc-select--outlined singup-form-select-birthday-month">
+                                                            <div class="mdc-select demo-width-class mdc-select--outlined singup-form-select-birthday-month" v-on:focusout="DOBMonth_focusOut()" v-on:focusin="DOBMonth_focusIn()" >
                                                                 <input type="hidden" name="singup-form-select-birthday-month" id="singup-form-select-birthday-month" required>
                                                                 <i class="mdc-select__dropdown-icon"></i>
                                                                 <div class="mdc-select__selected-text"></div>
@@ -157,7 +157,7 @@
                                     </div>
                                     <div class="form-content-subitem">
                                         <div class="gend">
-                                            <div class="mdc-select demo-width-class mdc-select--outlined singup-form-select-gender">
+                                            <div class="mdc-select demo-width-class mdc-select--outlined singup-form-select-gender" v-on:focusout="Gender_focusOut()" v-on:focusin="Gender_focusIn()">
                                                 <input type="hidden" name="singup-form-select-gender" id="singup-form-select-gender" required>
                                                 <i class="mdc-select__dropdown-icon"></i>
                                                 <div class="mdc-select__selected-text"></div>
@@ -285,7 +285,7 @@
                                 <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, ad quo? Placeat, at. Earum libero delectus quis sit quidem consequuntur, nihil unde sunt at neque nesciunt, quae repellendus quo in.</p>
                                 <div class="form-content-item form-content-item--coluumns-2 document">
                                     <div class="form-content-subitem">
-                                        <div class="mdc-select demo-width-class mdc-select--outlined singup-form-select-document-type">
+                                        <div class="mdc-select demo-width-class mdc-select--outlined singup-form-select-document-type" v-on:focusout="DocumentType_focusOut()" v-on:focusin="DocumentType_focusIn()">
                                             <input type="hidden" name="singup-form-select-document-type" id="singup-form-select-document-type" required>
                                             <i class="mdc-select__dropdown-icon"></i>
                                             <div class="mdc-select__selected-text"></div>
@@ -337,8 +337,8 @@
                                         <div class="file-upload-section">
                                             <div class="file-upload-container">
                                                 <div class="uploaded-file-container">
-                                                    <input type="file" name="singup-form-file-document" id="singup-form-file-document" required>
-                                                    <button class="mdc-button" id="file-upload-action-button">
+                                                    <input type="file" name="singup-form-file-document" id="singup-form-file-document" v-on:invalid="FileUpload_invalid($event)" v-on:change="FileUpload_change($event)" required>
+                                                    <button class="mdc-button" id="file-upload-action-button" v-on:click="FileUploadButton_click($event)">
                                                         <i class="material-icons mdc-button__icon" aria-hidden="true">cloud_upload</i>
                                                         <span class="mdc-button__label">Upload Document</span>
                                                     </button>
@@ -371,8 +371,207 @@
     </div>
 </template>
 
-<script>
+<script v-on:load="formLoad()">
+
+import {MDCTextField} from '@material/textfield';
+import {MDCTextFieldHelperText} from '@material/textfield/helper-text';
+import {MDCSelect} from '@material/select';
+
+var textField_FirstName,textField_LastName,textField_FullName,textField_BirthdayDay,textField_BirthdayYear, textField_School, textField_Address1, textField_Address2, textField_ContactNo, textField_Email, textField_DocumentNo; // textFields
+var select_BirthdayMonth_Element, select_Gender_Element, select_DocumentType_Element; // selectElements
+var select_BirthdayMonth, select_Gender, select_DocumentType; // selectFields
+var helperText_FirstName, helperText_LastName, helperText_FullName, helperText_Gender, helperText_School, helperText_Address1, helperText_Address2, helperText_ContactNo, helperText_Email, helperText_DocumentNo, helperText_DocumentType, helperText_DocumentUpload;  // helperTexts
+// file upload
+var fileUploadActionButton, fileUpload, fileUploadContainer;
+
+
 export default {
-    
+    data() {
+        return {
+
+        }
+    },
+    methods : {
+        DOBMonth_focusOut : () => {
+            if (select_BirthdayMonth.value === "") {
+                select_BirthdayMonth_Element.classList.add('mdc-select--invalid');
+            }else if(select_BirthdayMonth_Element.classList.contains('mdc-select--invalid')){
+                select_BirthdayMonth_Element.classList.remove('mdc-select--invalid');
+            }else if (select_BirthdayMonth.value !== "") {
+                select_BirthdayMonth_Element.classList.remove('mdc-select--invalid');
+            }
+        },
+        DOBMonth_focusIn : () => {
+            if(select_BirthdayMonth_Element.classList.contains('mdc-select--invalid')){
+                select_BirthdayMonth_Element.classList.remove('mdc-select--invalid');
+            }else if (select_BirthdayMonth.value !== "") {
+                select_BirthdayMonth_Element.classList.remove('mdc-select--invalid');
+            }
+        },
+        Gender_focusOut : () => {
+             if (select_Gender.value === "") {
+                select_Gender_Element.classList.add('mdc-select--invalid');
+            }else if(select_Gender_Element.classList.contains('mdc-select--invalid')){
+                select_Gender_Element.classList.remove('mdc-select--invalid');
+            }else if (select_Gender.value !== "") {
+                select_Gender_Element.classList.remove('mdc-select--invalid');
+            }
+        },
+        Gender_focusIn : () => {
+            if(select_Gender_Element.classList.contains('mdc-select--invalid')){
+                select_Gender_Element.classList.remove('mdc-select--invalid');
+            }else if (select_Gender.value !== "") {
+                select_Gender_Element.classList.remove('mdc-select--invalid');
+            }
+        },
+        DocumentType_focusOut : () => {
+            if (select_DocumentType.value === "") {
+                select_DocumentType_Element.classList.add('mdc-select--invalid');
+            }else if(select_DocumentType_Element.classList.contains('mdc-select--invalid')){
+                select_DocumentType_Element.classList.remove('mdc-select--invalid');
+            }else if (select_DocumentType.value !== "") {
+                select_DocumentType_Element.classList.remove('mdc-select--invalid');
+            }
+        },
+        DocumentType_focusIn : () => {
+            if(select_DocumentType_Element.classList.contains('mdc-select--invalid')){
+                select_DocumentType_Element.classList.remove('mdc-select--invalid');
+            }else if (select_DocumentType.value !== "") {
+                select_DocumentType_Element.classList.remove('mdc-select--invalid');
+            }
+        },
+        FileUploadButton_click : (event) => {
+            event.preventDefault();
+            fileUpload.click();
+        },
+        FileUpload_invalid : (event) => {
+            if (event.target.value == null) {
+                fileUploadContainer.classList.add('file-upload-container--invlid');
+            }else if (fileUploadContainer.classList.contains('file-upload-container--invlid')){
+                fileUploadContainer.classList.remove('file-upload-container--invlid');
+            }
+        },
+        FileUpload_change : (event) => {
+            var fileName = "";
+            if (event.target.value == null) {
+                fileUploadContainer.classList.add('file-upload-container--invlid');
+            }else {
+                if (fileUploadContainer.classList.contains('file-upload-container--invlid')){
+                    fileUploadContainer.classList.remove('file-upload-container--invlid');
+                }
+                fileName = event.target.value.replace('C:\\fakepath\\', '');
+                fileUploadActionButton.style.display = 'none';
+                const container = document.querySelector('#uploaded-file-container-i');
+                var file_container_inner = document.createElement('div');
+                file_container_inner.classList.add('uploaded-file-container-inner');
+
+                var icon_div = document.createElement('div');
+                icon_div.classList.add('icon');
+                var icon_span = document.createElement('span');
+                icon_span.classList.add('material-icons');
+                icon_span.innerText = 'attachment';
+                icon_div.appendChild(icon_span);
+                file_container_inner.appendChild(icon_div);
+
+                var name_div = document.createElement('div');
+                name_div.classList.add('name');
+                var name_div_p = document.createElement('p');
+                name_div_p.innerText = fileName;
+                name_div.appendChild(name_div_p);
+                file_container_inner.appendChild(name_div);
+
+                var del_div = document.createElement('div');
+                del_div.classList.add('delet-icon');
+                var del_div_btn = document.createElement('button');
+                del_div_btn.setAttribute('type','button');
+                del_div_btn.setAttribute('id','upload-cancel-btn');
+                var del_div_btn_span = document.createElement('span');
+                del_div_btn_span.classList.add('material-icons');
+                del_div_btn_span.innerText = 'cancel';
+                del_div_btn.appendChild(del_div_btn_span);
+                del_div.appendChild(del_div_btn);
+                file_container_inner.appendChild(del_div);
+
+                container.appendChild(file_container_inner);
+                document.querySelector('#upload-cancel-btn').addEventListener('click', () => {
+                    fileUploadActionButton.style.display = 'unset';
+                    container.innerHTML = '';
+                    fileUpload.value = null;
+                    fileUploadContainer.classList.add('file-upload-container--invlid');
+                });
+            }
+        }
+    },
+    mounted : () => {
+        textField_FirstName = new MDCTextField(document.querySelector('.text-field-first-name'));
+        textField_LastName = new MDCTextField(document.querySelector('.text-field-last-name'));
+        textField_FullName = new MDCTextField(document.querySelector('.text-field-full-name'));
+        textField_BirthdayDay = new MDCTextField(document.querySelector('.text-field-birthday-day'));
+        textField_BirthdayYear = new MDCTextField(document.querySelector('.text-field-birthday-year'));
+        select_BirthdayMonth_Element = document.querySelector('.singup-form-select-birthday-month');
+        select_BirthdayMonth = new MDCSelect(select_BirthdayMonth_Element);
+
+        select_BirthdayMonth.listen('MDCSelect:change', () => {
+        if (select_BirthdayMonth.value === "") {
+            select_BirthdayMonth_Element.classList.add('mdc-select--invalid');
+        }else if(select_BirthdayMonth_Element.classList.contains('mdc-select--invalid')){
+            select_BirthdayMonth_Element.classList.remove('mdc-select--invalid');
+        }else if (select_BirthdayMonth.value !== "") {
+            select_BirthdayMonth_Element.classList.remove('mdc-select--invalid');
+        }
+        // alert(`Selected option at index ${select_BirthdayMonth.selectedIndex} with value "${select_BirthdayMonth.value}"`);
+        });
+
+        select_Gender_Element = document.querySelector('.singup-form-select-gender');
+        select_Gender= new MDCSelect(select_Gender_Element);
+        select_Gender.listen('MDCSelect:change', () => {
+        if (select_Gender.value === "") {
+            select_Gender_Element.classList.add('mdc-select--invalid');
+        }else if(select_Gender_Element.classList.contains('mdc-select--invalid')){
+            select_Gender_Element.classList.remove('mdc-select--invalid');
+        }else if (select_Gender.value !== "") {
+            select_Gender_Element.classList.remove('mdc-select--invalid');
+        }
+        // alert(`Selected option at index ${select_Gender.selectedIndex} with value "${select_Gender.value}"`);
+        });
+
+        textField_School = new MDCTextField(document.querySelector('.text-field-school'));
+        textField_Address1 = new MDCTextField(document.querySelector('.text-field-address-1'));
+        textField_Address2 = new MDCTextField(document.querySelector('.text-field-address-2'));
+        textField_ContactNo = new MDCTextField(document.querySelector('.text-field-contact-no'));
+        textField_Email = new MDCTextField(document.querySelector('.text-field-email'));
+        textField_DocumentNo = new MDCTextField(document.querySelector('.text-field-document-no'));
+
+        select_DocumentType_Element = document.querySelector('.singup-form-select-document-type');
+        select_DocumentType = new MDCSelect(select_DocumentType_Element);
+        select_DocumentType.listen('MDCSelect:change', () => {
+            if (select_DocumentType.value === "") {
+                select_DocumentType_Element.classList.add('mdc-select--invalid');
+            }else if(select_DocumentType_Element.classList.contains('mdc-select--invalid')){
+                select_DocumentType_Element.classList.remove('mdc-select--invalid');
+            }else if (select_DocumentType.value !== "") {
+                select_DocumentType_Element.classList.remove('mdc-select--invalid');
+            }
+        });
+
+        fileUploadActionButton = document.querySelector('#file-upload-action-button');
+        fileUpload = document.querySelector('#singup-form-file-document');
+        fileUploadContainer = document.querySelector('.file-upload-container');
+
+
+        helperText_FirstName = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-first-name-helper-text'));
+        helperText_LastName = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-last-name-helper-text'));
+        helperText_FullName = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-full-name-helper-text'));
+        helperText_Gender = new MDCTextFieldHelperText(document.querySelector('#singup-form-select-gender-helper-text'));
+        helperText_School = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-school-helper-text'));
+        helperText_Address1 = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-address-1-helper-text'));
+        helperText_Address2 = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-address-2-helper-text'));
+        helperText_ContactNo = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-contact-no-helper-text'));
+        helperText_Email = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-email-helper-text'));
+        helperText_DocumentNo = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-document-no-helper-text'));
+        helperText_DocumentType = new MDCTextFieldHelperText(document.querySelector('#singup-form-select-document-type-helper-text'));
+        helperText_DocumentUpload = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-upload-document-helper-text'));
+    }
 }
 </script>
+

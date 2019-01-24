@@ -20,6 +20,11 @@
 
 import NavDrawerItem from "./NavDrawerItem.vue"
 
+import {MDCList} from "@material/list";
+import {MDCDrawer} from "@material/drawer";
+
+var drawer_list, drawer;
+
 export default {
   components: {
     NavDrawerItem
@@ -92,7 +97,18 @@ export default {
       ]
     };
   },
-  methods: {}
+  methods: {},
+  mounted : () => {
+    drawer_list = MDCList.attachTo(document.querySelector('.mdc-list'));
+    drawer_list.wrapFocus = true;
+
+    drawer = MDCDrawer.attachTo(document.querySelector('#noi-drawer'));
+
+    document.querySelector('.mobile-responsive-button').addEventListener('click', function(){
+      drawer.open = !drawer.open;
+    });
+    
+  }
 };
 
 

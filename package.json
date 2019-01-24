@@ -54,6 +54,7 @@
     "@material/top-app-bar": "^0.43.0",
     "@material/typography": "^0.43.0",
     "autoprefixer": "^9.4.4",
+    "particles.js": "^2.0.0",
     "smooth-scroll": "^15.0.0",
     "smooth-scrolling": "^2.3.11",
     "vue": "^2.5.21",
