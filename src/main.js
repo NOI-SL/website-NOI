@@ -50,21 +50,5 @@ new Vue({
   components: { App }
 })
 
-// DROPDOWN action
-document.querySelector('.mdc-list-item__text__content:not(.dropdown_icon)').addEventListener('click', function (event) {
-  if (event.target.parentElement.className == 'mdc-list-item__content') {
-    event.target.parentElement.className += ' mdc-list-item__content--activated';
-    event.target.childNodes[2].innerText = 'keyboard_arrow_up';
-  }else{
-    if ( event.target.parentElement.className != 'mdc-list-item__text__content') {
-      event.target.parentElement.className = 'mdc-list-item__content';
-    }
-    event.target.childNodes[2].innerText = 'keyboard_arrow_down';
-  }
-});
-
 // smooth scroll
 var scroll = new SmoothScroll('a[href*="#"]');
-
-
-console.log(window.innerHeight);

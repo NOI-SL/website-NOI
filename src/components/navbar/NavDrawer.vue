@@ -99,6 +99,7 @@ export default {
   },
   methods: {},
   mounted : () => {
+    
     drawer_list = MDCList.attachTo(document.querySelector('.mdc-list'));
     drawer_list.wrapFocus = true;
 
@@ -107,6 +108,20 @@ export default {
     document.querySelector('.mobile-responsive-button').addEventListener('click', function(){
       drawer.open = !drawer.open;
     });
+
+    // DROPDOWN action
+    document.querySelector('.mdc-list-item__text__content:not(.dropdown_icon)').addEventListener('click', function (event) {
+      if (event.target.parentElement.className == 'mdc-list-item__content') {
+        event.target.parentElement.className += ' mdc-list-item__content--activated';
+        event.target.childNodes[2].innerText = 'keyboard_arrow_up';
+      }else{
+        if ( event.target.parentElement.className != 'mdc-list-item__text__content') {
+          event.target.parentElement.className = 'mdc-list-item__content';
+        }
+        event.target.childNodes[2].innerText = 'keyboard_arrow_down';
+      }
+    });
+
     
   }
 };

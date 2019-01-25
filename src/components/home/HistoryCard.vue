@@ -1,5 +1,5 @@
 <template>
-  <div class="mdc-card mdc-card--outlined history-card">
+  <div class="mdc-elevation--z2 mdc-card history-card">
     <div
       class="mdc-card__media mdc-card__media--square"
       :class="{'history-card_2016': history.year == 2016,'history-card_2017': history.year == 2017,'history-card_2018': history.year == 2018}"

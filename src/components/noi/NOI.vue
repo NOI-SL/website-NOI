@@ -15,7 +15,7 @@
         <div class="content-inner">
           <div class="heading">
             <p class="heading-text">NOI Programme</p>
-            <p class="desc-text">Timeline of the NOI programme.</p>
+            <p class="desc-text">Stages of the NOI programme.</p>
             <p class="button-container">
               <router-link :to="'/noi/rulesandregulations'"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Rules and Regulations</button></router-link>
               <router-link :to="'/noi/awards'"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Awards</button></router-link>
