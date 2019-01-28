@@ -20,6 +20,11 @@
 
 import NavDrawerItem from "./NavDrawerItem.vue"
 
+import {MDCList} from "@material/list";
+import {MDCDrawer} from "@material/drawer";
+
+var drawer_list, drawer;
+
 export default {
   components: {
     NavDrawerItem
@@ -92,7 +97,33 @@ export default {
       ]
     };
   },
-  methods: {}
+  methods: {},
+  mounted : () => {
+    
+    drawer_list = MDCList.attachTo(document.querySelector('.mdc-list'));
+    drawer_list.wrapFocus = true;
+
+    drawer = MDCDrawer.attachTo(document.querySelector('#noi-drawer'));
+
+    document.querySelector('.mobile-responsive-button').addEventListener('click', function(){
+      drawer.open = !drawer.open;
+    });
+
+    // DROPDOWN action
+    document.querySelector('.mdc-list-item__text__content:not(.dropdown_icon)').addEventListener('click', function (event) {
+      if (event.target.parentElement.className == 'mdc-list-item__content') {
+        event.target.parentElement.className += ' mdc-list-item__content--activated';
+        event.target.childNodes[2].innerText = 'keyboard_arrow_up';
+      }else{
+        if ( event.target.parentElement.className != 'mdc-list-item__text__content') {
+          event.target.parentElement.className = 'mdc-list-item__content';
+        }
+        event.target.childNodes[2].innerText = 'keyboard_arrow_down';
+      }
+    });
+
+    
+  }
 };
 
 

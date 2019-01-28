@@ -22,14 +22,16 @@
 @import "@material/textfield/helper-text/mdc-text-field-helper-text";
 @import "@material/select/mdc-select";
 
-// fontawsom
-// @import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
-// @import "@fortawesome/fontawesome-free/scss/solid.scss";
-// @import "@fortawesome/fontawesome-free/scss/brands.scss";
+.page-background {
+  background-color: $theme-white-primary-bg;
+}
 
 @import "./custom_mixin";
+@import "./page_home";
+@import "./page_news";
 @import "./page_noi";
 @import "./page_noi_awards";
+@import "./page_noi_rules";
 @import "./page_ioi";
 @import "./page_resources";
 @import "./page_about";
@@ -38,11 +40,6 @@
 @import "./page_singup_response";
 @import "./cfooter";
 
-
-// fontawsom
-// @import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
-// @import "@fortawesome/fontawesome-free/scss/solid.scss";
-// @import "@fortawesome/fontawesome-free/scss/brands.scss";
 
 * {
   margin: 0;

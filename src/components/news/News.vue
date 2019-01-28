@@ -1,6 +1,8 @@
 <template>
-  <div class="container main-section about">
-    <h1>News -> blog</h1>
+  <div class="container-flud main-section about" id="page-news">
+    <section id="section-1">
+      <div class="content"></div>
+    </section>
   </div>
 </template>
 
