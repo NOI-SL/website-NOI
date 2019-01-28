@@ -1,0 +1,10 @@
+#page-news {
+    
+    @extend .page-background;
+
+    #section-1 {
+        .content {
+            height: 100vh;
+        }
+    }
+}

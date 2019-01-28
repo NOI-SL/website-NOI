@@ -1,0 +1,175 @@
+#page-noi-awards {
+
+    @extend .page-background;
+
+    .back-style {
+        height: 100vh;
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        background-color: $mdc-theme-primary;
+    }
+
+    #section-1 {
+        position: relative;
+        .back {
+            @extend .back-style;
+            // -webkit-clip-path: polygon(0 0, 100% 0%, 19% 28%, 0 100%);
+            // clip-path: polygon(0 0, 100% 0%, 19% 28%, 0 100%);
+            -webkit-clip-path: polygon(0 0, 100% 0%, 15% 40%, 0 100%);
+            clip-path: polygon(0 0, 100% 0%, 15% 40%, 0 100%);
+            height: 100%;
+        }
+
+        .content {
+            height: auto;
+            padding-top: 100px;
+            position: relative;
+            z-index: 1;
+
+            .heading {
+                padding-left: 2em;
+                .heading-text {
+                    font-size: 2em;
+                    color: $theme-white-primary;
+                }
+                .desc {
+                    color: $mdc-theme-color-1;
+                    max-width: 550px;
+
+                    @include width841Max {
+                        max-width: 400px;
+                    }
+
+                    @include width713Max {
+                        max-width: 350px;
+                    }
+
+                    @include width520Max {
+                        max-width: 290px;
+                    }
+
+                    @include width450Max {
+                        max-width: 220px;
+                    }
+                }
+            }
+
+            .awards-detail-container {
+                padding: 70px 0 0 0;
+
+
+                .awards-detail-container-inner {
+                    display: grid;
+                    grid-template-areas: 'cat-1 cat-2';
+                    grid-template-columns: 50% auto;
+                    grid-column-gap: 100px;
+
+                    @include backChangeMaxWidth {
+                        display: unset;
+                    }
+
+                    .award-cat-1 {
+                        @include backChangeMaxWidth {
+                            margin-bottom: 50px;
+                        }
+                    }
+
+                    .demo-card__primary, .demo-card__secondary {
+                        padding: 1em;
+                    }
+
+                    .demo-card__primary {
+                        text-align: center;
+                        background-color: $theme-white-primary-dark;
+                    }
+
+                    .award-cat-1 {
+                        grid-area: cat-1;
+                    }
+
+                    .award-cat-2 {
+                        grid-area: cat-2;
+                    }
+
+                    .demo-card {
+                        max-width: 500px;
+                        margin: auto;
+                        overflow: hidden;
+                    }
+
+                    ul {
+                        list-style: none;
+                        li{
+                            display: grid;
+                            grid-template-columns: 40px auto;
+                            margin-bottom: 10px;
+
+                            span:first-child{
+                                color: $mdc-theme-primary;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .spacial-awards-detail-container {
+                padding-top: 50px;
+                .spacial-awards-detail-container-inner {
+                    .demo-card__primary, .demo-card__secondary {
+                        padding: 1em;
+                    }
+                    .demo-card__primary {
+                        text-align: center;
+                        background-color: $mdc-theme-primary-dark;
+                    }
+                    .demo-card {
+                        max-width: 500px;
+                        margin: auto;
+                        overflow: hidden;
+                        background-color: $mdc-theme-primary;
+                        color:$theme-white-primary;
+                    }
+                    ul {
+                        list-style: none;
+                        li{
+                            display: grid;
+                            grid-template-columns: 40px auto;
+                            margin-bottom: 10px;
+
+                            span:first-child{
+                                color: $mdc-theme-secondary;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .team-select {
+                padding-top: 50px;
+                .team-select-inner {
+                    .demo-card__primary, .demo-card__secondary {
+                        padding: 1em;
+                    }
+
+                    .demo-card {
+                        max-width: 800px;
+                        margin: auto;
+                        overflow: hidden;
+                        background-color: $mdc-theme-primary;
+                        color:$theme-white-primary;
+                    }
+
+                    .demo-card__primary {
+                        text-align: center;
+                        background-color: $mdc-theme-primary-dark;
+                    }
+                    .demo-card__secondary a {
+                        color: $theme-white-primary;
+                    }
+                }
+            }
+        }
+    }
+}

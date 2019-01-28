@@ -1,0 +1,130 @@
+<template>
+    <aside id="noi-drawer" class="mdc-drawer mdc-drawer--modal">
+        <div class="mdc-drawer__content"> <!-- for open mdc-drawer--open -->
+            <nav class="mdc-list">
+                <nav-drawer-item
+                
+                    v-for="nav in navs"
+                    :key="nav.id"
+                    :nav="nav"
+                    :isSelected="nav.route == $route.path"
+                    :dropDowns="dropDowns"
+                
+                />
+            </nav>
+        </div>
+    </aside>
+</template>
+
+<script>
+
+import NavDrawerItem from "./NavDrawerItem.vue"
+
+import {MDCList} from "@material/list";
+import {MDCDrawer} from "@material/drawer";
+
+var drawer_list, drawer;
+
+export default {
+  components: {
+    NavDrawerItem
+  },
+  data() {
+    return {
+      navs: [
+        {
+          id: 0,
+          icon: "",
+          route: "/",
+          text: "Home"
+        },
+        {
+          id: 1,
+          icon: "",
+          route: "/noi",
+          text: "NOI Programme"
+        },
+        {
+          id: 2,
+          icon: "",
+          route: "/news",
+          text: "News"
+        },
+        {
+          id: 3,
+          icon: "",
+          route: "/resources",
+          text: "Resources"
+        },
+        {
+          id:4,
+          icon:"",
+          route:"/ioi",
+          text:"IOI"
+        },
+        {
+          id:5,
+          icon:"",
+          route:"/about",
+          text:"About"
+        },
+        {
+          id:6,
+          icon:"",
+          route:"/contact",
+          text:"Contact"
+        }
+      ],
+      dropDowns: [
+          {
+              id: 0,
+              dropDownFor: 1,
+              dropDownItems : [
+                  {
+                    id: 0,
+                    icon: "",
+                    route: "/noi/rulesandregulations",
+                    text: "Rules and regulations"
+                  },
+                  {
+                    id: 1,
+                    icon: "",
+                    route: "/noi/awards",
+                    text: "Awards"
+                  }
+              ]
+          }
+      ]
+    };
+  },
+  methods: {},
+  mounted : () => {
+    
+    drawer_list = MDCList.attachTo(document.querySelector('.mdc-list'));
+    drawer_list.wrapFocus = true;
+
+    drawer = MDCDrawer.attachTo(document.querySelector('#noi-drawer'));
+
+    document.querySelector('.mobile-responsive-button').addEventListener('click', function(){
+      drawer.open = !drawer.open;
+    });
+
+    // DROPDOWN action
+    document.querySelector('.mdc-list-item__text__content:not(.dropdown_icon)').addEventListener('click', function (event) {
+      if (event.target.parentElement.className == 'mdc-list-item__content') {
+        event.target.parentElement.className += ' mdc-list-item__content--activated';
+        event.target.childNodes[2].innerText = 'keyboard_arrow_up';
+      }else{
+        if ( event.target.parentElement.className != 'mdc-list-item__text__content') {
+          event.target.parentElement.className = 'mdc-list-item__content';
+        }
+        event.target.childNodes[2].innerText = 'keyboard_arrow_down';
+      }
+    });
+
+    
+  }
+};
+
+
+</script>

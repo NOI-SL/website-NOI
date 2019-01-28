@@ -1,0 +1,246 @@
+#resources {
+
+    @extend .page-background;
+
+    .back-style {
+        height: 100vh;
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        background-color: $mdc-theme-primary;
+    }
+
+    #section-1 {
+
+        position: relative;
+
+        .back {
+            @extend .back-style;
+            min-height: 800px;
+
+            // -webkit-clip-path: polygon(71% 0, 0 0, 0 100%, 100% 100%, 100% 66%, 92% 92%, 67% 100%, 33% 100%);
+            // clip-path: polygon(71% 0, 0 0, 0 100%, 100% 100%, 100% 66%, 92% 92%, 71% 100%, 33% 100%);
+
+            -webkit-clip-path: polygon(0 0, 90% 0, 59% 100%, 0% 100%);
+            clip-path: polygon(0 0, 90% 0, 59% 100%, 0% 100%);
+
+            @include backChangeMaxWidth {
+                // -webkit-clip-path: polygon(100% 0, 100% 47%, 0 68%, 0 53%, 0 0);
+                // clip-path: polygon(100% 0, 100% 47%, 0 68%, 0 53%, 0 0);
+
+                // -webkit-clip-path: polygon(100% 47%, 100% 0, 0 0, 0 47%, 0 100%, 0 100%, 100% 74%, 0 100%, 100% 100%, 100% 79%, 0 100%, 0 68%);
+                // clip-path: polygon(100% 47%, 100% 0, 0 0, 0 47%, 0 100%, 0 100%, 100% 74%, 0 100%, 100% 100%, 100% 79%, 0 100%, 0 68%);
+                
+                -webkit-clip-path: polygon(100% 47%, 100% 0, 0 0, 0 47%, 0 100%, 100% 85%, 38% 100%, 38% 100%, 100% 100%, 100% 85%, 0 100%, 0 68%);
+                clip-path: polygon(100% 47%, 100% 0, 0 0, 0 47%, 0 100%, 100% 85%, 38% 100%, 38% 100%, 100% 100%, 100% 85%, 0 100%, 0 68%);
+                height: 100%;
+            } 
+
+        }
+
+        .content {
+            // height: 100vh;
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+            'heading'
+            'resources';
+            padding-top: 65px;
+            min-height: 800px;
+            z-index: 1;
+
+            @include backChangeMinWidth {
+                grid-template-columns: 40% auto;
+                grid-template-areas: 
+                'heading resources';
+                height: 100vh;
+                justify-content: center;
+            }
+
+            
+
+            .heading-content {
+                grid-area: heading;
+                min-height: 300px;
+
+                .heading-content-inner {
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: $theme-white-primary;
+                    text-align: center;
+
+                    .heading {
+                        font-size: 2em;
+                        font-weight: bold;
+                    }
+
+                    .desc {
+                        font-size: 1em;
+                        color: $mdc-theme-color-1;
+                        font-weight: lighter;
+                    }
+                }
+            }
+
+            .resources-content {
+                grid-area: resources;
+                justify-content: center;
+                z-index: 1;
+
+                .resources-content-inner {
+
+                    @include backChangeMinWidth {
+                        position: relative;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+
+                        @include width642Min {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                        }
+
+                        @include backChangeMinWidth {
+                            display: unset;
+                            grid-template-columns:unset;
+                            position: relative;
+
+                            position: relative;
+                            top: 50%;
+                            transform: translateY(-50%);
+
+                        }
+
+                        li {
+                            padding: 0 5px 0 5px;
+                            margin-bottom: 10px;
+
+                            .demo-card__primary {
+                                padding: 1rem;
+                            } 
+
+                            .demo-card__subtitle {
+                                color: $theme-white-secondary-2;
+                            }
+        
+                            .demo-card__secondary {
+                                padding: 0 1rem 8px;
+                                color: $theme-white-secondary;
+                            }
+
+                        }
+
+
+
+                        li:nth-child(1) {
+
+                            @include backChangeMinWidth {
+                                padding-left: 215px;
+                                padding-right: 10%;
+                            }
+                            
+                        }
+
+                        li:nth-child(2) {
+
+                            @include backChangeMinWidth {
+                                padding-left: 125px;
+                                padding-right: 15%;
+                            }
+                        }
+
+                        li:nth-child(3) {
+
+                            @include backChangeMinWidth {
+                                padding-left:  40px;
+                                padding-right: 20%;
+                            }
+                        }
+
+                        li:nth-child(4) {
+                            @include backChangeMinWidth {
+                                margin-left: -30px;
+                                padding-right: 25%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #section-2 {
+        position: relative;
+        .back {
+            @extend .back-style;
+            -webkit-clip-path: polygon(100% 0, 100% 100%, 38% 0);
+            clip-path: polygon(100% 0, 100% 100%, 38% 0);
+            min-height: 500px;
+        }
+
+        .content {
+            height: 100vh;
+            padding: 0 5px 0 5px;
+            min-height: 500px;
+
+            .video-container {
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 600px;
+
+                .mdc-card__media--16-9::before {
+                    margin: 0;
+                }
+
+                .demo-card__secondary, .demo-card__primary {
+                    padding: 1em;
+                }
+
+                .demo-card__secondary {
+                    color: $theme-white-secondary;
+                }
+
+                .demo-card__subtitle {
+                    color: $theme-white-secondary-2;
+                }
+            }
+        }
+    }
+
+    #section-3 {
+        .content {
+            height: auto;
+            padding-bottom: 10px;
+            margin-bottom: 0;
+
+            .platforms {
+                max-width: 600px;
+                padding: 0 5px 0 5px;
+                margin: auto;
+
+                @include backChangeMinWidth {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    max-width: 900px;
+                    grid-column-gap: 20%;
+                }
+
+                .platform-items {
+                    margin-bottom: 10px;
+
+                    .demo-card__secondary, .demo-card__primary {
+                        padding: 1em;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+- "lts/*"
+branches:
+  only:
+  - master
+  # - develop
+script:
+- if [ "$TRAVIS_BRANCH" == "master" ]; then npm run build; else npm run build; fi
+deploy:
+- provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: dist
+  repo: SLIOI/slioi.github.io
+  target-branch: noi_deploy
+  verbose: true
+  on:
+    repo: SLIOI/website-NOI
+    branch: master
+# - provider: pages
+#   skip-cleanup: true
+#   github-token: $GITHUB_TOKEN
+#   keep-history: true
+#   local-dir: dist
+#   verbose: true
+#   on:
+#     repo: SLIOI/website
+#     branch: develop
