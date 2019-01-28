@@ -1,5 +1,7 @@
 #page-singup-response {
-    background-color: $theme-white-primary-bg;
+    
+    @extend .page-background;
+    
     #section-1 {
         .content {
             height: 100vh;

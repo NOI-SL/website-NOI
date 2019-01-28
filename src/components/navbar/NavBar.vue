@@ -51,6 +51,8 @@
 <script>
 import NavBarItem from "./NavBarItem.vue";
 
+import {MDCRipple} from '@material/ripple';
+
 export default {
   components: {
     NavBarItem
@@ -103,6 +105,9 @@ export default {
       ]
     };
   },
-  methods: {}
+  methods: {},
+  mounted : () => {
+    const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
+  }
 };
 </script>

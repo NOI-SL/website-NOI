@@ -22,11 +22,16 @@
 @import "@material/textfield/helper-text/mdc-text-field-helper-text";
 @import "@material/select/mdc-select";
 
+.page-background {
+  background-color: $theme-white-primary-bg;
+}
+
 @import "./custom_mixin";
 @import "./page_home";
 @import "./page_news";
 @import "./page_noi";
 @import "./page_noi_awards";
+@import "./page_noi_rules";
 @import "./page_ioi";
 @import "./page_resources";
 @import "./page_about";

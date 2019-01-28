@@ -1,6 +1,6 @@
 #page-about {
 
-    background-color: $theme-white-primary-bg;
+    @extend .page-background;
 
     .back-style {
         height: 100vh;

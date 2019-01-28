@@ -376,6 +376,7 @@
 import {MDCTextField} from '@material/textfield';
 import {MDCTextFieldHelperText} from '@material/textfield/helper-text';
 import {MDCSelect} from '@material/select';
+import {MDCRipple} from '@material/ripple';
 
 var textField_FirstName,textField_LastName,textField_FullName,textField_BirthdayDay,textField_BirthdayYear, textField_School, textField_Address1, textField_Address2, textField_ContactNo, textField_Email, textField_DocumentNo; // textFields
 var select_BirthdayMonth_Element, select_Gender_Element, select_DocumentType_Element; // selectElements
@@ -571,6 +572,8 @@ export default {
         helperText_DocumentNo = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-document-no-helper-text'));
         helperText_DocumentType = new MDCTextFieldHelperText(document.querySelector('#singup-form-select-document-type-helper-text'));
         helperText_DocumentUpload = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-upload-document-helper-text'));
+    
+        const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
     }
 }
 </script>

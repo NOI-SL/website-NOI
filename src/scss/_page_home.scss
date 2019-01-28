@@ -1,5 +1,6 @@
 #page-home {
-    background-color: $theme-white-primary-bg;
+    
+    @extend .page-background;
 
     .back-style {
         height: 100vh;
@@ -303,7 +304,9 @@
     }
 
     #section-4 {
-
+        margin-bottom: -200px;
+        position: relative;
+        z-index: 1;
         .content {
             height: auto;
             padding-top: 100px;

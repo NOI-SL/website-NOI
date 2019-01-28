@@ -1,5 +1,7 @@
 #page-singup {
-    background-color: $theme-white-primary-bg;
+   
+    @extend .page-background;
+
     #section-1 {
 
         // .back {

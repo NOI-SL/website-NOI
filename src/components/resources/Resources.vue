@@ -167,8 +167,13 @@
 </template>
 
 <script>
+import {MDCRipple} from '@material/ripple';
+
 export default {
   components: {
+  },
+  mounted : () => {
+    const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
   }
 };
 </script>
