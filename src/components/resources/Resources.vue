@@ -2,7 +2,7 @@
   <div class="container-flud main-section about" id="resources">
     <section id="section-1">
       <div class="back"></div>
-      <div class="content">
+      <div class="content">  
         <div class="heading-content">
           <div class="heading-content-inner">
             <p class="heading">Resources</p>
@@ -25,7 +25,7 @@
                   </div>
                   <div class="mdc-card__actions">
                     <div class="mdc-card__action-buttons">
-                      <a href=""><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Read</button></a>
+                      <a v-bind:href="item['competitive-programming-hand-book'].loc"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Read</button></a>
                     </div>
                   </div>
                 </div>
@@ -61,7 +61,7 @@
                   </div>
                   <div class="mdc-card__actions">
                     <div class="mdc-card__action-buttons">
-                      <a href=""><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">read</button></a>
+                      <a v-bind:href="item['ioi-syllabus'].loc"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">read</button></a>
                     </div>
                   </div>
                 </div>
@@ -172,8 +172,24 @@ import {MDCRipple} from '@material/ripple';
 export default {
   components: {
   },
+  data () {
+    return {
+      item: {
+        'competitive-programming-hand-book' : {
+          title: 'competitive-programming-hand-book', 
+          loc: require('../../resources_documents/competitive-programming-hand-book/competitive-programming-hand-book.pdf')
+        },
+        'ioi-syllabus' : {
+          title: 'ioi-syllabus',
+          loc: require('../../resources_documents/ioi-syllabus/ioi-syllabus.pdf')
+        }
+      }
+    };
+  },
   mounted : () => {
     const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
+
+    
   }
 };
 </script>
