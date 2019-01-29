@@ -183,13 +183,13 @@
             @extend .back-style;
             -webkit-clip-path: polygon(100% 0, 100% 100%, 38% 0);
             clip-path: polygon(100% 0, 100% 100%, 38% 0);
-            min-height: 574px;
+            min-height: 605px;
         }
 
         .content {
             height: 100vh;
             padding: 0 5px 0 5px;
-            min-height: 574px;
+            min-height: 605px;
 
             .video-container {
                 position: relative;
