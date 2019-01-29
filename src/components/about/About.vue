@@ -8,7 +8,7 @@
             <div class="org-container">
               <div class="mdc-card demo-card demo-card--hero">
                 <div class="mdc-card__primary-action mdc-ripple-upgraded" tabindex="0">
-                  <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" style="background-image: url('../../img/acm_ucsc.png');"></div>
+                  <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" id="org-by"></div>
                   <div class="demo-card__primary">
                     <h2 class="demo-card__title mdc-typography--headline6">Organized by</h2>
                     <!-- <h3 class="demo-card__subtitle mdc-typography--subtitle2">by Codearchery</h3> -->
@@ -29,13 +29,13 @@
             <div class="sp-container">
               <div class="mdc-card demo-card demo-card--hero">
                 <div class="mdc-card__primary-action mdc-ripple-upgraded" tabindex="0">
-                  <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" style="background-image: url('../../img/oDoc-logo.png');"></div>
+                  <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" id="spo-by" ></div>
                   <div class="demo-card__primary">
                     <h2 class="demo-card__title mdc-typography--headline6">Sponsored by</h2>
                     <!-- <h3 class="demo-card__subtitle mdc-typography--subtitle2">by Codearchery</h3> -->
                   </div>
                   <div class="demo-card__secondary mdc-typography--body2">
-                    <p class="text">oDoc is the sole sponsor for IOI 2019 program.</p>
+                    <p class="text">oDoc is the sole sponsor for NOI 2019 program.</p>
                   </div>
                 </div>
                 <!-- <div class="mdc-card__actions">

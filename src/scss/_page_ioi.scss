@@ -153,7 +153,7 @@
     }
 
     #section-2 {
-
+        overflow-x: hidden;
         .back {
             @extend .back-style;
             // -webkit-clip-path: polygon(100% 0, 71% 0, 33% 100%, 100% 100%);
@@ -390,14 +390,14 @@
             -webkit-clip-path: polygon(100% 0, 100% 50%, 86% 22%, 19% 22%, 0 0);
             clip-path: polygon(100% 0, 100% 50%, 86% 22%, 19% 22%, 0 0);
             @extend .back-style;
-            min-height: 700px;
+            // min-height: 700px;
 
         }
 
         .content {
             padding-top: 90px;
             height: auto;
-            min-height: 700px;
+            // min-height: 700px;
 
             .content-text-1 {
                 display: grid;
@@ -420,6 +420,10 @@
                 @include backChangeMinWidth {
                     font-size: 1.2em;
                     max-width: 600px;
+                }
+
+                @include backChangeMaxWidth {
+                    margin-top: -130px;
                 }
             }
 
@@ -450,7 +454,9 @@
     }
 
     #section-4 {
-
+        position: relative;
+        margin-bottom: -100px;
+        z-index: 1;
         .back{
             
             -webkit-clip-path: polygon(0 0, 80% 16%, 100% 75%, 52% 75%, 36% 100%, 0 75%);

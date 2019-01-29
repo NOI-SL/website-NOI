@@ -79,6 +79,8 @@
                         font-size: 1em;
                         color: $mdc-theme-color-1;
                         font-weight: lighter;
+                        padding-left: 5px;
+                        padding-right: 5px;
                     }
                 }
             }
@@ -181,13 +183,13 @@
             @extend .back-style;
             -webkit-clip-path: polygon(100% 0, 100% 100%, 38% 0);
             clip-path: polygon(100% 0, 100% 100%, 38% 0);
-            min-height: 500px;
+            min-height: 574px;
         }
 
         .content {
             height: 100vh;
             padding: 0 5px 0 5px;
-            min-height: 500px;
+            min-height: 574px;
 
             .video-container {
                 position: relative;
@@ -216,14 +218,25 @@
     }
 
     #section-3 {
+        margin-bottom: -100px;
+        position: relative;
+        z-index: 1;
         .content {
             height: auto;
             padding-bottom: 10px;
             margin-bottom: 0;
+            padding: 0 5px 0 5px;
+
+            #hackerrank {
+                background-image: url('../img/platforms/hackerrank-.png');
+            }
+
+            #codeforces {
+                background-image: url('../img/platforms/codeforces-.png');
+            }
 
             .platforms {
                 max-width: 600px;
-                padding: 0 5px 0 5px;
                 margin: auto;
 
                 @include backChangeMinWidth {

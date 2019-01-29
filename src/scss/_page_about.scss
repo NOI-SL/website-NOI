@@ -290,7 +290,9 @@
     }
 
     #section-3 {
-
+        position: relative;
+        margin-bottom: -100px;
+        z-index: 1;
         .back {
             @extend .back-style;
             // -webkit-clip-path: polygon(51% 0, 0 0, 0 25%);
@@ -303,13 +305,13 @@
             // clip-path: polygon(51% 0%, 10% 19%, 100% 82%, 51% 100%, 0 84%, 0 66%, 0 0);
 
             -webkit-clip-path: polygon(0 0, 51% 0, 10% 19%, 100% 81%, 23% 69%, 0 100%, 0% 51%);
-clip-path: polygon(0 0, 51% 0, 10% 19%, 100% 81%, 23% 69%, 0 100%, 0% 51%);
+            clip-path: polygon(0 0, 51% 0, 10% 19%, 100% 81%, 23% 69%, 0 100%, 0% 51%);
 
             @include backChangeMaxWidth {
 //                 -webkit-clip-path: polygon(51% 0, 10% 19%, 28% 9%, 100% 10%, 0 68%, 0 0);
 // clip-path: polygon(51% 0, 10% 19%, 28% 9%, 100% 10%, 0 68%, 0 0);
--webkit-clip-path: polygon(51% 0, 10% 19%, 51% 0, 100% 10%, 0 68%, 0 0);
-clip-path: polygon(51% 0, 10% 19%, 51% 0, 100% 10%, 0 68%, 0 0);
+                -webkit-clip-path: polygon(51% 0, 10% 19%, 51% 0, 100% 10%, 0 68%, 0 0);
+                clip-path: polygon(51% 0, 10% 19%, 51% 0, 100% 10%, 0 68%, 0 0);
             }
         }
 
