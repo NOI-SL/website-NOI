@@ -11,6 +11,12 @@
                     :dropDowns="dropDowns"
                 
                 />
+                <router-link :to="buttons[0].route" class="mdc-list-item">
+                  <button class="mdc-button mdc-button--raised reg-button" tabindex="0">
+                    <span class="material-icons mdc-button__icon" aria-hidden="true">person</span>
+                    <span>Sign up</span>
+                  </button>
+                </router-link>
             </nav>
         </div>
     </aside>
@@ -94,6 +100,14 @@ export default {
                   }
               ]
           }
+      ],
+      buttons : [
+          {
+            id: 0,
+            icon: "",
+            route: "/singup",
+            text: "Home"
+          }
       ]
     };
   },
@@ -122,7 +136,8 @@ export default {
       }
     });
 
-    
+    const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
+
   }
 };
 
