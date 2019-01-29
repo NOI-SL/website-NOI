@@ -13,7 +13,7 @@ deploy:
   github-token: $GITHUB_TOKEN
   keep-history: true
   local-dir: dist
-  repo: SLIOI/slioi.github.io
+  repo: SLIOI/noi.github.io
   target-branch: noi_deploy
   verbose: true
   on:
