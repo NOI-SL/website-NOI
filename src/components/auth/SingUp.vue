@@ -6,7 +6,7 @@
                 <div class="container">
                     <div class="mdc-elevation--z2 singup-form-container">
                         <div class="heading">
-                            <p class="heading-text">Sing Up</p>
+                            <p class="heading-text">Sign Up</p>
                         </div>
                         <div class="desc">
                             <p class="desc-text">Sign up for the National Olympiad in Informatics program.</p>
