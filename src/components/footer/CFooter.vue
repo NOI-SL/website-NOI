@@ -8,13 +8,13 @@
                 <div class="social-links">
                     <ul>
                         <li>
-                            <a href="https://www.facebook.com/srilankaioi/"><div class="link"><img src="../../img/social-media-icons/facebook.svg" alt=""></div></a>
+                            <a href="https://www.facebook.com/noisrilanka/"><div class="link"><img src="../../img/social-media-icons/facebook.svg" alt=""></div></a>
                         </li>
                         <li>
-                            <a href=""><div class="link"><img class="img-responsive" src="../../img/social-media-icons/youtube.svg" alt=""></div></a>
+                            <a href="https://www.youtube.com/channel/UC2RgFroDzxQwKLKV5pH1dMQ"><div class="link"><img class="img-responsive" src="../../img/social-media-icons/youtube.svg" alt=""></div></a>
                         </li>
                         <li>
-                            <a href=""><div class="link"><img class="img-responsive" src="../../img/social-media-icons/twitter.svg" alt=""></div></a>
+                            <a href="https://twitter.com/NOISL4"><div class="link"><img class="img-responsive" src="../../img/social-media-icons/twitter.svg" alt=""></div></a>
                         </li>
                     </ul>
                 </div>
