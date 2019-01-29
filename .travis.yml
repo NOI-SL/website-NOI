@@ -14,7 +14,7 @@ deploy:
   keep-history: true
   local-dir: dist
   repo: SLIOI/noi.github.io
-  target-branch: noi_deploy
+  target-branch: master
   verbose: true
   on:
     repo: SLIOI/website-NOI
