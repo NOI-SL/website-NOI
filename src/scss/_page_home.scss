@@ -14,6 +14,7 @@
 
         .back {
             @extend .back-style;
+            min-height: 665px;
             // -webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
             // clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
             -webkit-clip-path: polygon(0 0, 100% 0, 100% 38%, 65% 100%, 0 100%);
@@ -32,6 +33,7 @@
             height: 100vh;
             position: relative;
             z-index: 2;
+            min-height: 665px;
 
             .content-inner {
                 display: grid;
@@ -117,6 +119,7 @@
 
         .back {
             @extend .back-style;
+            min-height: 640px;
             // -webkit-clip-path: polygon(0 0, 100% 0, 0 4%);
             // clip-path: polygon(0 0, 65% 0, 0 4%);
 
@@ -133,9 +136,31 @@
 
         .content {
             height: 100vh;
+            min-height: 640px;
             @include  width-change-max-width(1090px) {
                 height: auto;
                 padding-bottom: 40px;
+            }
+
+            .history-card {
+                margin-top: 16px;
+                border-radius: 8px;
+            }
+              
+            .history-card_2016 {
+                background-image: url("../img/team-2016.png");
+            }
+            
+            .history-card_2017 {
+                background-image: url("../img/team-2017.png");
+            }
+            
+            .history-card_2018 {
+                background-image: url("../img/team-2018.png");
+            }
+            
+            .history-card_content {
+                padding: 16px;
             }
 
             .heading {
@@ -281,8 +306,12 @@
                     .noted-text {
                         color: $mdc-theme-secondary;
                         text-align: center;
-                        margin-top: 30px;
                         font-size: 1em;
+                        border: 1px solid $mdc-theme-secondary;
+                        padding: 5px;
+                        margin: 30px auto 0 auto;
+                        max-width: 650px;
+                        border-radius: 4px;
                     }
                 }
     

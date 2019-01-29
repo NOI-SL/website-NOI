@@ -153,6 +153,11 @@ a {
   .mdc-list-item {
     height: auto;
     min-height: 40px;
+
+    .reg-button {
+      width: 100%;
+    }
+    
   }
   .mdc-list-item__content {
     width: 100%;
@@ -201,27 +206,6 @@ a {
   margin-top: 0;
 }
 
-/* Home */
-.history-card {
-  margin-top: 16px;
-  border-radius: 8px;
-}
-
-.history-card_2016 {
-  background-image: url("../img/team-2016.png");
-}
-
-.history-card_2017 {
-  background-image: url("../img/team-2017.png");
-}
-
-.history-card_2018 {
-  background-image: url("../img/team-2018.png");
-}
-
-.history-card_content {
-  padding: 16px;
-}
 
 /* Gallery */
 .gallery {
@@ -238,4 +222,12 @@ a {
 
 .gallery-section h2 {
   margin-bottom: 18px;
+}
+
+#org-by {
+  background-image: url('../img/acm_ucsc.png');
+}
+
+#spo-by {
+  background-image: url('../img/oDoc-logo.png');
 }
