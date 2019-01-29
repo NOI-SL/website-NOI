@@ -137,7 +137,7 @@
               </div>
               <div class="mdc-card__actions">
                 <div class="mdc-card__action-buttons">
-                  <a target="_blank" href=""><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Website</button></a>
+                  <a target="_blank" href="https://www.hackerrank.com"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Website</button></a>
                 </div>
               </div>
             </div>
@@ -155,7 +155,7 @@
               </div>
               <div class="mdc-card__actions">
                 <div class="mdc-card__action-buttons">
-                  <a target="_blank" href=""><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Website</button></a>
+                  <a target="_blank" href="https://codeforces.com"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Website</button></a>
                 </div>
               </div>
             </div>
