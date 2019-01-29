@@ -36,7 +36,7 @@
                 <router-link :to="'singup'">
                   <button class="mdc-button mdc-button--raised reg-button" tabindex="0">
                     <span class="material-icons mdc-button__icon" aria-hidden="true">person</span>
-                    <span>Sing up</span>
+                    <span>Sign up</span>
                   </button>
                 </router-link>
               </div>

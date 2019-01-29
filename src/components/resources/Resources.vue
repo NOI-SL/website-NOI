@@ -127,7 +127,7 @@
           <div class="platform-items">
             <div class="mdc-card demo-card demo-card--hero">
               <div class="mdc-card__primary-action mdc-ripple-upgraded" tabindex="0">
-                <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" style="background-image: url('../../img/platforms/hackerrank-.png');"></div>
+                <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" id="hackerrank"></div>
                 <div class="demo-card__primary">
                   <h2 class="demo-card__title mdc-typography--headline6">Hackerrank platform</h2>
                   <!-- <h3 class="demo-card__subtitle mdc-typography--subtitle2">by Codearchery</h3> -->
@@ -145,7 +145,7 @@
           <div class="platform-items">
             <div class="mdc-card demo-card demo-card--hero">
               <div class="mdc-card__primary-action mdc-ripple-upgraded" tabindex="0">
-                <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" style="background-image: url('../../img/platforms/codeforces-.png');"></div>
+                <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" id="codeforces"></div>
                 <div class="demo-card__primary">
                   <h2 class="demo-card__title mdc-typography--headline6">Codeforces platform</h2>
                   <!-- <h3 class="demo-card__subtitle mdc-typography--subtitle2">by Codearchery</h3> -->
