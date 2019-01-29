@@ -3,10 +3,9 @@
     @extend .page-background;
 
     #section-1 {
-
-        // .back {
-
-        // }
+        position: relative;
+        margin-bottom: -100px;
+        z-index: 1;
 
         .content {
             height: auto;
@@ -112,6 +111,11 @@
 
                             .label-text {
                                 grid-area: lb;
+
+                                @include width568max { 
+                                    padding-bottom: 5px;
+                                }
+
                                 p {
                                     width: 100%;
                                     position: relative;
@@ -203,9 +207,10 @@
                             grid-template-columns: 100px auto; 
 
                             @include width568max {
-                                grid-template-areas: 'lb''fields';
-                                grid-template-columns:unset;
-                                grid-row-gap: 5px;
+                                // grid-template-areas: 'lb''fields';
+                                // grid-template-columns:unset;
+                                // grid-row-gap: 5px;
+                                display: unset;
                             }
                             .label-text {
                                 grid-area: lb;
@@ -214,6 +219,7 @@
                                     padding-top: 1em;
                                     @include width568max {
                                         padding-top: 0;
+                                        padding-bottom: 5px;
                                     }
                                 }
                             }
@@ -262,16 +268,17 @@
 
                                 .uploaded-file-container {
                                     height: 100%;
+                                    position: relative;
 
                                     #singup-form-file-document {
                                         display: none;
                                     }
 
                                     #file-upload-action-button {
-                                        position: relative;
+                                        position: absolute;
                                         top: 50%;
-                                        left: 50%;
-                                        transform: translate(-50%,-50%);
+                                        transform: translateY(-50%);
+                                        width: 100%;
                                         .mdc-button__label {
                                             &::after {
                                                 content: "*";
