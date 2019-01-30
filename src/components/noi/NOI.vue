@@ -14,8 +14,8 @@
         <div class="content-back-small"></div>
         <div class="content-inner">
           <div class="heading">
-            <p class="heading-text">NOI Programme</p>
-            <p class="desc-text">Stages of the NOI programme.</p>
+            <p class="heading-text">NOI 2019 <small>powered by oDoc</small></p>
+            <p class="desc-text">Stages of the NOI 2019 program</p>
             <p class="button-container">
               <router-link :to="'/noi/rulesandregulations'"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Rules and Regulations</button></router-link>
               <router-link :to="'/noi/awards'"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Awards</button></router-link>
@@ -50,10 +50,10 @@
                         </div>
                         <div class="demo-card__secondary mdc-typography--body2">
                           <ul>
-                            <li>Register for the NOI program through <router-link :to="'singup'"><button class="demo-button mdc-button mdc-button--unelevated mdc-ripple-upgraded signup"><i class="material-icons mdc-button__icon">new_releases</i><span class="mdc-button__label signup_label">Register Now</span></button></router-link> <b>on or before 15th of March 2019.</b></li>
+                            <li>Register for the NOI program through <router-link :to="'singup'"><button class="demo-button mdc-button mdc-button--unelevated mdc-ripple-upgraded signup"><i class="material-icons mdc-button__icon">new_releases</i><span class="mdc-button__label signup_label">Register Now</span></button></router-link> <b>on or before 20th of March 2019.</b></li>
                             <li>There is an optional C++ training program for students who are not familiar with programming.</li>
                             <li>Students for the C++ training program will be selected through an IQ test.</li>
-                            <li>If you wish to take part in the C++ training program, please register <b>on or before 15th of February 2019</b> through the same registration link</li>
+                            <li>If you wish to take part in the C++ training program, please register <b>on or before 20th of February 2019</b> through the same registration link</li>
                           </ul>
                         </div>
                       </div>
@@ -74,15 +74,15 @@
                     <div class="mdc-card demo-card demo-card--hero">
                       <div class="mdc-card__primary-action mdc-ripple-upgraded" tabindex="0">
                         <div class="demo-card__primary">
-                          <h2 class="demo-card__title mdc-typography--headline6">Online IQ Test</h2>
+                          <h2 class="demo-card__title mdc-typography--headline6">Online Screening Test (IQ Test)</h2>
                           <!-- <h3 class="demo-card__subtitle mdc-typography--subtitle2">by Codearchery</h3> -->
                         </div>
                         <div class="demo-card__secondary mdc-typography--body2">
                           <ul>
-                            <li>The IQ test would be of 20 questions that tests your problem solving ability.</li>
-                            <li>Test will be hosted on the “NOI … platform” through <b>xth of February 2019</b> to <b>yth of February 2019</b>.</li>
+                            <li>The IQ test would be of 30 questions that tests your problem solving ability.</li>
+                            <li>Test will be hosted on the “NOI portal” through <b>25th of February 2019</b> to <b>26th of February 2019</b>.</li>
                             <li>You may attempt the IQ test at any time during the above mentioned period from anywhere you prefer.</li>
-                            <li>Log into the “NOI … platform” through the credentials provided at NOI program registration.</li>
+                            <li>Log into the “NOI portal” through the credentials mailed to you upon registration.</li>
                           </ul>
                         </div>
                       </div>
