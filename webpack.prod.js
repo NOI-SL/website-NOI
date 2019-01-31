@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
+    mode: 'production',
     entry: ['./src/scss/main.scss', './src/main.js'],
     output: {
         filename: '[name].min.js',
@@ -61,7 +62,8 @@ module.exports = {
                         options: {
                             includePaths: ['./node_modules'],
                         },
-                    }],
+                    }
+                ],
             }
         ],
     },

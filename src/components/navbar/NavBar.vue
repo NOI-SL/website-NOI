@@ -70,7 +70,7 @@ export default {
           id: 1,
           icon: "",
           route: "/noi",
-          text: "NOI Programme"
+          text: "NOI 2019"
         },
         {
           id: 2,
