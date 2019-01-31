@@ -11,7 +11,8 @@
     }
 
     #section-1 {
-
+        position: relative;
+        margin-bottom: -1px;
         .back {
             @extend .back-style;
             min-height: 665px;
@@ -23,6 +24,7 @@
             @include  width-change-max-width(788px) {
                 -webkit-clip-path: polygon(0 0,100% 0,100% 60%,65% 100%,0 100%);
                 clip-path: polygon(0 0,100% 0,100% 60%,65% 100%,0 100%);
+                height: 100%;
             }
 
             #particles-js {
@@ -34,6 +36,10 @@
             position: relative;
             z-index: 2;
             min-height: 665px;
+
+            @include width-change-max-width(788px) {
+                height: auto;
+            }
 
             .content-inner {
                 display: grid;
@@ -68,6 +74,10 @@
                     .heading-desc {
                         padding-top: 50px;
                         padding-left: 20px;
+                        position: relative;
+                        z-index: 1;
+                        margin: 0;
+                        text-shadow: 1px 1px 1px $mdc-theme-primary-dark;
 
                         @include  width-change-max-width(586px) {
                             padding-left: 0;
