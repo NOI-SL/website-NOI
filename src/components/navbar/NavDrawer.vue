@@ -28,6 +28,7 @@ import NavDrawerItem from "./NavDrawerItem.vue"
 
 import {MDCList} from "@material/list";
 import {MDCDrawer} from "@material/drawer";
+import {MDCRipple} from '@material/ripple';
 
 var drawer_list, drawer;
 
