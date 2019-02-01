@@ -13,12 +13,12 @@
                             <p class="required-text">* Required</p>
                         </div>
                         <div class="form-content">
-                            <form action="" method="post" id="singup-form" enctype="multipart/form-data" onload="formLoad()">
+                            <form method="post" id="singup-form" enctype="multipart/form-data" v-on:submit="Form_OnSubmit($event)" novalidate="true">
                                 <p class="section-heading-text">Basic information</p>
                                 <div class="form-content-item form-content-item--coluumns-2">
                                     <div class="form-content-subitem">
                                         <div class="demo-text-field text-field-first-name mdc-text-field mdc-text-field--outlined">
-                                            <input type="text" id="singup-form-textfield-first-name" class="mdc-text-field__input" required>
+                                            <input type="text" id="singup-form-textfield-first-name" name="first_name" class="mdc-text-field__input" v-on:keypress="LettersValidation_keypress($event)" required>
                                             <div class="mdc-notched-outline">
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch">
@@ -33,7 +33,7 @@
                                     </div>
                                     <div class="form-content-subitem">
                                         <div class="demo-text-field text-field-last-name mdc-text-field mdc-text-field--outlined">
-                                            <input type="text" id="singup-form-textfield-last-name" class="mdc-text-field__input" required>
+                                            <input type="text" id="singup-form-textfield-last-name" name="last_name" class="mdc-text-field__input" v-on:keypress="LettersValidation_keypress($event)" required>
                                             <div class="mdc-notched-outline">
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch">
@@ -50,7 +50,7 @@
                                 <div class="form-content-item form-content-item--coluumns-1">
                                     <div class="form-content-subitem">
                                         <div class="demo-text-field text-field-full-name mdc-text-field mdc-text-field--outlined">
-                                            <input type="text" id="singup-form-textfield-full-name" class="mdc-text-field__input" required>
+                                            <input type="text" id="singup-form-textfield-full-name" name="full_name" class="mdc-text-field__input" v-on:keypress="LettersValidation_keypress($event)" required>
                                             <div class="mdc-notched-outline">
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch">
@@ -73,7 +73,7 @@
                                                     <div class="birthday-inner">
                                                         <div class="day">
                                                             <div class="demo-text-field text-field-birthday-day mdc-text-field mdc-text-field--outlined">
-                                                                <input type="text" id="singup-form-textfield-birthday-day" class="mdc-text-field__input" required>
+                                                                <input type="text" id="singup-form-textfield-birthday-day" name="dob_day" class="mdc-text-field__input" v-on:keypress="NumericValidation_keypress($event)" required>
                                                                 <div class="mdc-notched-outline">
                                                                     <div class="mdc-notched-outline__leading"></div>
                                                                     <div class="mdc-notched-outline__notch">
@@ -85,7 +85,7 @@
                                                         </div>
                                                         <div class="month">
                                                             <div class="mdc-select demo-width-class mdc-select--outlined singup-form-select-birthday-month" v-on:focusout="DOBMonth_focusOut()" v-on:focusin="DOBMonth_focusIn()" >
-                                                                <input type="hidden" name="singup-form-select-birthday-month" id="singup-form-select-birthday-month" required>
+                                                                <input type="hidden" name="dob_month" id="singup-form-select-birthday-month" required>
                                                                 <i class="mdc-select__dropdown-icon"></i>
                                                                 <div class="mdc-select__selected-text"></div>
                                                                 <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
@@ -140,7 +140,7 @@
                                                         </div>
                                                         <div class="year">
                                                             <div class="demo-text-field text-field-birthday-year mdc-text-field mdc-text-field--outlined">
-                                                                <input type="text" id="singup-form-textfield-birthday-year" class="mdc-text-field__input" required>
+                                                                <input type="text" id="singup-form-textfield-birthday-year" name="dob_year" class="mdc-text-field__input" v-on:keypress="NumericValidation_keypress($event)" required>
                                                                 <div class="mdc-notched-outline">
                                                                     <div class="mdc-notched-outline__leading"></div>
                                                                     <div class="mdc-notched-outline__notch">
@@ -158,7 +158,7 @@
                                     <div class="form-content-subitem">
                                         <div class="gend">
                                             <div class="mdc-select demo-width-class mdc-select--outlined singup-form-select-gender" v-on:focusout="Gender_focusOut()" v-on:focusin="Gender_focusIn()">
-                                                <input type="hidden" name="singup-form-select-gender" id="singup-form-select-gender" required>
+                                                <input type="hidden" name="gender" id="singup-form-select-gender" required>
                                                 <i class="mdc-select__dropdown-icon"></i>
                                                 <div class="mdc-select__selected-text"></div>
                                                 <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
@@ -193,7 +193,7 @@
                                 <div class="form-content-item form-content-item--coluumns-1">
                                     <div class="form-content-subitem">
                                         <div class="demo-text-field text-field-school mdc-text-field mdc-text-field--outlined">
-                                            <input type="text" id="singup-form-textfield-school" class="mdc-text-field__input" required>
+                                            <input type="text" id="singup-form-textfield-school" name="school_name" class="mdc-text-field__input" required>
                                             <div class="mdc-notched-outline">
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch">
@@ -217,7 +217,7 @@
                                             <div class="address-fields">
                                                 <div>
                                                     <div class="demo-text-field text-field-address-1 mdc-text-field mdc-text-field--outlined">
-                                                        <input type="text" id="singup-form-textfield-address-1" class="mdc-text-field__input" required>
+                                                        <input type="text" id="singup-form-textfield-address-1" name="address_1" class="mdc-text-field__input" required>
                                                         <div class="mdc-notched-outline">
                                                             <div class="mdc-notched-outline__leading"></div>
                                                             <div class="mdc-notched-outline__notch">
@@ -232,7 +232,7 @@
                                                 </div>
                                                 <div>
                                                     <div class="demo-text-field text-field-address-2 mdc-text-field mdc-text-field--outlined">
-                                                        <input type="text" id="singup-form-textfield-address-2" class="mdc-text-field__input">
+                                                        <input type="text" id="singup-form-textfield-address-2" name="address_2" class="mdc-text-field__input">
                                                         <div class="mdc-notched-outline">
                                                             <div class="mdc-notched-outline__leading"></div>
                                                             <div class="mdc-notched-outline__notch">
@@ -252,22 +252,22 @@
                                 <div class="form-content-item form-content-item--coluumns-2 contact">
                                     <div class="form-content-subitem">
                                         <div class="demo-text-field text-field-contact-no mdc-text-field mdc-text-field--outlined">
-                                            <input type="text" id="singup-form-textfield-contact-no" class="mdc-text-field__input" required>
+                                            <input type="text" id="singup-form-textfield-contact-no" name="contact_number" class="mdc-text-field__input" v-on:keypress="ContactNoValidation_keypress($event)" required>
                                             <div class="mdc-notched-outline">
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch">
-                                                    <label for="singup-form-textfield-contact-no" class="mdc-floating-label">Contact No</label>
+                                                    <label for="singup-form-textfield-contact-no" class="mdc-floating-label">Contact No (E.g : 077-658-4010)</label>
                                                 </div>
                                                 <div class="mdc-notched-outline__trailing"></div>
                                             </div>
                                         </div>
                                         <p id="singup-form-textfield-contact-no-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
-                                            Enter your contact no.
+                                            Enter your contact no. (E.g : 077-658-4010)
                                         </p>
                                     </div>
                                     <div class="form-content-subitem">
                                         <div class="demo-text-field text-field-email mdc-text-field mdc-text-field--outlined">
-                                            <input type="text" id="singup-form-textfield-email" class="mdc-text-field__input" required>
+                                            <input type="text" id="singup-form-textfield-email" name="email" class="mdc-text-field__input" required>
                                             <div class="mdc-notched-outline">
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch">
@@ -286,7 +286,7 @@
                                 <div class="form-content-item form-content-item--coluumns-2 document">
                                     <div class="form-content-subitem">
                                         <div class="mdc-select demo-width-class mdc-select--outlined singup-form-select-document-type" v-on:focusout="DocumentType_focusOut()" v-on:focusin="DocumentType_focusIn()">
-                                            <input type="hidden" name="singup-form-select-document-type" id="singup-form-select-document-type" required>
+                                            <input type="hidden" name="document_type" id="singup-form-select-document-type" required>
                                             <i class="mdc-select__dropdown-icon"></i>
                                             <div class="mdc-select__selected-text"></div>
                                             <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
@@ -320,7 +320,7 @@
                                     </div>
                                     <div class="form-content-subitem">
                                         <div class="demo-text-field text-field-document-no mdc-text-field mdc-text-field--outlined">
-                                            <input type="text" id="singup-form-textfield-document-no" class="mdc-text-field__input">
+                                            <input type="text" id="singup-form-textfield-document-no" name="document_number" class="mdc-text-field__input">
                                             <div class="mdc-notched-outline">
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch">
@@ -337,7 +337,7 @@
                                         <div class="file-upload-section">
                                             <div class="file-upload-container">
                                                 <div class="uploaded-file-container">
-                                                    <input type="file" name="singup-form-file-document" id="singup-form-file-document" v-on:invalid="FileUpload_invalid($event)" v-on:change="FileUpload_change($event)" required>
+                                                    <input type="file" name="file_document" id="singup-form-file-document" v-on:invalid="FileUpload_invalid($event)" v-on:change="FileUpload_change($event)" required>
                                                     <button class="mdc-button" id="file-upload-action-button" v-on:click="FileUploadButton_click($event)">
                                                         <i class="material-icons mdc-button__icon" aria-hidden="true">cloud_upload</i>
                                                         <span class="mdc-button__label">Upload Document</span>
@@ -359,7 +359,7 @@
                                 <div class="form-content-item">
                                     <div class="recapcha"></div>
                                     <div class="submit-button">
-                                        <p style="text-align:right"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Sing Up</button></p>
+                                        <p style="text-align:right"><button type="submit" class="mdc-button mdc-button--raised mdc-ripple-upgraded">Sing Up</button></p>
                                     </div>
                                 </div>
                             </form>
@@ -368,6 +368,16 @@
                 </div>
             </div>
         </section>
+        <div class="mdc-snackbar" id="message-snackbar">
+            <div class="mdc-snackbar__surface">
+                <div class="mdc-snackbar__label" id="snackbar-label" role="status" aria-live="polite">
+                    Some error. Please try again !
+                </div>
+                <div class="mdc-snackbar__actions">
+                    <button class="mdc-icon-button mdc-snackbar__dismiss material-icons" title="Dismiss">close</button>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -377,6 +387,9 @@ import {MDCTextField} from '@material/textfield';
 import {MDCTextFieldHelperText} from '@material/textfield/helper-text';
 import {MDCSelect} from '@material/select';
 import {MDCRipple} from '@material/ripple';
+import {MDCSnackbar} from '@material/snackbar';
+
+import axios from 'axios';
 
 var textField_FirstName,textField_LastName,textField_FullName,textField_BirthdayDay,textField_BirthdayYear, textField_School, textField_Address1, textField_Address2, textField_ContactNo, textField_Email, textField_DocumentNo; // textFields
 var select_BirthdayMonth_Element, select_Gender_Element, select_DocumentType_Element; // selectElements
@@ -384,11 +397,167 @@ var select_BirthdayMonth, select_Gender, select_DocumentType; // selectFields
 var helperText_FirstName, helperText_LastName, helperText_FullName, helperText_Gender, helperText_School, helperText_Address1, helperText_Address2, helperText_ContactNo, helperText_Email, helperText_DocumentNo, helperText_DocumentType, helperText_DocumentUpload;  // helperTexts
 // file upload
 var fileUploadActionButton, fileUpload, fileUploadContainer;
+// snack bar
+var snackbar, snackbar_label;
 
+var SnackBarShowMessage = (message) => {
+    snackbar_label.innerText = message;
+    snackbar.open();
+}
+
+var Fields_Validation_By_Class = (element, class_name = 'mdc-text-field--invalid') => {
+    element.root_.classList.add(class_name);
+}
+
+// validate functions
+var DOB_Validate = (day, month, year) => {
+    if (((day == null || day == '') || (month == null || month == '')) || year == '') {
+        console.log('dob error');
+        SnackBarShowMessage('Please fill the date of birth.');
+        return false;
+    }else {
+        const min_date = new Date('1999/7/1');
+        const max_date = new Date('2019/7/1');
+        var date = new Date(year + '/' + month + '/' + day);
+        if ((min_date <= date && max_date >= date)) {
+            return true;
+        }else {
+            SnackBarShowMessage('Your date of birth must in between 1999/7/1 and 2019/7/1.');
+            return false;
+        }
+    }
+}
+
+var Email_Validate = (email) => {
+    var regx_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (email == null || email == '') {
+        console.log('email empty');
+        SnackBarShowMessage('Please fill the email.');
+        return false;
+    }else if (regx_email.test(email)) {
+        return true;
+    }else {
+        console.log('email format error');
+        SnackBarShowMessage('Please fill a valid email.')
+        return false;
+    }
+}
+
+var Document_validate = (doc_type, doc_number) => {
+    if (doc_type == null || doc_type == ''){
+        console.log('doc type error');
+        Fields_Validation_By_Class(select_DocumentType,'mdc-select--invalid');
+        SnackBarShowMessage('Please select the document type.')
+        return false;
+    }else if ((doc_type == 'Postal ID' || doc_type == 'National ID') || doc_type == 'Passport') {
+        if (doc_number == null || doc_number == '') {
+            console.log('doc number error');
+            Fields_Validation_By_Class(textField_DocumentNo);
+            SnackBarShowMessage('Please fill the '+doc_type+' number.');
+            return false;
+        }else {
+            return true;
+        }
+    }else {
+        if (doc_type == 'Letter') {
+            return true;
+        }
+    }
+}
+
+var ContactNo_Validate = (number) => {
+    if (number == null || number == '') {
+        console.log('contact no not fill error');
+        SnackBarShowMessage('Please fill the contact number.');
+        return false;
+    }else {
+        var regx = /^\d{3}-\d{3}-\d{4}$/;
+        if (regx.test(number)) {
+            return true;
+        }else {
+            console.log('contact no format error');
+            SnackBarShowMessage('Please fill a valid contact number (E.g : 077-658-4010).');
+            return false;
+        }
+    }
+}
+
+var Form_validate = () => {
+    if (textField_FirstName == null || textField_FirstName.value == '') {
+        console.log('first name error');
+        Fields_Validation_By_Class(textField_FirstName);
+        SnackBarShowMessage('Please fill the first name.');
+        return false;
+    }else if (textField_LastName.value == null || textField_LastName.value == '') {
+        console.log('last name error');
+        Fields_Validation_By_Class(textField_LastName);
+        SnackBarShowMessage('Please fill the last name.');
+        return false;
+    }else if (textField_FullName.value == null || textField_FullName.value == '') {
+        console.log('full name error');
+        Fields_Validation_By_Class(textField_FullName);
+        SnackBarShowMessage('Please fill the full name.');
+        return false;
+    }else if (!DOB_Validate(textField_BirthdayDay.value, select_BirthdayMonth.value, textField_BirthdayYear.value)) {
+        console.log('date error');
+        Fields_Validation_By_Class(textField_BirthdayDay);
+        Fields_Validation_By_Class(textField_BirthdayYear);
+        Fields_Validation_By_Class(select_BirthdayMonth, 'mdc-select--invalid');
+        return false;
+    }else if (select_Gender.value == '') {
+        console.log('gender error');
+        Fields_Validation_By_Class(select_Gender,'mdc-select--invalid');
+        SnackBarShowMessage('Please select the gender.');
+        return false;
+    }else if (textField_School.value == null || textField_School.value == '') {
+        console.log('school error');
+        Fields_Validation_By_Class(textField_School);
+        SnackBarShowMessage('Please fill the school name.')
+        return false;
+    }else if (textField_Address1.value == null || textField_Address1.value == '') {
+        console.log('address error');
+        Fields_Validation_By_Class(textField_Address1);
+        SnackBarShowMessage('Please fill the address.')
+        return false;
+    }else if (!ContactNo_Validate(textField_ContactNo.value)) {
+        console.log('contact no error');
+        Fields_Validation_By_Class(textField_ContactNo);
+        return false;
+    }else if (!Email_Validate(textField_Email.value)) {
+        console.log('email error');
+        Fields_Validation_By_Class(textField_Email);
+        return false;
+    }else if (!Document_validate(select_DocumentType.value,textField_DocumentNo.value)) {
+        console.log('doc type error');
+        return false
+    }else if (fileUpload.value == null || fileUpload.value == '') {
+        console.log('upload file error');
+        fileUploadContainer.classList.add('file-upload-container--invlid');
+        SnackBarShowMessage('Please choose the file.')
+        return false;
+    }else {
+        return true;
+    }
+}
 
 export default {
     data() {
         return {
+            // first_name: null,
+            // last_name: null,
+            // full_name: null,
+            // dob_day: null,
+            // dob_month: '',
+            // dob_year: null,
+            // gender: '',
+            // school_name: null,
+            // address_1: null,
+            // address_2: null,
+            // contact_number: null,
+            // email: null,
+            // document_type: '',
+            // document_number: null,
+            // file_document: null
 
         }
     },
@@ -501,6 +670,52 @@ export default {
                     fileUploadContainer.classList.add('file-upload-container--invlid');
                 });
             }
+        },
+        NumericValidation_keypress : (event) => {
+            var regex = new RegExp("^[0-9]+$");
+            var char = event.which || event.keyCode;
+            var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+            if(!regex.test(key) && !((char == 8)? true:(char == 9)? true : false)){
+                event.preventDefault();
+            }
+        },
+        ContactNoValidation_keypress : (event) => {
+            var regex = new RegExp("^[0-9-]+$");
+            var char = event.which || event.keyCode;
+            var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+            if(!regex.test(key) && !((char == 8)? true:(char == 9)? true : false)){
+                event.preventDefault();
+            }
+        },
+        LettersValidation_keypress : (event) => {
+            var regex = new RegExp("^[a-zA-Z]+$");
+            var char = event.which || event.keyCode;
+            var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+            if(!regex.test(key) && !((char == 8)? true:(char == 9)? true : (char == 32)? true : false)){
+                event.preventDefault();
+            }
+        },
+        SignupButton_click : (event) => {
+
+        },
+        Form_OnSubmit : (e) => {
+            e.preventDefault();
+            if (Form_validate()) {
+                let formData = new FormData(document.getElementById('singup-form'));
+                axios.post( 
+                    'url',
+                    formData,
+                    {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                }).then((response) => {
+
+                }).catch((error) => {
+
+                });
+            }
+            
         }
     },
     mounted : () => {
@@ -512,27 +727,41 @@ export default {
         select_BirthdayMonth_Element = document.querySelector('.singup-form-select-birthday-month');
         select_BirthdayMonth = new MDCSelect(select_BirthdayMonth_Element);
 
+        textField_BirthdayDay.listen('click' , () => {
+            textField_BirthdayYear.root_.classList.remove('mdc-text-field--invalid');
+            select_BirthdayMonth.root_.classList.remove('mdc-select--invalid');
+        });
+
+        textField_BirthdayYear.listen('click' , () => {
+            textField_BirthdayDay.root_.classList.remove('mdc-text-field--invalid');
+            select_BirthdayMonth.root_.classList.remove('mdc-select--invalid');
+        });
+
+
         select_BirthdayMonth.listen('MDCSelect:change', () => {
-        if (select_BirthdayMonth.value === "") {
-            select_BirthdayMonth_Element.classList.add('mdc-select--invalid');
-        }else if(select_BirthdayMonth_Element.classList.contains('mdc-select--invalid')){
-            select_BirthdayMonth_Element.classList.remove('mdc-select--invalid');
-        }else if (select_BirthdayMonth.value !== "") {
-            select_BirthdayMonth_Element.classList.remove('mdc-select--invalid');
-        }
+            if (select_BirthdayMonth.value === "") {
+                select_BirthdayMonth_Element.classList.add('mdc-select--invalid');
+            }else if(select_BirthdayMonth_Element.classList.contains('mdc-select--invalid')){
+                select_BirthdayMonth_Element.classList.remove('mdc-select--invalid');
+            }else if (select_BirthdayMonth.value !== "") {
+                select_BirthdayMonth_Element.classList.remove('mdc-select--invalid');
+            }
+            textField_BirthdayYear.root_.classList.remove('mdc-text-field--invalid');
+            textField_BirthdayDay.root_.classList.remove('mdc-text-field--invalid');
         // alert(`Selected option at index ${select_BirthdayMonth.selectedIndex} with value "${select_BirthdayMonth.value}"`);
         });
 
         select_Gender_Element = document.querySelector('.singup-form-select-gender');
         select_Gender= new MDCSelect(select_Gender_Element);
         select_Gender.listen('MDCSelect:change', () => {
-        if (select_Gender.value === "") {
-            select_Gender_Element.classList.add('mdc-select--invalid');
-        }else if(select_Gender_Element.classList.contains('mdc-select--invalid')){
-            select_Gender_Element.classList.remove('mdc-select--invalid');
-        }else if (select_Gender.value !== "") {
-            select_Gender_Element.classList.remove('mdc-select--invalid');
-        }
+            if (select_Gender.value === "") {
+                select_Gender_Element.classList.add('mdc-select--invalid');
+            }else if(select_Gender_Element.classList.contains('mdc-select--invalid')){
+                select_Gender_Element.classList.remove('mdc-select--invalid');
+            }else if (select_Gender.value !== "") {
+                select_Gender_Element.classList.remove('mdc-select--invalid');
+            }
+            
         // alert(`Selected option at index ${select_Gender.selectedIndex} with value "${select_Gender.value}"`);
         });
 
@@ -553,6 +782,8 @@ export default {
             }else if (select_DocumentType.value !== "") {
                 select_DocumentType_Element.classList.remove('mdc-select--invalid');
             }
+            textField_DocumentNo.value = '';
+            textField_DocumentNo.root_.classList.remove('mdc-text-field--invalid');
         });
 
         fileUploadActionButton = document.querySelector('#file-upload-action-button');
@@ -573,6 +804,12 @@ export default {
         helperText_DocumentType = new MDCTextFieldHelperText(document.querySelector('#singup-form-select-document-type-helper-text'));
         helperText_DocumentUpload = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-upload-document-helper-text'));
     
+        snackbar = new MDCSnackbar(document.querySelector('#message-snackbar'));
+        snackbar_label = document.querySelector('#snackbar-label');
+        snackbar.listen('MDCSnackbar:closed', () => {
+            snackbar_label.innerText = 'Some error. Please try again !';
+        });
+
         const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
     }
 }
