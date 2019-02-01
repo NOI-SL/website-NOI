@@ -63,7 +63,7 @@
                 padding-top: 90px;
             }
 
-            @include width520Max {
+            @include  width-change-max-width(520px) {
                 height: auto;
                 padding-top: 80px;
             }
@@ -74,7 +74,7 @@
                 grid-template-columns: 50% auto;
                 height: 100%;
 
-                @include width520Max {
+                @include width-change-max-width(520px) {
                     grid-template-areas: 'org ' 'sp';
                     grid-template-columns: unset;
                     grid-row-gap: 10px;
@@ -104,7 +104,7 @@
                         min-height: 130px;
                     }
 
-                    @include width520Max {
+                    @include width-change-max-width(520px) {
                         min-height: auto;
                     }
 
