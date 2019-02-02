@@ -1,6 +1,6 @@
 
 const URLS = {
-    'signup' : 'http://api.noi.lk:3000/api/v1/signup'
+    'signup' : 'https://api.noi.lk:3000/api/v1/signup'
 }
 
 class API {

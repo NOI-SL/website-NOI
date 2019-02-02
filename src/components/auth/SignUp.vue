@@ -577,6 +577,14 @@ var FileUpload_close = () => {
     fileUpload.value = null;
 }
 
+var reCAPTCHA_set = () => {
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6LfJjI4UAAAAACjEIuGGUDaUjQ6gJ6Iwi3IZJS5J', {action: 'signup'}).then(function(token) {
+            document.getElementById('recaptcha_token').value = token;
+        });
+    });
+}
+
 export default {
     data() {
         return {
@@ -757,6 +765,7 @@ export default {
                     document.getElementById('signup-form-submit-button').disabled = false;//submit button enable
                     progressbar.close();// progressbar close
                     console.log(response);
+                    grecaptcha.reset();
                     if (response.data.statusCode == 200) {
                         document.getElementById('signup-form').reset();
                         window.location.replace(window.location.href + '/success');
@@ -772,6 +781,7 @@ export default {
                 }).catch((error) => {
                     document.getElementById('signup-form-submit-button').disabled = false;//submit button enable
                     progressbar.close(); // progressbar close
+                    grecaptcha.reset();
                     SnackBarShowMessage('Unexpected error occurred. Please try again or contact us');
                 }); 
             }
@@ -876,11 +886,7 @@ export default {
         progressbar.close();
 
         // reCAPTCHA
-        grecaptcha.ready(function() {
-            grecaptcha.execute('6LfJjI4UAAAAACjEIuGGUDaUjQ6gJ6Iwi3IZJS5J', {action: 'signup'}).then(function(token) {
-                document.getElementById('recaptcha_token').value = token;
-            });
-        });
+        reCAPTCHA_set();
     }
 }
 </script>
