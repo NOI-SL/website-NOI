@@ -760,20 +760,19 @@ export default {
                     if (response.data.statusCode == 200) {
                         document.getElementById('signup-form').reset();
                         window.location.replace(window.location.href + '/success');
-                    }else if (response.data.statusCode == 400) {
+                    }else if (response.data.statusCode == 406) {
                         document.getElementById('signup-form').reset();
+                        select_DocumentType.value = '';
+                        FileUpload_close();
+                        select_DocumentType_Element.classList.remove('mdc-select--invalid');
                         SnackBarShowMessage('Email is already on the system. Please log into the NOI portal through portal.noi.lk');
                     }else if (response.data.statusCode == 500) {
                         SnackBarShowMessage('Unexpected error occurred. Please try again or contact us');
                     }
-                }).catch((error,response) => {
+                }).catch((error) => {
                     document.getElementById('signup-form-submit-button').disabled = false;//submit button enable
                     progressbar.close(); // progressbar close
-                    document.getElementById('signup-form').reset();
-                    select_DocumentType.value = '';
-                    FileUpload_close();
-                    select_DocumentType_Element.classList.remove('mdc-select--invalid');
-                    SnackBarShowMessage('Email is already on the system. Please log into the NOI portal through portal.noi.lk');
+                    SnackBarShowMessage('Unexpected error occurred. Please try again or contact us');
                 }); 
             }
             
