@@ -282,7 +282,20 @@
                                     </div>
                                 </div>
                                 <p class="section-heading-text">Document information</p>
-                                <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, ad quo? Placeat, at. Earum libero delectus quis sit quidem consequuntur, nihil unde sunt at neque nesciunt, quae repellendus quo in.</p>
+                                <div class="desc proof-doc">
+                                    <p class="head">Proof Documents</p>
+                                    <p class="dc">
+                                        Please attach a scanned copy or a photograph of any one of following documents to verify your identity.
+                                    </p>
+                                    <div class="list--"> 
+                                        <ul>
+                                            <li>Postal ID Card</li>
+                                            <li>National ID Card</li>
+                                            <li>Passport</li>
+                                            <li>Letter signed by principal (<a target="_blank" v-bind:href="item['letter_template'].loc">Click here to download the Template</a>)</li>
+                                        </ul>
+                                    </div>
+                                </div>
                                 <div class="form-content-item form-content-item--coluumns-2 document">
                                     <div class="form-content-subitem">
                                         <div class="mdc-select demo-width-class mdc-select--outlined signup-form-select-document-type" v-on:focusout="DocumentType_focusOut()" v-on:focusin="DocumentType_focusIn()">
@@ -568,6 +581,12 @@ var FileUpload_close = () => {
 export default {
     data() {
         return {
+            item: {
+                'letter_template' : {
+                    title: 'principles-certification-NOI-fillable', 
+                    loc: require('../../letter/Principles_Certification_NOI__fillable.pdf')
+                },
+            }
             // first_name: null,
             // last_name: null,
             // full_name: null,

@@ -39,6 +39,30 @@
                     }
                 }
 
+
+                .proof-doc {
+                    .head {
+                        font-weight: bold;
+                        padding-bottom: 5px;
+                    }
+                    .dc {
+                        font-size: 1em;
+                        padding-bottom: 5px;
+                    }
+
+                    .list-- {
+                        padding-left: 20px;
+
+                        ul {
+                            li {
+                                a {
+                                    font-size: 0.9em;
+                                }
+                            }
+                        }
+                    }
+                }
+
                 .section-heading-text {
                     padding: 0.5em;
                     margin: 0 -1em 0 -1em;
