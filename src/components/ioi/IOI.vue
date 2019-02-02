@@ -128,6 +128,10 @@
 <script>
 export default {
   components: {
+  },
+  mounted : () => {
+    // scroll to top 
+    document.querySelector('#section-1').scrollIntoView(true);
   }
 };
 </script>

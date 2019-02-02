@@ -18,6 +18,9 @@
 
 <script>
 export default {
-
+    mounted : () => {
+        // scroll to top 
+        document.querySelector('#section-1').scrollIntoView(true);
+    }
 }
 </script>
