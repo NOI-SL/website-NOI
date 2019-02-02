@@ -74,9 +74,9 @@
               class="noted-text"
             >If you <b>DO NOT</b> wish to take part in the C++ Training Camp, sign-up before 20th of March 2019.</p>
           </div>
-          <div class="sing-up">
+          <div class="sign-up">
             <p>
-              <router-link :to="'singup'">
+              <router-link :to="'signup'">
                 <button
                   class="mdc-button mdc-button--raised reg-button reg-button--section"
                   tabindex="0"

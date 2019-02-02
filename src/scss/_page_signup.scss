@@ -1,4 +1,4 @@
-#page-singup {
+#page-signup {
    
     @extend .page-background;
 
@@ -12,7 +12,7 @@
             padding-top: 100px;
             padding-bottom: 20px;
 
-            .singup-form-container {
+            .signup-form-container {
                 min-height: 200px;
                 background-color: $theme-white-primary;
 
@@ -179,7 +179,7 @@
                             @include width568max { 
                                 padding-top: 10px;
                             }
-                            .singup-form-select-gender {
+                            .signup-form-select-gender {
                                 .mdc-floating-label {
                                     &::after {
                                         content: "*";
@@ -241,7 +241,7 @@
                             width: 100%;
                         }
 
-                        .singup-form-select-document-type {
+                        .signup-form-select-document-type {
                             .mdc-floating-label {
                                 &::after {
                                     content: "*";
@@ -270,7 +270,7 @@
                                     height: 100%;
                                     position: relative;
 
-                                    #singup-form-file-document {
+                                    #signup-form-file-document {
                                         display: none;
                                     }
 
