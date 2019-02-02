@@ -559,6 +559,12 @@ var Form_validate = () => {
     }
 }
 
+var FileUpload_close = () => {
+    fileUploadActionButton.style.display = 'unset';
+    document.querySelector('#uploaded-file-container-i').innerHTML = '';
+    fileUpload.value = null;
+}
+
 export default {
     data() {
         return {
@@ -683,9 +689,7 @@ export default {
 
                 container.appendChild(file_container_inner);
                 document.querySelector('#upload-cancel-btn').addEventListener('click', () => {
-                    fileUploadActionButton.style.display = 'unset';
-                    container.innerHTML = '';
-                    fileUpload.value = null;
+                    FileUpload_close();
                     fileUploadContainer.classList.add('file-upload-container--invlid');
                 });
             }
@@ -719,6 +723,7 @@ export default {
         },
         Form_OnSubmit : (e) => {
             e.preventDefault();
+            
             if (Form_validate()) {
                 let formData = new FormData(document.getElementById('signup-form'));
                 document.getElementById('signup-form-submit-button').disabled = true; // submit button disable
@@ -733,9 +738,24 @@ export default {
                 }).then((response) => {
                     document.getElementById('signup-form-submit-button').disabled = false;//submit button enable
                     progressbar.close();// progressbar close
-                }).catch((error) => {
-                    // document.getElementById('signup-form-submit-button').disabled = false;//submit button enable
-                    // progressbar.close(); // progressbar close
+                    console.log(response);
+                    if (response.data.statusCode == 200) {
+                        document.getElementById('signup-form').reset();
+                        window.location.replace(window.location.href + '/success');
+                    }else if (response.data.statusCode == 400) {
+                        document.getElementById('signup-form').reset();
+                        SnackBarShowMessage('Email is already on the system. Please log into the NOI portal through portal.noi.lk');
+                    }else if (response.data.statusCode == 500) {
+                        SnackBarShowMessage('Unexpected error occurred. Please try again or contact us');
+                    }
+                }).catch((error,response) => {
+                    document.getElementById('signup-form-submit-button').disabled = false;//submit button enable
+                    progressbar.close(); // progressbar close
+                    document.getElementById('signup-form').reset();
+                    select_DocumentType.value = '';
+                    FileUpload_close();
+                    select_DocumentType_Element.classList.remove('mdc-select--invalid');
+                    SnackBarShowMessage('Email is already on the system. Please log into the NOI portal through portal.noi.lk');
                 }); 
             }
             
@@ -841,7 +861,6 @@ export default {
         // reCAPTCHA
         grecaptcha.ready(function() {
             grecaptcha.execute('6LfJjI4UAAAAACjEIuGGUDaUjQ6gJ6Iwi3IZJS5J', {action: 'signup'}).then(function(token) {
-                console.log(token);
                 document.getElementById('recaptcha_token').value = token;
             });
         });
