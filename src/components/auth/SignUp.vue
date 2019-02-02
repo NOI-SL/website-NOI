@@ -585,6 +585,17 @@ var reCAPTCHA_set = () => {
     });
 }
 
+var SignupForm_reset = () => {
+    document.getElementById('signup-form').reset();
+    select_DocumentType.value = '';
+    select_BirthdayMonth.value = '';
+    select_Gender.value = '';
+    FileUpload_close();
+    select_DocumentType_Element.classList.remove('mdc-select--invalid');
+    select_BirthdayMonth_Element.classList.remove('mdc-select--invalid');
+    select_Gender_Element.classList.remove('mdc-select--invalid');
+}
+
 export default {
     data() {
         return {
@@ -766,16 +777,21 @@ export default {
                     progressbar.close();// progressbar close
                     console.log(response);
                     reCAPTCHA_set();
-                    if (response.data.statusCode == 200) {
-                        document.getElementById('signup-form').reset();
-                        window.location.replace(window.location.href + '/success');
-                    }else if (response.data.statusCode == 406) {
-                        document.getElementById('signup-form').reset();
-                        select_DocumentType.value = '';
-                        FileUpload_close();
-                        select_DocumentType_Element.classList.remove('mdc-select--invalid');
-                        SnackBarShowMessage('Email is already on the system. Please log into the NOI portal through portal.noi.lk');
-                    }else if (response.data.statusCode == 500) {
+                    if (response.status == 200) {
+                        if (response.data.statusCode == 200) {
+                            SignupForm_reset();
+                            window.location.replace(window.location.href + '/success');
+                        }else if (response.data.statusCode == 400) {
+                            SnackBarShowMessage('Invalid input data provided. Try again !');
+                        }else if (response.data.statusCode == 406){
+                            SignupForm_reset();
+                            SnackBarShowMessage('Email is already on the system. Please log into the NOI portal through portal.noi.lk');
+                        }else if (response.data.statusCode == 500) {
+                            SnackBarShowMessage('Unexpected error occurred. Please try again or contact us');
+                        }else {
+                            SnackBarShowMessage('Unexpected error occurred. Please try again or contact us');
+                        }
+                    }else {
                         SnackBarShowMessage('Unexpected error occurred. Please try again or contact us');
                     }
                 }).catch((error) => {
