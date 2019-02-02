@@ -50,7 +50,7 @@
                         </div>
                         <div class="demo-card__secondary mdc-typography--body2">
                           <ul>
-                            <li>Register for the NOI program through <router-link :to="'singup'"><button class="demo-button mdc-button mdc-button--unelevated mdc-ripple-upgraded signup"><i class="material-icons mdc-button__icon">new_releases</i><span class="mdc-button__label signup_label">Register Now</span></button></router-link> <b>on or before 20th of March 2019.</b></li>
+                            <li>Register for the NOI program through <router-link :to="'signup'"><button class="demo-button mdc-button mdc-button--unelevated mdc-ripple-upgraded signup"><i class="material-icons mdc-button__icon">new_releases</i><span class="mdc-button__label signup_label">Register Now</span></button></router-link> <b>on or before 20th of March 2019.</b></li>
                             <li>There is an optional C++ training program for students who are not familiar with programming.</li>
                             <li>Students for the C++ training program will be selected through an IQ test.</li>
                             <li>If you wish to take part in the C++ training program, please register <b>on or before 20th of February 2019</b> through the same registration link</li>

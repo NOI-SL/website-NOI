@@ -106,7 +106,7 @@ export default {
           {
             id: 0,
             icon: "",
-            route: "/singup",
+            route: "/signup",
             text: "Home"
           }
       ]

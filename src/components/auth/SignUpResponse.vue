@@ -1,5 +1,5 @@
 <template>
-    <div class="container-flud main-section about" id="page-singup-response">
+    <div class="container-flud main-section about" id="page-signup-response">
         <section id="section-1">
             <div class="content">
                 <div class="container">

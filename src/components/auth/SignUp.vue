@@ -1,10 +1,10 @@
 <template>
-    <div class="container-flud main-section about" id="page-singup">
+    <div class="container-flud main-section about" id="page-signup">
         <section id="section-1">
             <div class="back"></div>
             <div class="content">
                 <div class="container">
-                    <div class="mdc-elevation--z2 singup-form-container">
+                    <div class="mdc-elevation--z2 signup-form-container">
                         <div class="heading">
                             <p class="heading-text">Sign Up</p>
                         </div>
@@ -13,36 +13,36 @@
                             <p class="required-text">* Required</p>
                         </div>
                         <div class="form-content">
-                            <form method="post" id="singup-form" enctype="multipart/form-data" v-on:submit="Form_OnSubmit($event)" novalidate="true">
+                            <form method="post" id="signup-form" enctype="multipart/form-data" v-on:submit="Form_OnSubmit($event)" novalidate="true">
                                 <p class="section-heading-text">Basic information</p>
                                 <div class="form-content-item form-content-item--coluumns-2">
                                     <div class="form-content-subitem">
                                         <div class="demo-text-field text-field-first-name mdc-text-field mdc-text-field--outlined">
-                                            <input type="text" id="singup-form-textfield-first-name" name="first_name" class="mdc-text-field__input" v-on:keypress="LettersValidation_keypress($event)" required>
+                                            <input type="text" id="signup-form-textfield-first-name" name="first_name" class="mdc-text-field__input" v-on:keypress="LettersValidation_keypress($event)" required>
                                             <div class="mdc-notched-outline">
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch">
-                                                    <label for="singup-form-textfield-first-name" class="mdc-floating-label">First Name</label>
+                                                    <label for="signup-form-textfield-first-name" class="mdc-floating-label">First Name</label>
                                                 </div>
                                                 <div class="mdc-notched-outline__trailing"></div>
                                             </div>
                                         </div>
-                                        <p id="singup-form-textfield-first-name-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                                        <p id="signup-form-textfield-first-name-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
                                             Enter your first name.
                                         </p>
                                     </div>
                                     <div class="form-content-subitem">
                                         <div class="demo-text-field text-field-last-name mdc-text-field mdc-text-field--outlined">
-                                            <input type="text" id="singup-form-textfield-last-name" name="last_name" class="mdc-text-field__input" v-on:keypress="LettersValidation_keypress($event)" required>
+                                            <input type="text" id="signup-form-textfield-last-name" name="last_name" class="mdc-text-field__input" v-on:keypress="LettersValidation_keypress($event)" required>
                                             <div class="mdc-notched-outline">
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch">
-                                                    <label for="singup-form-textfield-last-name" class="mdc-floating-label">Last Name</label>
+                                                    <label for="signup-form-textfield-last-name" class="mdc-floating-label">Last Name</label>
                                                 </div>
                                                 <div class="mdc-notched-outline__trailing"></div>
                                             </div>
                                         </div>
-                                        <p id="singup-form-textfield-last-name-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                                        <p id="signup-form-textfield-last-name-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
                                             Enter your last name.
                                         </p>
                                     </div>
@@ -50,16 +50,16 @@
                                 <div class="form-content-item form-content-item--coluumns-1">
                                     <div class="form-content-subitem">
                                         <div class="demo-text-field text-field-full-name mdc-text-field mdc-text-field--outlined">
-                                            <input type="text" id="singup-form-textfield-full-name" name="full_name" class="mdc-text-field__input" v-on:keypress="LettersValidation_keypress($event)" required>
+                                            <input type="text" id="signup-form-textfield-full-name" name="full_name" class="mdc-text-field__input" v-on:keypress="LettersValidation_keypress($event)" required>
                                             <div class="mdc-notched-outline">
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch">
-                                                    <label for="singup-form-textfield-full-name" class="mdc-floating-label">Full Name</label>
+                                                    <label for="signup-form-textfield-full-name" class="mdc-floating-label">Full Name</label>
                                                 </div>
                                                 <div class="mdc-notched-outline__trailing"></div>
                                             </div>
                                         </div>
-                                        <p id="singup-form-textfield-full-name-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                                        <p id="signup-form-textfield-full-name-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
                                             The name that should be mentioned in the certificate.
                                         </p>
                                     </div>
@@ -73,19 +73,19 @@
                                                     <div class="birthday-inner">
                                                         <div class="day">
                                                             <div class="demo-text-field text-field-birthday-day mdc-text-field mdc-text-field--outlined">
-                                                                <input type="text" id="singup-form-textfield-birthday-day" name="dob_day" class="mdc-text-field__input" v-on:keypress="NumericValidation_keypress($event)" required>
+                                                                <input type="text" id="signup-form-textfield-birthday-day" name="dob_day" class="mdc-text-field__input" v-on:keypress="NumericValidation_keypress($event)" required>
                                                                 <div class="mdc-notched-outline">
                                                                     <div class="mdc-notched-outline__leading"></div>
                                                                     <div class="mdc-notched-outline__notch">
-                                                                        <label for="singup-form-textfield-birthday-day" class="mdc-floating-label">Day</label>
+                                                                        <label for="signup-form-textfield-birthday-day" class="mdc-floating-label">Day</label>
                                                                     </div>
                                                                     <div class="mdc-notched-outline__trailing"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="month">
-                                                            <div class="mdc-select demo-width-class mdc-select--outlined singup-form-select-birthday-month" v-on:focusout="DOBMonth_focusOut()" v-on:focusin="DOBMonth_focusIn()" >
-                                                                <input type="hidden" name="dob_month" id="singup-form-select-birthday-month" required>
+                                                            <div class="mdc-select demo-width-class mdc-select--outlined signup-form-select-birthday-month" v-on:focusout="DOBMonth_focusOut()" v-on:focusin="DOBMonth_focusIn()" >
+                                                                <input type="hidden" name="dob_month" id="signup-form-select-birthday-month" required>
                                                                 <i class="mdc-select__dropdown-icon"></i>
                                                                 <div class="mdc-select__selected-text"></div>
                                                                 <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
@@ -140,11 +140,11 @@
                                                         </div>
                                                         <div class="year">
                                                             <div class="demo-text-field text-field-birthday-year mdc-text-field mdc-text-field--outlined">
-                                                                <input type="text" id="singup-form-textfield-birthday-year" name="dob_year" class="mdc-text-field__input" v-on:keypress="NumericValidation_keypress($event)" required>
+                                                                <input type="text" id="signup-form-textfield-birthday-year" name="dob_year" class="mdc-text-field__input" v-on:keypress="NumericValidation_keypress($event)" required>
                                                                 <div class="mdc-notched-outline">
                                                                     <div class="mdc-notched-outline__leading"></div>
                                                                     <div class="mdc-notched-outline__notch">
-                                                                        <label for="singup-form-textfield-birthday-year" class="mdc-floating-label">Year</label>
+                                                                        <label for="signup-form-textfield-birthday-year" class="mdc-floating-label">Year</label>
                                                                     </div>
                                                                     <div class="mdc-notched-outline__trailing"></div>
                                                                 </div>
@@ -157,8 +157,8 @@
                                     </div>
                                     <div class="form-content-subitem">
                                         <div class="gend">
-                                            <div class="mdc-select demo-width-class mdc-select--outlined singup-form-select-gender" v-on:focusout="Gender_focusOut()" v-on:focusin="Gender_focusIn()">
-                                                <input type="hidden" name="gender" id="singup-form-select-gender" required>
+                                            <div class="mdc-select demo-width-class mdc-select--outlined signup-form-select-gender" v-on:focusout="Gender_focusOut()" v-on:focusin="Gender_focusIn()">
+                                                <input type="hidden" name="gender" id="signup-form-select-gender" required>
                                                 <i class="mdc-select__dropdown-icon"></i>
                                                 <div class="mdc-select__selected-text"></div>
                                                 <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
@@ -183,7 +183,7 @@
                                                     <div class="mdc-notched-outline__trailing"></div>
                                                 </div>
                                             </div>
-                                            <p id="singup-form-select-gender-helper-text" class="mdc-select-helper-text" aria-hidden="true">
+                                            <p id="signup-form-select-gender-helper-text" class="mdc-select-helper-text" aria-hidden="true">
                                                 Select your gender.
                                             </p>
                                         </div>
@@ -193,16 +193,16 @@
                                 <div class="form-content-item form-content-item--coluumns-1">
                                     <div class="form-content-subitem">
                                         <div class="demo-text-field text-field-school mdc-text-field mdc-text-field--outlined">
-                                            <input type="text" id="singup-form-textfield-school" name="school_name" class="mdc-text-field__input" required>
+                                            <input type="text" id="signup-form-textfield-school" name="school_name" class="mdc-text-field__input" required>
                                             <div class="mdc-notched-outline">
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch">
-                                                    <label for="singup-form-textfield-school" class="mdc-floating-label">School Name</label>
+                                                    <label for="signup-form-textfield-school" class="mdc-floating-label">School Name</label>
                                                 </div>
                                                 <div class="mdc-notched-outline__trailing"></div>
                                             </div>
                                         </div>
-                                        <p id="singup-form-textfield-school-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                                        <p id="signup-form-textfield-school-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
                                             Enter your school name.
                                         </p>
                                     </div>
@@ -217,31 +217,31 @@
                                             <div class="address-fields">
                                                 <div>
                                                     <div class="demo-text-field text-field-address-1 mdc-text-field mdc-text-field--outlined">
-                                                        <input type="text" id="singup-form-textfield-address-1" name="address_1" class="mdc-text-field__input" required>
+                                                        <input type="text" id="signup-form-textfield-address-1" name="address_1" class="mdc-text-field__input" required>
                                                         <div class="mdc-notched-outline">
                                                             <div class="mdc-notched-outline__leading"></div>
                                                             <div class="mdc-notched-outline__notch">
-                                                                <label for="singup-form-textfield-address-1" class="mdc-floating-label">Address 1</label>
+                                                                <label for="signup-form-textfield-address-1" class="mdc-floating-label">Address 1</label>
                                                             </div>
                                                             <div class="mdc-notched-outline__trailing"></div>
                                                         </div>
                                                     </div>
-                                                    <p id="singup-form-textfield-address-1-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                                                    <p id="signup-form-textfield-address-1-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
                                                         Address 1.
                                                     </p>
                                                 </div>
                                                 <div>
                                                     <div class="demo-text-field text-field-address-2 mdc-text-field mdc-text-field--outlined">
-                                                        <input type="text" id="singup-form-textfield-address-2" name="address_2" class="mdc-text-field__input">
+                                                        <input type="text" id="signup-form-textfield-address-2" name="address_2" class="mdc-text-field__input">
                                                         <div class="mdc-notched-outline">
                                                             <div class="mdc-notched-outline__leading"></div>
                                                             <div class="mdc-notched-outline__notch">
-                                                                <label for="singup-form-textfield-address-2" class="mdc-floating-label">Address 2</label>
+                                                                <label for="signup-form-textfield-address-2" class="mdc-floating-label">Address 2</label>
                                                             </div>
                                                             <div class="mdc-notched-outline__trailing"></div>
                                                         </div>
                                                     </div>
-                                                    <p id="singup-form-textfield-address-2-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                                                    <p id="signup-form-textfield-address-2-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
                                                         Address 2.
                                                     </p>
                                                 </div>
@@ -252,31 +252,31 @@
                                 <div class="form-content-item form-content-item--coluumns-2 contact">
                                     <div class="form-content-subitem">
                                         <div class="demo-text-field text-field-contact-no mdc-text-field mdc-text-field--outlined">
-                                            <input type="text" id="singup-form-textfield-contact-no" name="contact_number" class="mdc-text-field__input" v-on:keypress="ContactNoValidation_keypress($event)" required>
+                                            <input type="text" id="signup-form-textfield-contact-no" name="contact_number" class="mdc-text-field__input" v-on:keypress="ContactNoValidation_keypress($event)" required>
                                             <div class="mdc-notched-outline">
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch">
-                                                    <label for="singup-form-textfield-contact-no" class="mdc-floating-label">Contact No (E.g : 077-658-4010)</label>
+                                                    <label for="signup-form-textfield-contact-no" class="mdc-floating-label">Contact No (E.g : 077-658-4010)</label>
                                                 </div>
                                                 <div class="mdc-notched-outline__trailing"></div>
                                             </div>
                                         </div>
-                                        <p id="singup-form-textfield-contact-no-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                                        <p id="signup-form-textfield-contact-no-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
                                             Enter your contact no. (E.g : 077-658-4010)
                                         </p>
                                     </div>
                                     <div class="form-content-subitem">
                                         <div class="demo-text-field text-field-email mdc-text-field mdc-text-field--outlined">
-                                            <input type="text" id="singup-form-textfield-email" name="email" class="mdc-text-field__input" required>
+                                            <input type="text" id="signup-form-textfield-email" name="email" class="mdc-text-field__input" required>
                                             <div class="mdc-notched-outline">
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch">
-                                                    <label for="singup-form-textfield-email" class="mdc-floating-label">Email</label>
+                                                    <label for="signup-form-textfield-email" class="mdc-floating-label">Email</label>
                                                 </div>
                                                 <div class="mdc-notched-outline__trailing"></div>
                                             </div>
                                         </div>
-                                        <p id="singup-form-textfield-email-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                                        <p id="signup-form-textfield-email-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
                                             Enter your email.
                                         </p>
                                     </div>
@@ -285,8 +285,8 @@
                                 <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, ad quo? Placeat, at. Earum libero delectus quis sit quidem consequuntur, nihil unde sunt at neque nesciunt, quae repellendus quo in.</p>
                                 <div class="form-content-item form-content-item--coluumns-2 document">
                                     <div class="form-content-subitem">
-                                        <div class="mdc-select demo-width-class mdc-select--outlined singup-form-select-document-type" v-on:focusout="DocumentType_focusOut()" v-on:focusin="DocumentType_focusIn()">
-                                            <input type="hidden" name="document_type" id="singup-form-select-document-type" required>
+                                        <div class="mdc-select demo-width-class mdc-select--outlined signup-form-select-document-type" v-on:focusout="DocumentType_focusOut()" v-on:focusin="DocumentType_focusIn()">
+                                            <input type="hidden" name="document_type" id="signup-form-select-document-type" required>
                                             <i class="mdc-select__dropdown-icon"></i>
                                             <div class="mdc-select__selected-text"></div>
                                             <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
@@ -314,22 +314,22 @@
                                                 <div class="mdc-notched-outline__trailing"></div>
                                             </div>
                                         </div>
-                                        <p id="singup-form-select-document-type-helper-text" class="mdc-select-helper-text" aria-hidden="true">
+                                        <p id="signup-form-select-document-type-helper-text" class="mdc-select-helper-text" aria-hidden="true">
                                             Select your document type.
                                         </p>
                                     </div>
                                     <div class="form-content-subitem">
                                         <div class="demo-text-field text-field-document-no mdc-text-field mdc-text-field--outlined">
-                                            <input type="text" id="singup-form-textfield-document-no" name="document_number" class="mdc-text-field__input">
+                                            <input type="text" id="signup-form-textfield-document-no" name="document_number" class="mdc-text-field__input">
                                             <div class="mdc-notched-outline">
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch">
-                                                    <label for="singup-form-textfield-document-no" class="mdc-floating-label">Postal ID / National ID / Passport number.</label>
+                                                    <label for="signup-form-textfield-document-no" class="mdc-floating-label">Postal ID / National ID / Passport number.</label>
                                                 </div>
                                                 <div class="mdc-notched-outline__trailing"></div>
                                             </div>
                                         </div>
-                                        <p id="singup-form-textfield-document-no-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                                        <p id="signup-form-textfield-document-no-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
                                             Enter your Postal ID / National ID / Passport number.
                                         </p>
                                     </div>
@@ -337,13 +337,13 @@
                                         <div class="file-upload-section">
                                             <div class="file-upload-container">
                                                 <div class="uploaded-file-container">
-                                                    <input type="file" name="file_document" id="singup-form-file-document" v-on:invalid="FileUpload_invalid($event)" v-on:change="FileUpload_change($event)" required>
+                                                    <input type="file" name="file_document" id="signup-form-file-document" v-on:invalid="FileUpload_invalid($event)" v-on:change="FileUpload_change($event)" required>
                                                     <button class="mdc-button" id="file-upload-action-button" v-on:click="FileUploadButton_click($event)">
                                                         <i class="material-icons mdc-button__icon" aria-hidden="true">cloud_upload</i>
                                                         <span class="mdc-button__label">Upload Document</span>
                                                     </button>
                                                     <div id="uploaded-file-container-i"></div>
-                                                    <p id="singup-form-textfield-upload-document-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                                                    <p id="signup-form-textfield-upload-document-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
                                                         Upload a scanned copy of your Postal ID / National ID / Passport.
                                                     </p>
                                                     <!-- <div class="uploaded-file-container-inner">
@@ -361,7 +361,7 @@
                                         <input type="hidden" id="recaptcha_token" name="recaptcha_token">
                                     </div>
                                     <div class="submit-button">
-                                        <p style="text-align:right"><button type="submit" id="signup-form-submit-button" class="mdc-button mdc-button--raised mdc-ripple-upgraded">Sing Up</button></p>
+                                        <p style="text-align:right"><button type="submit" id="signup-form-submit-button" class="mdc-button mdc-button--raised mdc-ripple-upgraded">Sign Up</button></p>
                                     </div>
                                 </div>
                             </form>
@@ -717,11 +717,11 @@ export default {
         Form_OnSubmit : (e) => {
             e.preventDefault();
             if (Form_validate()) {
-                let formData = new FormData(document.getElementById('singup-form'));
+                let formData = new FormData(document.getElementById('sign-form'));
                 document.getElementById('signup-form-submit-button').disabled = true; // submit button disable
                 progressbar.open(); // progressbar open
                 axios.post( 
-                    'url',
+                    'http://api.noi.lk:3000/api/v1/signup',
                     formData,
                     {
                         headers: {
@@ -744,7 +744,7 @@ export default {
         textField_FullName = new MDCTextField(document.querySelector('.text-field-full-name'));
         textField_BirthdayDay = new MDCTextField(document.querySelector('.text-field-birthday-day'));
         textField_BirthdayYear = new MDCTextField(document.querySelector('.text-field-birthday-year'));
-        select_BirthdayMonth_Element = document.querySelector('.singup-form-select-birthday-month');
+        select_BirthdayMonth_Element = document.querySelector('.signup-form-select-birthday-month');
         select_BirthdayMonth = new MDCSelect(select_BirthdayMonth_Element);
 
         textField_BirthdayDay.listen('click' , () => {
@@ -771,7 +771,7 @@ export default {
         // alert(`Selected option at index ${select_BirthdayMonth.selectedIndex} with value "${select_BirthdayMonth.value}"`);
         });
 
-        select_Gender_Element = document.querySelector('.singup-form-select-gender');
+        select_Gender_Element = document.querySelector('.signup-form-select-gender');
         select_Gender= new MDCSelect(select_Gender_Element);
         select_Gender.listen('MDCSelect:change', () => {
             if (select_Gender.value === "") {
@@ -792,7 +792,7 @@ export default {
         textField_Email = new MDCTextField(document.querySelector('.text-field-email'));
         textField_DocumentNo = new MDCTextField(document.querySelector('.text-field-document-no'));
 
-        select_DocumentType_Element = document.querySelector('.singup-form-select-document-type');
+        select_DocumentType_Element = document.querySelector('.signup-form-select-document-type');
         select_DocumentType = new MDCSelect(select_DocumentType_Element);
         select_DocumentType.listen('MDCSelect:change', () => {
             if (select_DocumentType.value === "") {
@@ -808,22 +808,22 @@ export default {
         });
 
         fileUploadActionButton = document.querySelector('#file-upload-action-button');
-        fileUpload = document.querySelector('#singup-form-file-document');
+        fileUpload = document.querySelector('#signup-form-file-document');
         fileUploadContainer = document.querySelector('.file-upload-container');
 
 
-        helperText_FirstName = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-first-name-helper-text'));
-        helperText_LastName = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-last-name-helper-text'));
-        helperText_FullName = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-full-name-helper-text'));
-        helperText_Gender = new MDCTextFieldHelperText(document.querySelector('#singup-form-select-gender-helper-text'));
-        helperText_School = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-school-helper-text'));
-        helperText_Address1 = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-address-1-helper-text'));
-        helperText_Address2 = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-address-2-helper-text'));
-        helperText_ContactNo = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-contact-no-helper-text'));
-        helperText_Email = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-email-helper-text'));
-        helperText_DocumentNo = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-document-no-helper-text'));
-        helperText_DocumentType = new MDCTextFieldHelperText(document.querySelector('#singup-form-select-document-type-helper-text'));
-        helperText_DocumentUpload = new MDCTextFieldHelperText(document.querySelector('#singup-form-textfield-upload-document-helper-text'));
+        helperText_FirstName = new MDCTextFieldHelperText(document.querySelector('#signup-form-textfield-first-name-helper-text'));
+        helperText_LastName = new MDCTextFieldHelperText(document.querySelector('#signup-form-textfield-last-name-helper-text'));
+        helperText_FullName = new MDCTextFieldHelperText(document.querySelector('#signup-form-textfield-full-name-helper-text'));
+        helperText_Gender = new MDCTextFieldHelperText(document.querySelector('#signup-form-select-gender-helper-text'));
+        helperText_School = new MDCTextFieldHelperText(document.querySelector('#signup-form-textfield-school-helper-text'));
+        helperText_Address1 = new MDCTextFieldHelperText(document.querySelector('#signup-form-textfield-address-1-helper-text'));
+        helperText_Address2 = new MDCTextFieldHelperText(document.querySelector('#signup-form-textfield-address-2-helper-text'));
+        helperText_ContactNo = new MDCTextFieldHelperText(document.querySelector('#signup-form-textfield-contact-no-helper-text'));
+        helperText_Email = new MDCTextFieldHelperText(document.querySelector('#signup-form-textfield-email-helper-text'));
+        helperText_DocumentNo = new MDCTextFieldHelperText(document.querySelector('#signup-form-textfield-document-no-helper-text'));
+        helperText_DocumentType = new MDCTextFieldHelperText(document.querySelector('#signup-form-select-document-type-helper-text'));
+        helperText_DocumentUpload = new MDCTextFieldHelperText(document.querySelector('#signup-form-textfield-upload-document-helper-text'));
     
         snackbar = new MDCSnackbar(document.querySelector('#message-snackbar'));
         snackbar_label = document.querySelector('#snackbar-label');

@@ -33,7 +33,7 @@
                   :nav="nav"
                   :isSelected="nav.route == $route.path"
                 />
-                <router-link :to="'singup'">
+                <router-link :to="'signup'">
                   <button class="mdc-button mdc-button--raised reg-button" tabindex="0">
                     <span class="material-icons mdc-button__icon" aria-hidden="true">person</span>
                     <span>Sign up</span>
