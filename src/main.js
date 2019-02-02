@@ -18,8 +18,8 @@ import IOI from './components/ioi/IOI.vue'
 import Gallery from './components/gallery/Gallery.vue'
 import About from './components/about/About.vue'
 import Contact from './components/contact/Contact.vue'
-import signUp from './components/auth/signUp.vue'
-import signUpResponse from './components/auth/signUpResponse.vue'
+import SignUp from './components/auth/SignUp.vue'
+import SignUpResponse from './components/auth/SignUpResponse.vue'
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false
@@ -34,8 +34,8 @@ const routes = [
   { path: '/ioi' , component: IOI},
   { path: '/about', component: About },
   { path: '/contact', component: Contact},
-  { path: '/signup', component:signUp},
-  { path: '/signup/success', component:signUpResponse}
+  { path: '/signup', component:SignUp},
+  { path: '/signup/success', component:SignUpResponse}
 ]
 
 const router = new VueRouter({
