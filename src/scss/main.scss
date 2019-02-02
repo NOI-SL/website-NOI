@@ -22,6 +22,7 @@
 @import "@material/textfield/helper-text/mdc-text-field-helper-text";
 @import "@material/select/mdc-select";
 @import "@material/snackbar/mdc-snackbar";
+@import "@material/linear-progress/mdc-linear-progress.scss";
 
 .page-background {
   background-color: $theme-white-primary-bg;
@@ -92,4 +93,8 @@ a {
 
 #spo-by {
   background-image: url('../img/oDoc-logo.png');
+}
+
+.grecaptcha-badge {
+  z-index: 1;
 }
