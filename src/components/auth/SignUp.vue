@@ -281,9 +281,8 @@
                                         </p>
                                     </div>
                                 </div>
-                                <p class="section-heading-text">Document information</p>
+                                <p class="section-heading-text">Proof Documents</p>
                                 <div class="desc proof-doc">
-                                    <p class="head">Proof Documents</p>
                                     <p class="dc">
                                         Please attach a scanned copy or a photograph of any one of following documents to verify your identity.
                                     </p>
