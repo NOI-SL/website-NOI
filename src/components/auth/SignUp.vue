@@ -765,7 +765,7 @@ export default {
                     document.getElementById('signup-form-submit-button').disabled = false;//submit button enable
                     progressbar.close();// progressbar close
                     console.log(response);
-                    grecaptcha.reset();
+                    reCAPTCHA_set();
                     if (response.data.statusCode == 200) {
                         document.getElementById('signup-form').reset();
                         window.location.replace(window.location.href + '/success');
@@ -781,7 +781,7 @@ export default {
                 }).catch((error) => {
                     document.getElementById('signup-form-submit-button').disabled = false;//submit button enable
                     progressbar.close(); // progressbar close
-                    grecaptcha.reset();
+                    reCAPTCHA_set();
                     SnackBarShowMessage('Unexpected error occurred. Please try again or contact us');
                 }); 
             }
