@@ -405,6 +405,9 @@ import {MDCLinearProgress} from '@material/linear-progress';
 // form send data
 import axios from 'axios';
 
+// API
+import {API} from '../../config';
+
 var textField_FirstName,textField_LastName,textField_FullName,textField_BirthdayDay,textField_BirthdayYear, textField_School, textField_Address1, textField_Address2, textField_ContactNo, textField_Email, textField_DocumentNo; // textFields
 var select_BirthdayMonth_Element, select_Gender_Element, select_DocumentType_Element; // selectElements
 var select_BirthdayMonth, select_Gender, select_DocumentType; // selectFields
@@ -721,7 +724,7 @@ export default {
                 document.getElementById('signup-form-submit-button').disabled = true; // submit button disable
                 progressbar.open(); // progressbar open
                 axios.post( 
-                    'http://api.noi.lk:3000/api/v1/signup',
+                    new API('signup').getURL(),
                     formData,
                     {
                         headers: {
