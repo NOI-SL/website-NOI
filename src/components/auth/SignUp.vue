@@ -282,7 +282,20 @@
                                     </div>
                                 </div>
                                 <p class="section-heading-text">Document information</p>
-                                <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, ad quo? Placeat, at. Earum libero delectus quis sit quidem consequuntur, nihil unde sunt at neque nesciunt, quae repellendus quo in.</p>
+                                <div class="desc proof-doc">
+                                    <p class="head">Proof Documents</p>
+                                    <p class="dc">
+                                        Please attach a scanned copy or a photograph of any one of following documents to verify your identity.
+                                    </p>
+                                    <div class="list--"> 
+                                        <ul>
+                                            <li>Postal ID Card</li>
+                                            <li>National ID Card</li>
+                                            <li>Passport</li>
+                                            <li>Letter signed by principal (<a target="_blank" v-bind:href="item['letter_template'].loc">Click here to download the Template</a>)</li>
+                                        </ul>
+                                    </div>
+                                </div>
                                 <div class="form-content-item form-content-item--coluumns-2 document">
                                     <div class="form-content-subitem">
                                         <div class="mdc-select demo-width-class mdc-select--outlined signup-form-select-document-type" v-on:focusout="DocumentType_focusOut()" v-on:focusin="DocumentType_focusIn()">
@@ -559,9 +572,21 @@ var Form_validate = () => {
     }
 }
 
+var FileUpload_close = () => {
+    fileUploadActionButton.style.display = 'unset';
+    document.querySelector('#uploaded-file-container-i').innerHTML = '';
+    fileUpload.value = null;
+}
+
 export default {
     data() {
         return {
+            item: {
+                'letter_template' : {
+                    title: 'principles-certification-NOI-fillable', 
+                    loc: require('../../letter/Principles_Certification_NOI__fillable.pdf')
+                },
+            }
             // first_name: null,
             // last_name: null,
             // full_name: null,
@@ -683,9 +708,7 @@ export default {
 
                 container.appendChild(file_container_inner);
                 document.querySelector('#upload-cancel-btn').addEventListener('click', () => {
-                    fileUploadActionButton.style.display = 'unset';
-                    container.innerHTML = '';
-                    fileUpload.value = null;
+                    FileUpload_close();
                     fileUploadContainer.classList.add('file-upload-container--invlid');
                 });
             }
@@ -719,6 +742,7 @@ export default {
         },
         Form_OnSubmit : (e) => {
             e.preventDefault();
+            
             if (Form_validate()) {
                 let formData = new FormData(document.getElementById('signup-form'));
                 document.getElementById('signup-form-submit-button').disabled = true; // submit button disable
@@ -733,9 +757,24 @@ export default {
                 }).then((response) => {
                     document.getElementById('signup-form-submit-button').disabled = false;//submit button enable
                     progressbar.close();// progressbar close
-                }).catch((error) => {
-                    // document.getElementById('signup-form-submit-button').disabled = false;//submit button enable
-                    // progressbar.close(); // progressbar close
+                    console.log(response);
+                    if (response.data.statusCode == 200) {
+                        document.getElementById('signup-form').reset();
+                        window.location.replace(window.location.href + '/success');
+                    }else if (response.data.statusCode == 400) {
+                        document.getElementById('signup-form').reset();
+                        SnackBarShowMessage('Email is already on the system. Please log into the NOI portal through portal.noi.lk');
+                    }else if (response.data.statusCode == 500) {
+                        SnackBarShowMessage('Unexpected error occurred. Please try again or contact us');
+                    }
+                }).catch((error,response) => {
+                    document.getElementById('signup-form-submit-button').disabled = false;//submit button enable
+                    progressbar.close(); // progressbar close
+                    document.getElementById('signup-form').reset();
+                    select_DocumentType.value = '';
+                    FileUpload_close();
+                    select_DocumentType_Element.classList.remove('mdc-select--invalid');
+                    SnackBarShowMessage('Email is already on the system. Please log into the NOI portal through portal.noi.lk');
                 }); 
             }
             
@@ -841,7 +880,6 @@ export default {
         // reCAPTCHA
         grecaptcha.ready(function() {
             grecaptcha.execute('6LfJjI4UAAAAACjEIuGGUDaUjQ6gJ6Iwi3IZJS5J', {action: 'signup'}).then(function(token) {
-                console.log(token);
                 document.getElementById('recaptcha_token').value = token;
             });
         });
