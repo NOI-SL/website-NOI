@@ -26,6 +26,8 @@
         .go-to-top-button-container {
             text-align: right;
             padding-right: 10px;
+            position: relative;
+            z-index: 1;
             .go-to-top-button{
                 border-radius: 50%;
                 height: 50px;
