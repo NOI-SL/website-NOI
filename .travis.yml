@@ -19,12 +19,12 @@ deploy:
   on:
     repo: SLIOI/website-NOI
     branch: master
-- provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  local-dir: dist
-  verbose: true
-  on:
-    repo: SLIOI/website-NOI
-    branch: develop
+# - provider: pages
+#   skip-cleanup: true
+#   github-token: $GITHUB_TOKEN
+#   keep-history: true
+#   local-dir: dist
+#   verbose: true
+#   on:
+#     repo: SLIOI/website-NOI
+#     branch: develop
