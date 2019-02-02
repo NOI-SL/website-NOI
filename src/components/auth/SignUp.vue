@@ -717,7 +717,7 @@ export default {
         Form_OnSubmit : (e) => {
             e.preventDefault();
             if (Form_validate()) {
-                let formData = new FormData(document.getElementById('sign-form'));
+                let formData = new FormData(document.getElementById('signup-form'));
                 document.getElementById('signup-form-submit-button').disabled = true; // submit button disable
                 progressbar.open(); // progressbar open
                 axios.post( 
