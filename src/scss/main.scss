@@ -21,6 +21,8 @@
 @import "@material/textfield/mdc-text-field";
 @import "@material/textfield/helper-text/mdc-text-field-helper-text";
 @import "@material/select/mdc-select";
+@import "@material/snackbar/mdc-snackbar";
+@import "@material/linear-progress/mdc-linear-progress.scss";
 
 .page-background {
   background-color: $theme-white-primary-bg;
@@ -38,8 +40,8 @@
 @import "./page_resources";
 @import "./page_about";
 @import "./page_contact";
-@import "./page_singup";
-@import "./page_singup_response";
+@import "./page_signup";
+@import "./page_signup_response";
 @import "./cfooter";
 
 
@@ -91,4 +93,8 @@ a {
 
 #spo-by {
   background-image: url('../img/oDoc-logo.png');
+}
+
+.grecaptcha-badge {
+  z-index: 1;
 }
