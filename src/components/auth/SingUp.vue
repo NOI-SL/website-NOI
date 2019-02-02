@@ -357,12 +357,24 @@
                                     </div>
                                 </div>
                                 <div class="form-content-item">
-                                    <div class="recapcha"></div>
+                                    <div class="recapcha">
+                                        <input type="hidden" id="recaptcha_token" name="recaptcha_token">
+                                    </div>
                                     <div class="submit-button">
-                                        <p style="text-align:right"><button type="submit" class="mdc-button mdc-button--raised mdc-ripple-upgraded">Sing Up</button></p>
+                                        <p style="text-align:right"><button type="submit" id="signup-form-submit-button" class="mdc-button mdc-button--raised mdc-ripple-upgraded">Sing Up</button></p>
                                     </div>
                                 </div>
                             </form>
+                        </div>
+                        <div role="progressbar" id="progressbar" class="mdc-linear-progress mdc-linear-progress--indeterminate">
+                            <div class="mdc-linear-progress__buffering-dots"></div>
+                            <div class="mdc-linear-progress__buffer"></div>
+                            <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+                                <span class="mdc-linear-progress__bar-inner"></span>
+                            </div>
+                            <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+                                <span class="mdc-linear-progress__bar-inner"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -388,7 +400,9 @@ import {MDCTextFieldHelperText} from '@material/textfield/helper-text';
 import {MDCSelect} from '@material/select';
 import {MDCRipple} from '@material/ripple';
 import {MDCSnackbar} from '@material/snackbar';
+import {MDCLinearProgress} from '@material/linear-progress';
 
+// form send data
 import axios from 'axios';
 
 var textField_FirstName,textField_LastName,textField_FullName,textField_BirthdayDay,textField_BirthdayYear, textField_School, textField_Address1, textField_Address2, textField_ContactNo, textField_Email, textField_DocumentNo; // textFields
@@ -399,6 +413,8 @@ var helperText_FirstName, helperText_LastName, helperText_FullName, helperText_G
 var fileUploadActionButton, fileUpload, fileUploadContainer;
 // snack bar
 var snackbar, snackbar_label;
+// progressbar
+var progressbar;
 
 var SnackBarShowMessage = (message) => {
     snackbar_label.innerText = message;
@@ -702,18 +718,22 @@ export default {
             e.preventDefault();
             if (Form_validate()) {
                 let formData = new FormData(document.getElementById('singup-form'));
+                document.getElementById('signup-form-submit-button').disabled = true; // submit button disable
+                progressbar.open(); // progressbar open
                 axios.post( 
                     'url',
                     formData,
                     {
-                    headers: {
-                        'Content-Type': 'multipart/form-data'
-                    }
+                        headers: {
+                            'Content-Type': 'multipart/form-data'
+                        }
                 }).then((response) => {
-
+                    document.getElementById('signup-form-submit-button').disabled = false;//submit button enable
+                    progressbar.close();// progressbar close
                 }).catch((error) => {
-
-                });
+                    // document.getElementById('signup-form-submit-button').disabled = false;//submit button enable
+                    // progressbar.close(); // progressbar close
+                }); 
             }
             
         }
@@ -782,6 +802,7 @@ export default {
             }else if (select_DocumentType.value !== "") {
                 select_DocumentType_Element.classList.remove('mdc-select--invalid');
             }
+
             textField_DocumentNo.value = '';
             textField_DocumentNo.root_.classList.remove('mdc-text-field--invalid');
         });
@@ -811,6 +832,16 @@ export default {
         });
 
         const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
+        progressbar = new MDCLinearProgress(document.querySelector('#progressbar'));
+        progressbar.close();
+
+        // reCAPTCHA
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LfJjI4UAAAAACjEIuGGUDaUjQ6gJ6Iwi3IZJS5J', {action: 'signup'}).then(function(token) {
+                console.log(token);
+                document.getElementById('recaptcha_token').value = token;
+            });
+        });
     }
 }
 </script>
