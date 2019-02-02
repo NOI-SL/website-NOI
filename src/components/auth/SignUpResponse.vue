@@ -7,7 +7,7 @@
                         <p class="heading-success">You are successfully signed up.</p>
                         <div class="content-message">
                             <p class="thank-you">Thank you !</p>
-                            <p class="text">NOI … platform credentials have been mailed to your email address.</p>
+                            <p class="text">NOI Portal credentials have been mailed to your email address.</p>
                         </div>
                     </div>
                 </div>
