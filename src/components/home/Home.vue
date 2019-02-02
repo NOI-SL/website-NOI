@@ -160,10 +160,8 @@ export default {
     };
   },
   mounted: () => {
-    // particlesJS.load('particles-js', '../../js/particles/particlesjs-config.json', function() {
-    //   console.log('particles.js loaded - callback');
-    // });
 
+    // particles
     particlesJS("particles-js", {
       particles: {
         number: {
@@ -274,6 +272,10 @@ export default {
       },
       retina_detect: true
     });
+
+    // scroll to top 
+    document.querySelector('#section-1').scrollIntoView(true);
+
   }
 };
 </script>

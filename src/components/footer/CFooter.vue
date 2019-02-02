@@ -27,7 +27,17 @@
 
 
 <script>
+
+// Smooth scroll
+import SmoothScroll from 'smooth-scroll';
+
+
 export default {
-    
+    mounted : () => {
+        
+        // smooth scroll
+        var scroll = new SmoothScroll('a[href*="#"]');
+
+    }
 }
 </script>

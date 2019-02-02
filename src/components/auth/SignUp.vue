@@ -903,6 +903,10 @@ export default {
 
         // reCAPTCHA
         reCAPTCHA_set();
+
+        // scroll to top 
+        document.querySelector('#section-1').scrollIntoView(true);
+
     }
 }
 </script>

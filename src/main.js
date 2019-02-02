@@ -1,12 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-// IMPORT Material
-
-
-// Smooth scroll
-import SmoothScroll from 'smooth-scroll';
-
 import App from './App.vue'
 import Home from './components/home/Home.vue'
 import NOI from './components/noi/NOI.vue'
@@ -50,6 +44,3 @@ new Vue({
   router: router,
   components: { App }
 })
-
-// smooth scroll
-var scroll = new SmoothScroll('a[href*="#"]');

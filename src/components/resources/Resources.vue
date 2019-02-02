@@ -25,7 +25,7 @@
                   </div>
                   <div class="mdc-card__actions">
                     <div class="mdc-card__action-buttons">
-                      <a v-bind:href="item['competitive-programming-hand-book'].loc"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Read</button></a>
+                      <a target="_blank" v-bind:href="item['competitive-programming-hand-book'].loc"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Read</button></a>
                     </div>
                   </div>
                 </div>
@@ -43,7 +43,7 @@
                   </div>
                   <div class="mdc-card__actions">
                     <div class="mdc-card__action-buttons">
-                      <a href=""><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">amazon link</button></a>
+                      <a target="_blank" href=""><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">amazon link</button></a>
                     </div>
                   </div>
                 </div>
@@ -61,7 +61,7 @@
                   </div>
                   <div class="mdc-card__actions">
                     <div class="mdc-card__action-buttons">
-                      <a v-bind:href="item['ioi-syllabus'].loc"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">read</button></a>
+                      <a target="_blank" v-bind:href="item['ioi-syllabus'].loc"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">read</button></a>
                     </div>
                   </div>
                 </div>
@@ -79,7 +79,7 @@
                   </div>
                   <div class="mdc-card__actions">
                     <div class="mdc-card__action-buttons">
-                      <a href="">
+                      <a target="_blank" href="">
                         <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded">
                           <i class="material-icons mdc-button__icon">cloud_download</i><span class="mdc-button__label">download</span>
                         </button>
@@ -187,8 +187,15 @@ export default {
     };
   },
   mounted : () => {
-    const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
 
+    // const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
+    var buttons = document.querySelectorAll('.mdc-button');
+    buttons.forEach(element => {
+      new MDCRipple(element);
+    });
+
+    // scroll to top 
+    document.querySelector('#section-1').scrollIntoView(true);
     
   }
 };
