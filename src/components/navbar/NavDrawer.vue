@@ -11,7 +11,7 @@
                     :dropDowns="dropDowns"
                 
                 />
-                <router-link :to="buttons[0].route" class="mdc-list-item">
+                <router-link :to="buttons[0].route" class="mdc-list-item reg-button-link" :class="{'mdc-list-item--activated':(buttons[0].route == $route.path)}">
                   <button class="mdc-button mdc-button--raised reg-button" tabindex="0">
                     <span class="material-icons mdc-button__icon" aria-hidden="true">person</span>
                     <span>Sign up</span>
@@ -116,12 +116,20 @@ export default {
   mounted : () => {
     
     drawer_list = MDCList.attachTo(document.querySelector('.mdc-list'));
-    drawer_list.wrapFocus = true;
+    try {
+      drawer_list.wrapFocus = true;
+    } catch (error) {
+      console.log(error);
+    }
 
     drawer = MDCDrawer.attachTo(document.querySelector('#noi-drawer'));
 
     document.querySelector('.mobile-responsive-button').addEventListener('click', function(){
-      drawer.open = !drawer.open;
+      try {
+        drawer.open = !drawer.open;
+      }catch(error){
+        console.log(error);
+      }
     });
 
     // DROPDOWN action
