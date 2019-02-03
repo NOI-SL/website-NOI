@@ -256,13 +256,13 @@
                                             <div class="mdc-notched-outline">
                                                 <div class="mdc-notched-outline__leading"></div>
                                                 <div class="mdc-notched-outline__notch">
-                                                    <label for="signup-form-textfield-contact-no" class="mdc-floating-label">Contact No (E.g : 077-658-4010)</label>
+                                                    <label for="signup-form-textfield-contact-no" class="mdc-floating-label">Contact No (E.g : 0776584010)</label>
                                                 </div>
                                                 <div class="mdc-notched-outline__trailing"></div>
                                             </div>
                                         </div>
                                         <p id="signup-form-textfield-contact-no-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
-                                            Enter your contact no. (E.g : 077-658-4010)
+                                            Enter your contact no. (E.g : 0776584010)
                                         </p>
                                     </div>
                                     <div class="form-content-subitem">
@@ -502,12 +502,13 @@ var ContactNo_Validate = (number) => {
         SnackBarShowMessage('Please fill the contact number.');
         return false;
     }else {
-        var regx = /^\d{3}-\d{3}-\d{4}$/;
+        // var regx = /^\d{3}-\d{3}-\d{4}$/;
+        var regx = /^(\+\d{1,3}[- ]?)?\d{10}$/;
         if (regx.test(number)) {
             return true;
         }else {
             console.log('contact no format error');
-            SnackBarShowMessage('Please fill a valid contact number (E.g : 077-658-4010).');
+            SnackBarShowMessage('Please fill a valid contact number (E.g : 0776584010 or +94776584010).');
             return false;
         }
     }
@@ -735,15 +736,15 @@ export default {
             var regex = new RegExp("^[0-9]+$");
             var char = event.which || event.keyCode;
             var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-            if(!regex.test(key) && !((char == 8)? true:(char == 9)? true : false)){
+            if(!regex.test(key) && !((char == 8)? true:(char == 9)? true : (char == 37)? true : (char == 39)? true : false)){
                 event.preventDefault();
             }
         },
         ContactNoValidation_keypress : (event) => {
-            var regex = new RegExp("^[0-9-]+$");
+            var regex = new RegExp("^[0-9+]+$");
             var char = event.which || event.keyCode;
             var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-            if(!regex.test(key) && !((char == 8)? true:(char == 9)? true : false)){
+            if(!regex.test(key) && !((char == 8)? true:(char == 9)? true : (char == 37)? true : (char == 39)? true : false)){
                 event.preventDefault();
             }
         },
@@ -751,7 +752,8 @@ export default {
             var regex = new RegExp("^[a-zA-Z]+$");
             var char = event.which || event.keyCode;
             var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-            if(!regex.test(key) && !((char == 8)? true:(char == 9)? true : (char == 32)? true : false)){
+            console.log(char);
+            if(!regex.test(key) && !((char == 8)? true:(char == 9)? true : (char == 32)? true : (char == 37)? true : (char == 39)? true : false)){
                 event.preventDefault();
             }
         },
