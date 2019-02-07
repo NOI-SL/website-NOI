@@ -17,7 +17,7 @@
             <p class="heading-text">NOI 2019 <small>powered by oDoc</small></p>
             <p class="desc-text">Stages of the NOI 2019 program</p>
             <p class="button-container">
-              <router-link :to="'/noi/rulesandregulations'"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Rules and Regulations</button></router-link>
+              <!-- <router-link :to="'/noi/rulesandregulations'"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Rules and Regulations</button></router-link> -->
               <router-link :to="'/noi/awards'"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Awards</button></router-link>
             </p>
           </div>
