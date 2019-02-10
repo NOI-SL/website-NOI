@@ -87,12 +87,12 @@ export default {
               id: 0,
               dropDownFor: 1,
               dropDownItems : [
-                  {
-                    id: 0,
-                    icon: "",
-                    route: "/noi/rulesandregulations",
-                    text: "Rules and regulations"
-                  },
+                  // {
+                  //   id: 0, // ****edit style**** 
+                  //   icon: "",
+                  //   route: "/noi/rulesandregulations",
+                  //   text: "Rules and regulations"
+                  // },
                   {
                     id: 1,
                     icon: "",
