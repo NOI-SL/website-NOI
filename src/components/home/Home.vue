@@ -70,9 +70,7 @@
               <li>The NOI program consists of a C++ Training Camp for students, prior to the NOI 2019 contest</li>
               <li>For more information regarding the program, please see "<router-link :to="'noi'"><span style="color: white;">NOI 2019</span></router-link>" page.</li>
             </ul>
-            <p
-              class="noted-text"
-            >If you <b>DO NOT</b> wish to take part in the C++ Training Camp, sign-up before 20th of March 2019.</p>
+            <p class="noted-text">If you <b>DO NOT</b> wish to take part in the C++ Training Camp, sign-up before 20th of March 2019.</p>
           </div>
           <div class="sign-up">
             <p>
