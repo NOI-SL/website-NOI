@@ -388,6 +388,10 @@
                 
                 .org {
                     grid-area: org;
+
+                    @include  width-change-max-width(516px) { 
+                        padding-bottom: 10px;
+                    }
                 }
 
                 .spo {
