@@ -3,7 +3,9 @@
     <div class="mdc-toolbar__row">
       <section class="mdc-toolbar__section mdc-toolbar__section--align-start mdc-toolbar__section--shrink-to-fit mdc-toolbar__section-logo-conteiner">
         <div class="logo-container">
+          <router-link :to="'/'">
           <img class="img-responsive" src="img/NOI_LOGO_ORG_small.png" alt>
+          </router-link>
         </div>
       </section>
       <section class="mdc-toolbar__section mdc-toolbar__section--align-end mdc-toolbar__section--nav-mobile-content">
