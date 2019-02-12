@@ -65,10 +65,12 @@
             <p class="heading-desc">Sign up for the National Olympiad in Informatics program.</p>
           </div>
           <div class="desc">
-            <p class="deadline">Deadline&nbsp;: <b>20th of February 2019</b></p>
+            <p class="deadline">Deadline&nbsp;: <b>20<sup>th</sup> of February 2019</b></p>
             <ul>
               <li>The NOI program consists of a C++ Training Camp for students, prior to the NOI 2019 contest</li>
               <li>For more information regarding the program, please see "<router-link :to="'noi'"><span style="color: white;">NOI 2019</span></router-link>" page.</li>
+              <li>The contestant must be born after the 01<sup>st</sup> of July 1999 (under 20 years of age by 01st of July 2019).</li>
+              <li>There is no lower bound for age, to compete at NOI.</li>
             </ul>
             <p class="noted-text">If you <b>DO NOT</b> wish to take part in the C++ Training Camp, sign-up before 20th of March 2019.</p>
           </div>
@@ -114,9 +116,7 @@
             </div>
           </div>
           <div class="desc">
-            <p
-              class="desc-text"
-            >National Olympiad in Informatics program is organized by the ACM student Chapter of UCSC, with collaboration of IOI alumni of Sri Lanka</p>
+            <p class="desc-text">National Olympiad in Informatics program is organized by the ACM student Chapter of UCSC, with collaboration of IOI alumni of Sri Lanka</p>
             <p class="desc-text">NOI 2019 program is powered by oDoc</p>
           </div>
         </div>
