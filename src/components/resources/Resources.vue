@@ -83,6 +83,16 @@
                         <!-- <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded">
                           <i class="material-icons mdc-button__icon">cloud_download</i><span class="mdc-button__label">download</span>
                         </button> -->
+                        <a target="_blank" href="https://www.ioi2014.org/competition/tasks.html">
+                          <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded resource-pp-link-btn">
+                            <i class="material-icons mdc-button__icon">link</i><span class="mdc-button__label">IOI 2014 Taiwan</span>
+                          </button>
+                        </a>
+                        <a target="_blank" href="http://ioi2015.kz/content/view/1/271">
+                          <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded resource-pp-link-btn">
+                            <i class="material-icons mdc-button__icon">link</i><span class="mdc-button__label">IOI 2015 Kazakhstan</span>
+                          </button>
+                        </a>
                         <a target="_blank" href="http://ioi2016.ru/pages/ps?locale=en">
                           <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded resource-pp-link-btn">
                             <i class="material-icons mdc-button__icon">link</i><span class="mdc-button__label">IOI 2016 Russia</span>
