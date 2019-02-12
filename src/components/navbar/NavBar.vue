@@ -74,12 +74,12 @@ export default {
           route: "/noi",
           text: "NOI 2019"
         },
-        {
-          id: 2,
-          icon: "",
-          route: "/news",
-          text: "News"
-        },
+        // {
+        //   id: 2,
+        //   icon: "",
+        //   route: "/news",
+        //   text: "News"
+        // },
         {
           id: 3,
           icon: "",
