@@ -80,9 +80,24 @@
                   <div class="mdc-card__actions">
                     <div class="mdc-card__action-buttons">
                       <a target="_blank" href="">
-                        <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded">
+                        <!-- <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded">
                           <i class="material-icons mdc-button__icon">cloud_download</i><span class="mdc-button__label">download</span>
-                        </button>
+                        </button> -->
+                        <a target="_blank" href="http://ioi2016.ru/pages/ps?locale=en">
+                          <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded resource-pp-link-btn">
+                            <i class="material-icons mdc-button__icon">link</i><span class="mdc-button__label">IOI 2016 Russia</span>
+                          </button>
+                        </a>
+                        <a target="_blank" href="http://ioi2017.org/contest/tasks/">
+                          <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded resource-pp-link-btn">
+                            <i class="material-icons mdc-button__icon">link</i><span class="mdc-button__label">IOI 2017 Iran</span>
+                          </button>
+                        </a>
+                        <a target="_blank" href="https://ioi2018.jp/competition/tasks/">
+                          <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded resource-pp-link-btn">
+                            <i class="material-icons mdc-button__icon">link</i><span class="mdc-button__label">IOI 2018 Japan</span>
+                          </button>
+                        </a>
                       </a>
                     </div>
                   </div>
