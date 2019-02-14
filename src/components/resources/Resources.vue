@@ -43,7 +43,7 @@
                   </div>
                   <div class="mdc-card__actions">
                     <div class="mdc-card__action-buttons">
-                      <a target="_blank" href=""><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">amazon link</button></a>
+                      <a target="_blank" href="https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">amazon link</button></a>
                     </div>
                   </div>
                 </div>
