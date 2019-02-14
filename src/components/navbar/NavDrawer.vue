@@ -11,7 +11,7 @@
                     :dropDowns="dropDowns"
                 
                 />
-                <router-link :to="buttons[0].route" class="mdc-list-item">
+                <router-link :to="buttons[0].route" class="mdc-list-item reg-button-link" :class="{'mdc-list-item--activated':(buttons[0].route == $route.path)}">
                   <button class="mdc-button mdc-button--raised reg-button" tabindex="0">
                     <span class="material-icons mdc-button__icon" aria-hidden="true">person</span>
                     <span>Sign up</span>
@@ -28,6 +28,7 @@ import NavDrawerItem from "./NavDrawerItem.vue"
 
 import {MDCList} from "@material/list";
 import {MDCDrawer} from "@material/drawer";
+import {MDCRipple} from '@material/ripple';
 
 var drawer_list, drawer;
 
@@ -50,12 +51,12 @@ export default {
           route: "/noi",
           text: "NOI 2019"
         },
-        {
-          id: 2,
-          icon: "",
-          route: "/news",
-          text: "News"
-        },
+        // {
+        //   id: 2,
+        //   icon: "",
+        //   route: "/news",
+        //   text: "News"
+        // },
         {
           id: 3,
           icon: "",
@@ -86,12 +87,12 @@ export default {
               id: 0,
               dropDownFor: 1,
               dropDownItems : [
-                  {
-                    id: 0,
-                    icon: "",
-                    route: "/noi/rulesandregulations",
-                    text: "Rules and regulations"
-                  },
+                  // {
+                  //   id: 0, // ****edit style**** 
+                  //   icon: "",
+                  //   route: "/noi/rulesandregulations",
+                  //   text: "Rules and regulations"
+                  // },
                   {
                     id: 1,
                     icon: "",
@@ -105,7 +106,7 @@ export default {
           {
             id: 0,
             icon: "",
-            route: "/singup",
+            route: "/signup",
             text: "Home"
           }
       ]
@@ -115,12 +116,20 @@ export default {
   mounted : () => {
     
     drawer_list = MDCList.attachTo(document.querySelector('.mdc-list'));
-    drawer_list.wrapFocus = true;
+    try {
+      drawer_list.wrapFocus = true;
+    } catch (error) {
+      console.log(error);
+    }
 
     drawer = MDCDrawer.attachTo(document.querySelector('#noi-drawer'));
 
     document.querySelector('.mobile-responsive-button').addEventListener('click', function(){
-      drawer.open = !drawer.open;
+      try {
+        drawer.open = !drawer.open;
+      }catch(error){
+        console.log(error);
+      }
     });
 
     // DROPDOWN action

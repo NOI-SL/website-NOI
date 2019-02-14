@@ -25,7 +25,7 @@
                   </div>
                   <div class="mdc-card__actions">
                     <div class="mdc-card__action-buttons">
-                      <a v-bind:href="item['competitive-programming-hand-book'].loc"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Read</button></a>
+                      <a target="_blank" v-bind:href="item['competitive-programming-hand-book'].loc"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Read</button></a>
                     </div>
                   </div>
                 </div>
@@ -43,7 +43,7 @@
                   </div>
                   <div class="mdc-card__actions">
                     <div class="mdc-card__action-buttons">
-                      <a href=""><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">amazon link</button></a>
+                      <a target="_blank" href="https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">amazon link</button></a>
                     </div>
                   </div>
                 </div>
@@ -61,7 +61,7 @@
                   </div>
                   <div class="mdc-card__actions">
                     <div class="mdc-card__action-buttons">
-                      <a v-bind:href="item['ioi-syllabus'].loc"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">read</button></a>
+                      <a target="_blank" v-bind:href="item['ioi-syllabus'].loc"><button class="mdc-button mdc-button--raised mdc-ripple-upgraded">read</button></a>
                     </div>
                   </div>
                 </div>
@@ -79,10 +79,35 @@
                   </div>
                   <div class="mdc-card__actions">
                     <div class="mdc-card__action-buttons">
-                      <a href="">
-                        <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded">
+                      <a target="_blank" href="">
+                        <!-- <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded">
                           <i class="material-icons mdc-button__icon">cloud_download</i><span class="mdc-button__label">download</span>
-                        </button>
+                        </button> -->
+                        <a target="_blank" href="https://www.ioi2014.org/competition/tasks.html">
+                          <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded resource-pp-link-btn">
+                            <i class="material-icons mdc-button__icon">link</i><span class="mdc-button__label">IOI 2014 Taiwan</span>
+                          </button>
+                        </a>
+                        <a target="_blank" href="http://ioi2015.kz/content/view/1/271">
+                          <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded resource-pp-link-btn">
+                            <i class="material-icons mdc-button__icon">link</i><span class="mdc-button__label">IOI 2015 Kazakhstan</span>
+                          </button>
+                        </a>
+                        <a target="_blank" href="http://ioi2016.ru/pages/ps?locale=en">
+                          <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded resource-pp-link-btn">
+                            <i class="material-icons mdc-button__icon">link</i><span class="mdc-button__label">IOI 2016 Russia</span>
+                          </button>
+                        </a>
+                        <a target="_blank" href="http://ioi2017.org/contest/tasks/">
+                          <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded resource-pp-link-btn">
+                            <i class="material-icons mdc-button__icon">link</i><span class="mdc-button__label">IOI 2017 Iran</span>
+                          </button>
+                        </a>
+                        <a target="_blank" href="https://ioi2018.jp/competition/tasks/">
+                          <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded resource-pp-link-btn">
+                            <i class="material-icons mdc-button__icon">link</i><span class="mdc-button__label">IOI 2018 Japan</span>
+                          </button>
+                        </a>
                       </a>
                     </div>
                   </div>
@@ -187,8 +212,15 @@ export default {
     };
   },
   mounted : () => {
-    const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
 
+    // const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
+    var buttons = document.querySelectorAll('.mdc-button');
+    buttons.forEach(element => {
+      new MDCRipple(element);
+    });
+
+    // scroll to top 
+    document.querySelector('#section-1').scrollIntoView(true);
     
   }
 };

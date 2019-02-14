@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --inline --hot --env dev",
-    "build": "webpack --progress --hide-modules --env prod",
+    "build": "npm run clean; webpack --progress --hide-modules --env prod",
     "clean": "rm -rf dist"
   },
   "repository": {
@@ -45,9 +45,11 @@
     "@material/elevation": "^0.41.0",
     "@material/icon-button": "^0.42.0",
     "@material/image-list": "^0.42.0",
+    "@material/linear-progress": "^0.43.0",
     "@material/list": "^0.43.0",
     "@material/menu": "^0.43.0",
     "@material/select": "^0.43.0",
+    "@material/snackbar": "^0.43.0",
     "@material/tab-bar": "^0.42.0",
     "@material/textfield": "^0.43.0",
     "@material/theme": "^0.41.0",
@@ -55,6 +57,7 @@
     "@material/top-app-bar": "^0.43.0",
     "@material/typography": "^0.43.0",
     "autoprefixer": "^9.4.4",
+    "axios": "^0.18.0",
     "particles.js": "^2.0.0",
     "smooth-scroll": "^15.0.0",
     "smooth-scrolling": "^2.3.11",

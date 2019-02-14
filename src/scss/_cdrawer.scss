@@ -27,7 +27,7 @@
     padding-top: 9px;
     .mdc-menu__dropdown {
       width: 100%;
-      height: 100px;
+      height: 50px; // 100px when rules added
       // animation: dropdown-animate-f 0.5s ease-in forwards;
     }
   }

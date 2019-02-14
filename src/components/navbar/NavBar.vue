@@ -3,7 +3,9 @@
     <div class="mdc-toolbar__row">
       <section class="mdc-toolbar__section mdc-toolbar__section--align-start mdc-toolbar__section--shrink-to-fit mdc-toolbar__section-logo-conteiner">
         <div class="logo-container">
+          <router-link :to="'/'">
           <img class="img-responsive" src="img/NOI_LOGO_ORG_small.png" alt>
+          </router-link>
         </div>
       </section>
       <section class="mdc-toolbar__section mdc-toolbar__section--align-end mdc-toolbar__section--nav-mobile-content">
@@ -33,7 +35,7 @@
                   :nav="nav"
                   :isSelected="nav.route == $route.path"
                 />
-                <router-link :to="'singup'">
+                <router-link :to="'/signup'">
                   <button class="mdc-button mdc-button--raised reg-button" tabindex="0">
                     <span class="material-icons mdc-button__icon" aria-hidden="true">person</span>
                     <span>Sign up</span>
@@ -72,12 +74,12 @@ export default {
           route: "/noi",
           text: "NOI 2019"
         },
-        {
-          id: 2,
-          icon: "",
-          route: "/news",
-          text: "News"
-        },
+        // {
+        //   id: 2,
+        //   icon: "",
+        //   route: "/news",
+        //   text: "News"
+        // },
         {
           id: 3,
           icon: "",

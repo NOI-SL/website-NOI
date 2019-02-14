@@ -1,4 +1,4 @@
-#page-singup {
+#page-signup {
    
     @extend .page-background;
 
@@ -12,7 +12,7 @@
             padding-top: 100px;
             padding-bottom: 20px;
 
-            .singup-form-container {
+            .signup-form-container {
                 min-height: 200px;
                 background-color: $theme-white-primary;
 
@@ -36,6 +36,30 @@
 
                     .required-text {
                         color: rgb(185, 26, 26)
+                    }
+                }
+
+
+                .proof-doc {
+                    .head {
+                        font-weight: bold;
+                        padding-bottom: 5px;
+                    }
+                    .dc {
+                        font-size: 1em;
+                        padding-bottom: 5px;
+                    }
+
+                    .list-- {
+                        padding-left: 20px;
+
+                        ul {
+                            li {
+                                a {
+                                    font-size: 0.9em;
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -179,7 +203,7 @@
                             @include width568max { 
                                 padding-top: 10px;
                             }
-                            .singup-form-select-gender {
+                            .signup-form-select-gender {
                                 .mdc-floating-label {
                                     &::after {
                                         content: "*";
@@ -241,7 +265,7 @@
                             width: 100%;
                         }
 
-                        .singup-form-select-document-type {
+                        .signup-form-select-document-type {
                             .mdc-floating-label {
                                 &::after {
                                     content: "*";
@@ -270,7 +294,7 @@
                                     height: 100%;
                                     position: relative;
 
-                                    #singup-form-file-document {
+                                    #signup-form-file-document {
                                         display: none;
                                     }
 
