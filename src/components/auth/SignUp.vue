@@ -777,7 +777,15 @@ export default {
                 }).then((response) => {
                     document.getElementById('signup-form-submit-button').disabled = false;//submit button enable
                     progressbar.close();// progressbar close
-                    console.log(response);
+                    // console.log(response);
+                    ga('send', {
+                        hitType: 'event',
+                        eventCategory: 'Sign Up',
+                        eventAction: 'Form submit',
+                        eventLabel: 'Sign up form submit status code',
+                        eventValue: response.data.statusCode
+                    });
+
                     reCAPTCHA_set();
                     if (response.status == 200) {
                         if (response.data.statusCode == 200) {
