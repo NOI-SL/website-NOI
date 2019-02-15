@@ -565,9 +565,14 @@ var Form_validate = () => {
     }else if (fileUpload.value == null || fileUpload.value == '') {
         console.log('upload file error');
         fileUploadContainer.classList.add('file-upload-container--invlid');
-        SnackBarShowMessage('Please choose the file.')
+        SnackBarShowMessage('Please choose the file.');
         return false;
-    }else {
+    }else if (fileUpload.files[0].size > 5000000){
+        console.log('upload file error');
+        fileUploadContainer.classList.add('file-upload-container--invlid');
+        SnackBarShowMessage('Maximum file size is 5MB.');
+        return false;
+    }else{
         return true;
     }
 }
@@ -752,7 +757,7 @@ export default {
             var regex = new RegExp("^[a-zA-Z]+$");
             var char = event.which || event.keyCode;
             var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-            console.log(char);
+            // console.log(char);
             if(!regex.test(key) && !((char == 8)? true:(char == 9)? true : (char == 32)? true : (char == 37)? true : (char == 39)? true : false)){
                 event.preventDefault();
             }
@@ -899,9 +904,10 @@ export default {
         helperText_Email = new MDCTextFieldHelperText(document.querySelector('#signup-form-textfield-email-helper-text'));
         helperText_DocumentNo = new MDCTextFieldHelperText(document.querySelector('#signup-form-textfield-document-no-helper-text'));
         helperText_DocumentType = new MDCTextFieldHelperText(document.querySelector('#signup-form-select-document-type-helper-text'));
+
         helperText_DocumentUpload = new MDCTextFieldHelperText(document.querySelector('#signup-form-textfield-upload-document-helper-text'));
-    
         snackbar = new MDCSnackbar(document.querySelector('#message-snackbar'));
+
         snackbar_label = document.querySelector('#snackbar-label');
         snackbar.listen('MDCSnackbar:closed', () => {
             snackbar_label.innerText = 'Some error. Please try again !';
