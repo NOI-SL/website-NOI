@@ -845,7 +845,7 @@ var reCAPTCHA_set = () => {
 };
 
 // Google submit event cache
-var googleAnalyticsEventCatch = (eventLabelValue, value) => {
+var googleAnalyticsEventCatch = (eventLabelValue, value = 1) => {
   try {
     ga("send", {
       hitType: "event",
@@ -1115,31 +1115,31 @@ export default {
 
             if (response.status == 200) {
               if (response.data.statusCode == 200) {
-                googleAnalyticsEventCatch(response.data.statusCode, 100);
+                googleAnalyticsEventCatch(response.data.statusCode);
                 SignupForm_reset();
                 window.location.replace(window.location.href + "/success");
               } else if (response.data.statusCode == 400) {
-                googleAnalyticsEventCatch(response.data.statusCode, 100);
+                googleAnalyticsEventCatch(response.data.statusCode);
                 SnackBarShowMessage("Invalid input data provided. Try again !");
               } else if (response.data.statusCode == 406) {
-                googleAnalyticsEventCatch(response.data.statusCode, 100);
+                googleAnalyticsEventCatch(response.data.statusCode);
                 SignupForm_reset();
                 SnackBarShowMessage(
                   "Email is already on the system. Please log into the NOI portal through portal.noi.lk"
                 );
               } else if (response.data.statusCode == 500) {
-                googleAnalyticsEventCatch(response.data.statusCode, 100);
+                googleAnalyticsEventCatch(response.data.statusCode);
                 SnackBarShowMessage(
                   "Unexpected error occurred. Please try again or contact us"
                 );
               } else {
-                googleAnalyticsEventCatch(response.data.statusCode, 100);
+                googleAnalyticsEventCatch(response.data.statusCode);
                 SnackBarShowMessage(
                   "Unexpected error occurred. Please try again or contact us"
                 );
               }
             } else {
-              googleAnalyticsEventCatch(response.status, 100);
+              googleAnalyticsEventCatch(response.status);
               SnackBarShowMessage(
                 "Unexpected error occurred. Please try again or contact us"
               );
@@ -1152,7 +1152,7 @@ export default {
             progressbar.close(); // progressbar close
 
             // Google submit event cache
-            googleAnalyticsEventCatch(407, 100);
+            googleAnalyticsEventCatch(407);
 
             SnackBarShowMessage(
               "Unexpected error occurred. Please try again or contact us"
