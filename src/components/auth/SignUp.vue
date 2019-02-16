@@ -844,6 +844,21 @@ var reCAPTCHA_set = () => {
   });
 };
 
+// Google submit event cache
+var googleAnalyticsEventCatch = (eventLabelValue, value) => {
+  try {
+    ga("send", {
+      hitType: "event",
+      eventCategory: "Registration",
+      eventAction: "Form submission server response",
+      eventLabel: "Sign up form submit status code " + eventLabelValue,
+      eventValue: value
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 var SignupForm_reset = () => {
   document.getElementById("signup-form").reset();
   select_DocumentType.value = "";
@@ -1098,36 +1113,33 @@ export default {
             ).disabled = false; //submit button enable
             progressbar.close(); // progressbar close
 
-            // Google submit event cache
-            ga("send", {
-              hitType: "event",
-              eventCategory: "Sign Up",
-              eventAction: "Form submit",
-              eventLabel: "Sign up form submit status code",
-              eventValue: response.data.statusCode
-            });
-
             if (response.status == 200) {
               if (response.data.statusCode == 200) {
+                googleAnalyticsEventCatch(response.data.statusCode, 100);
                 SignupForm_reset();
                 window.location.replace(window.location.href + "/success");
               } else if (response.data.statusCode == 400) {
+                googleAnalyticsEventCatch(response.data.statusCode, 100);
                 SnackBarShowMessage("Invalid input data provided. Try again !");
               } else if (response.data.statusCode == 406) {
+                googleAnalyticsEventCatch(response.data.statusCode, 100);
                 SignupForm_reset();
                 SnackBarShowMessage(
                   "Email is already on the system. Please log into the NOI portal through portal.noi.lk"
                 );
               } else if (response.data.statusCode == 500) {
+                googleAnalyticsEventCatch(response.data.statusCode, 100);
                 SnackBarShowMessage(
                   "Unexpected error occurred. Please try again or contact us"
                 );
               } else {
+                googleAnalyticsEventCatch(response.data.statusCode, 100);
                 SnackBarShowMessage(
                   "Unexpected error occurred. Please try again or contact us"
                 );
               }
             } else {
+              googleAnalyticsEventCatch(response.status, 100);
               SnackBarShowMessage(
                 "Unexpected error occurred. Please try again or contact us"
               );
@@ -1140,13 +1152,7 @@ export default {
             progressbar.close(); // progressbar close
 
             // Google submit event cache
-            ga("send", {
-              hitType: "event",
-              eventCategory: "Sign Up",
-              eventAction: "Form submit",
-              eventLabel: "Sign up form submit status code",
-              eventValue: 407
-            });
+            googleAnalyticsEventCatch(407, 100);
 
             SnackBarShowMessage(
               "Unexpected error occurred. Please try again or contact us"
