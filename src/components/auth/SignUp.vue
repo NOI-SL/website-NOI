@@ -850,7 +850,7 @@ var googleAnalyticsEventCatch = (eventLabelValue, value) => {
     ga("send", {
       hitType: "event",
       eventCategory: "Registration",
-      eventAction: "Form submission",
+      eventAction: "Form submission server response",
       eventLabel: "Sign up form submit status code " + eventLabelValue,
       eventValue: value
     });
