@@ -50,10 +50,10 @@
                         </div>
                         <div class="demo-card__secondary mdc-typography--body2">
                           <ul>
-                            <li>Register for the NOI program through <router-link :to="'signup'"><button class="demo-button mdc-button mdc-button--unelevated mdc-ripple-upgraded signup"><i class="material-icons mdc-button__icon">new_releases</i><span class="mdc-button__label signup_label">Register Now</span></button></router-link> <b>on or before 20<sup>th</sup> of March 2019.</b></li>
+                            <li>Register for the NOI program through <router-link :to="'signup'"><button class="demo-button mdc-button mdc-button--unelevated mdc-ripple-upgraded signup"><i class="material-icons mdc-button__icon">new_releases</i><span class="mdc-button__label signup_label">Register Now</span></button></router-link> <b>on or before 28<sup>th</sup> of March 2019.</b></li>
                             <li>There is an optional C++ training program for students who are not familiar with programming.</li>
                             <li>Students for the C++ training program will be selected through an IQ test.</li>
-                            <li>If you wish to take part in the C++ training program, please register <b>on or before 20<sup>th</sup> of February 2019</b> through the same registration link</li>
+                            <li>If you wish to take part in the C++ training program, please register <b>on or before 28<sup>th</sup> of February 2019</b> through the same registration link</li>
                           </ul>
                         </div>
                       </div>
@@ -80,7 +80,7 @@
                         <div class="demo-card__secondary mdc-typography--body2">
                           <ul>
                             <li>The IQ test would be of 30 questions that tests your problem solving ability.</li>
-                            <li>Test will be hosted on the “NOI portal” through <b>25th of February 2019</b> to <b>26<sup>th</sup> of February 2019</b>.</li>
+                            <li>Test will be hosted on the “NOI portal” through <b>3<sup>rd</sup> of March 2019</b> to <b>5<sup>th</sup> of March 2019</b>.</li>
                             <li>You may attempt the IQ test at any time during the above mentioned period from anywhere you prefer.</li>
                             <li>Log into the “NOI portal” through the credentials mailed to you upon registration.</li>
                           </ul>

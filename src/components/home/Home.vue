@@ -65,7 +65,7 @@
             <p class="heading-desc">Sign up for the National Olympiad in Informatics program.</p>
           </div>
           <div class="desc">
-            <p class="deadline">Deadline&nbsp;: <b>20<sup>th</sup> of February 2019</b></p>
+            <p class="deadline">Deadline&nbsp;: <b>28<sup>th</sup> of February 2019</b></p>
             <ul>
               <li>The NOI program consists of a C++ Training Camp for students, prior to the NOI 2019 contest</li>
               <li>For more information regarding the program, please see "<router-link :to="'noi'"><span style="color: white;">NOI 2019</span></router-link>" page.</li>
