@@ -13,13 +13,16 @@
             <div class="heading-desc">
               <ul class="heading-desc-text">
                 <li>The National Olympiad in Informatics is the Sri Lanka’s leading computing competition for the secondary school students. At NOI, contestants have to write programs in C++, Pascal or Java to solve a set of problems within a specified time limit.</li>
-                <li>The National team to represent Sri Lanka at the International Olympiad in Informatics - 2019, which is to be held in Azerbaijan will be selected through the
+                <li>
+                  The National team to represent Sri Lanka at the International Olympiad in Informatics - 2019, which is to be held in Azerbaijan will be selected through the
                   <i>'National Olympiad in Informatics 2019'</i> program.
                 </li>
               </ul>
               <br>
               <ul class="heading-desc-text">
-                <li><b>Notice:</b> Registrations for the C++ Training camp are closed. You may still sign-up for the NOI 2019 contest.</li>
+                <li>
+                  <b>Notice:</b> Registrations for the C++ Training camp are closed. You may still sign-up for the NOI 2019 contest.
+                </li>
               </ul>
             </div>
           </div>
@@ -41,10 +44,13 @@
             <p class="desc-text">
               The IOI is one of five international science olympiads. The primary goal of the IOI is to stimulate interest in informatics (computing science) and information technology.
               Another important goal is to bring together exceptionally talented pupils from various countries and to have them share scientific and cultural experiences.
+              <br>Sri Lanka has taken part in this competition since 1992. IOI 2018 was held in Japan with the participation of 335 participants from 87 countries around the world.
               <br>
-               Sri Lanka has taken part in this competition  since 1992. IOI 2018 was held in Japan with the participation of 335 participants from 87 countries around the world. 
-              <br><br>
-              IOI 2019 is to be held next year in Azerbaijan (<a href="https://www.ioi2019.az" target="new">www.ioi2019.az</a>).
+              <br>IOI 2019 is to be held next year in Azerbaijan (
+              <a
+                href="https://www.ioi2019.az"
+                target="new"
+              >www.ioi2019.az</a>).
             </p>
           </div>
         </div>
@@ -69,13 +75,29 @@
             <p class="heading-desc">Sign up for the National Olympiad in Informatics program.</p>
           </div>
           <div class="desc">
-            <p class="deadline">Deadline&nbsp;: <b>20<sup>th</sup> of March 2019</b></p>
+            <p class="deadline">
+              Deadline&nbsp;:
+              <b>
+                20
+                <sup>th</sup> of March 2019
+              </b>
+            </p>
             <ul>
-              <li>For more information regarding the program, please see "<router-link :to="'noi'"><span style="color: white;">NOI 2019</span></router-link>" page.</li>
-              <li>The contestant must be born after the 01<sup>st</sup> of July 1999 (under 20 years of age by 01st of July 2019).</li>
+              <li>For more information regarding the program, please see "
+                <router-link :to="'noi'">
+                  <span style="color: white;">NOI 2019</span>
+                </router-link>" page.
+              </li>
+              <li>
+                The contestant must be born after the 01
+                <sup>st</sup> of July 1999 (under 20 years of age by 01st of July 2019).
+              </li>
               <li>There is no lower bound for age, to compete at NOI.</li>
             </ul>
-            <p class="noted-text">Sign-up before <b>20th of March 2019</b> for NOI 2019 contest.</p>
+            <p class="noted-text">
+              Sign-up before
+              <b>20th of March 2019</b> for NOI 2019 contest.
+            </p>
           </div>
           <div class="sign-up">
             <p>
@@ -83,10 +105,20 @@
                 <button
                   class="mdc-button mdc-button--raised reg-button reg-button--section"
                   tabindex="0"
+                  style="margin-bottom:5px;"
                 >
                   <span>Sign up</span>
                 </button>
               </router-link>
+              <a target="_blank" href="https://portal.noi.lk/">
+                <button
+                  class="mdc-button mdc-button--raised reg-button reg-button--section"
+                  tabindex="0"
+                  style="margin-bottom:5px;"
+                >
+                  <span>NOI Portal</span>
+                </button>
+              </a>
             </p>
           </div>
         </div>
@@ -119,7 +151,9 @@
             </div>
           </div>
           <div class="desc">
-            <p class="desc-text">National Olympiad in Informatics program is organized by the ACM student Chapter of UCSC, with collaboration of IOI alumni of Sri Lanka</p>
+            <p
+              class="desc-text"
+            >National Olympiad in Informatics program is organized by the ACM student Chapter of UCSC, with collaboration of IOI alumni of Sri Lanka</p>
             <p class="desc-text">NOI 2019 program is powered by oDoc</p>
           </div>
         </div>
@@ -161,7 +195,6 @@ export default {
     };
   },
   mounted: () => {
-
     // particles
     particlesJS("particles-js", {
       particles: {
@@ -274,9 +307,8 @@ export default {
       retina_detect: true
     });
 
-    // scroll to top 
-    document.querySelector('#section-1').scrollIntoView(true);
-
+    // scroll to top
+    document.querySelector("#section-1").scrollIntoView(true);
   }
 };
 </script>

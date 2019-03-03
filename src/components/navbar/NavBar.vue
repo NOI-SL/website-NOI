@@ -41,6 +41,12 @@
                     <span>Sign up</span>
                   </button>
                 </router-link>
+                <a target="_blank" href="https://portal.noi.lk/">
+                  <button class="mdc-button mdc-button--raised reg-button" tabindex="0">
+                    <span class="material-icons mdc-button__icon" aria-hidden="true">book</span>
+                    <span>NOI Portal</span>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
