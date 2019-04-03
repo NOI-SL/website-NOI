@@ -78,8 +78,7 @@
             <p class="deadline">
               Deadline&nbsp;:
               <b>
-                20
-                <sup>th</sup> of March 2019
+                20<sup>th</sup> of April 2019
               </b>
             </p>
             <ul>
@@ -89,14 +88,13 @@
                 </router-link>" page.
               </li>
               <li>
-                The contestant must be born after the 01
-                <sup>st</sup> of July 1999 (under 20 years of age by 01st of July 2019).
+                The contestant must be born after the 01<sup>st</sup> of July 1999 (under 20 years of age by 01st of July 2019).
               </li>
               <li>There is no lower bound for age, to compete at NOI.</li>
             </ul>
             <p class="noted-text">
               Sign-up before
-              <b>20th of March 2019</b> for NOI 2019 contest.
+              <b>20<sup>th</sup> of April 2019</b> for NOI 2019 contest.
             </p>
           </div>
           <div class="sign-up">
