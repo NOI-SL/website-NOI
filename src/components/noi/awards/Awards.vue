@@ -52,15 +52,16 @@
             <div class="spacial-awards-detail-container-inner">
               <div class="mdc-card demo-card demo-card--hero">
                 <div class="mdc-card__primary mdc-ripple-upgraded" tabindex="0">
-                  <div class="demo-card__primary">
+                  <div class="demo-card__primary ripple">
                     <h2 class="demo-card__title mdc-typography--headline6">Special Awards</h2>
                     <!-- <h3 class="demo-card__subtitle mdc-typography--subtitle2">by Codearchery</h3> -->
                   </div>
                   <div class="demo-card__secondary mdc-typography--body2">
                     <ul>
                       <li><span class="material-icons">label</span> <span>Best coder</span></li>
-                      <li><span class="material-icons">label</span> <span>Best girl coder</span></li>
+                      <li><span class="material-icons">label</span> <span>Top 3 girl coders</span></li>
                       <li><span class="material-icons">label</span> <span>Best performing school</span></li>
+                      <li><span class="material-icons">label</span> <span>Best coder in province</span></li>
                     </ul>
                   </div>
                 </div>
@@ -71,7 +72,7 @@
             <div class="team-select-inner">
               <div class="mdc-card demo-card demo-card--hero">
                 <div class="mdc-card__primary mdc-ripple-upgraded" tabindex="0">
-                  <div class="demo-card__primary">
+                  <div class="demo-card__primary ripple">
                     <h2 class="demo-card__title mdc-typography--headline6">National team</h2>
                     <!-- <h3 class="demo-card__subtitle mdc-typography--subtitle2">by Codearchery</h3> -->
                   </div>
