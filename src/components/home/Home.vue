@@ -19,11 +19,31 @@
                 </li>
               </ul>
               <br>
-              <ul class="heading-desc-text">
+              <!-- <ul class="heading-desc-text">
                 <li>
                   <b>Notice:</b> Registrations for the C++ Training camp are closed. You may still sign-up for the NOI 2019 contest.
                 </li>
-              </ul>
+              </ul>-->
+            </div>
+            <div class="mdc-card demo-card announcements-card">
+              <div class="mdc-card__primary mdc-ripple-upgraded" tabindex="0">
+                <div class="demo-card__primary ripple">
+                  <h2 class="demo-card__title mdc-typography--headline6">Announcements</h2>
+                  <!-- <h3 class="demo-card__subtitle mdc-typography--subtitle2">by Kurt Wagner</h3> -->
+                </div>
+                <div class="demo-card__secondary mdc-typography--body2">
+                  <ul class="announcements-list">
+                    <li class="announcements-list-item">Registrations for the C++ Training camp are closed. You may still sign-up for the NOI 2019 contest.</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- <div class="mdc-card__actions">
+                <div class="mdc-card__action-buttons">
+                  <a target="_blank">
+                    <button class="mdc-button mdc-button--raised mdc-ripple-upgraded">Read</button>
+                  </a>
+                </div>
+              </div>-->
             </div>
           </div>
           <div class="pet-image-container">
@@ -78,23 +98,29 @@
             <p class="deadline">
               Deadline&nbsp;:
               <b>
-                20<sup>th</sup> of April 2019
+                20
+                <sup>th</sup> of April 2019
               </b>
             </p>
             <ul>
-              <li>For more information regarding the program, please see "
+              <li>
+                For more information regarding the program, please see "
                 <router-link :to="'noi'">
                   <span style="color: white;">NOI 2019</span>
                 </router-link>" page.
               </li>
               <li>
-                The contestant must be born after the 01<sup>st</sup> of July 1999 (under 20 years of age by 01st of July 2019).
+                The contestant must be born after the 01
+                <sup>st</sup> of July 1999 (under 20 years of age by 01st of July 2019).
               </li>
               <li>There is no lower bound for age, to compete at NOI.</li>
             </ul>
             <p class="noted-text">
               Sign-up before
-              <b>20<sup>th</sup> of April 2019</b> for NOI 2019 contest.
+              <b>
+                20
+                <sup>th</sup> of April 2019
+              </b> for NOI 2019 contest.
             </p>
           </div>
           <div class="sign-up">
