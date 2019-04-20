@@ -33,7 +33,9 @@
                 </div>
                 <div class="demo-card__secondary mdc-typography--body2">
                   <ul class="announcements-list">
-                    <li class="announcements-list-item">Registrations for the C++ Training camp are closed. You may still sign-up for the NOI 2019 contest.</li>
+                    <li
+                      class="announcements-list-item"
+                    >Registrations have closed. Keep in touch with your mail inbox.</li>
                   </ul>
                 </div>
               </div>
@@ -92,48 +94,24 @@
         <div class="content-inner">
           <div class="heading">
             <p class="heading-text">Registrations</p>
-            <p class="heading-desc">Sign up for the National Olympiad in Informatics program.</p>
+            <p
+              class="heading-desc"
+            >National Olympiad in Informatics program registrations have closed.</p>
           </div>
           <div class="desc">
-            <p class="deadline">
-              Deadline&nbsp;:
-              <b>
-                20
-                <sup>th</sup> of April 2019
-              </b>
-            </p>
+            <p
+              class="deadline"
+            >NOI contest date will be informed via an email to registered students</p>
             <ul>
-              <li>
-                For more information regarding the program, please see "
-                <router-link :to="'noi'">
-                  <span style="color: white;">NOI 2019</span>
-                </router-link>" page.
+              <li class="closed">
+                <label>
+                  For more information regarding the program, please see "<router-link :to="'noi'"><span style="color: white;">NOI 2019</span></router-link>" page.
+                </label>
               </li>
-              <li>
-                The contestant must be born after the 01
-                <sup>st</sup> of July 1999 (under 20 years of age by 01st of July 2019).
-              </li>
-              <li>There is no lower bound for age, to compete at NOI.</li>
             </ul>
-            <p class="noted-text">
-              Sign-up before
-              <b>
-                20
-                <sup>th</sup> of April 2019
-              </b> for NOI 2019 contest.
-            </p>
           </div>
           <div class="sign-up">
             <p>
-              <router-link :to="'signup'">
-                <button
-                  class="mdc-button mdc-button--raised reg-button reg-button--section"
-                  tabindex="0"
-                  style="margin-bottom:5px;"
-                >
-                  <span>Sign up</span>
-                </button>
-              </router-link>
               <a target="_blank" href="https://portal.noi.lk/">
                 <button
                   class="mdc-button mdc-button--raised reg-button reg-button--section"
