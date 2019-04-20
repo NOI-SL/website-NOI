@@ -241,7 +241,7 @@
 
     .back {
       @extend .back-style;
-      min-height: 640px;
+      min-height: 790px;
       // -webkit-clip-path: polygon(0 0, 100% 0, 0 4%);
       // clip-path: polygon(0 0, 65% 0, 0 4%);
 
@@ -259,7 +259,7 @@
 
     .content {
       height: 100vh;
-      min-height: 640px;
+      min-height: 790px;
       @include width-change-max-width(1090px) {
         height: auto;
         padding-bottom: 40px;
@@ -423,6 +423,16 @@
               margin-bottom: 10px;
               padding-left: 10px;
               font-size: 1em;
+            }
+
+            li.closed {
+              border-left: 0;
+              text-align: center;
+              padding-left: 0;
+              label {
+                border-left: 3px solid $theme-white-primary;
+                padding-left: 10px;
+              }
             }
           }
 
