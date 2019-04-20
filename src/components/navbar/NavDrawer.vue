@@ -11,12 +11,6 @@
                     :dropDowns="dropDowns"
                 
                 />
-                <router-link :to="buttons[0].route" class="mdc-list-item reg-button-link" :class="{'mdc-list-item--activated':(buttons[0].route == $route.path)}">
-                  <button class="mdc-button mdc-button--raised reg-button" tabindex="0">
-                    <span class="material-icons mdc-button__icon" aria-hidden="true">person</span>
-                    <span>Sign up</span>
-                  </button>
-                </router-link>
                 <a target="_blank" href="https://portal.noi.lk/" class="mdc-list-item reg-button-link">
                   <button class="mdc-button mdc-button--raised reg-button" tabindex="0">
                     <span class="material-icons mdc-button__icon" aria-hidden="true">book</span>
@@ -112,7 +106,7 @@ export default {
           {
             id: 0,
             icon: "",
-            route: "/signup",
+            route: "/",
             text: "Home"
           }
       ]
