@@ -50,6 +50,14 @@
         min-height: 805px;
       }
 
+      @include width-change-max-width(1206px) {
+        min-height: 825px;
+      }
+
+      @include width-change-max-width(1010px) {
+        min-height: 920px;
+      }
+
       #particles-js {
         height: 100%;
       }
@@ -68,24 +76,32 @@
         min-height: 765px;
       }
 
-      @include width-change-max-width(911px) {
-        min-height: 795px;
-      }
+      // @include width-change-max-width(911px) {
+      //   min-height: 795px;
+      // }
 
-      @include width-change-max-width(1205px) {
-        min-height: 685px;
-      }
+      // @include width-change-max-width(1205px) {
+      //   min-height: 685px;
+      // }
 
       @include width-change-max-width(1148px) {
-        min-height: 755px;
+        min-height: 855px;
       }
 
-      @include width-change-max-width(1009px) {
-        min-height: 785px;
+      // @include width-change-max-width(1009px) {
+      //   min-height: 785px;
+      // }
+
+      // @include width-change-max-width(861px) {
+      //   min-height: 805px;
+      // }
+
+      @include width-change-max-width(1206px) {
+        min-height: 825px;
       }
 
-      @include width-change-max-width(861px) {
-        min-height: 805px;
+      @include width-change-max-width(1010px) {
+        min-height: 920px;
       }
 
       .content-inner {
@@ -212,6 +228,7 @@
                   border-left: 3px solid darken($color: $mdc-theme-primary, $amount: 10);
                   padding-left: 10px;
                   font-size: 1em;
+                  margin-bottom: 5px;
                 }
               }
             }
