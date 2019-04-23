@@ -33,6 +33,13 @@
                 </div>
                 <div class="demo-card__secondary mdc-typography--body2">
                   <ul class="announcements-list">
+                    <li class="announcements-list-item">
+                      The last session of
+                      <b>Monitored C++ Training program</b> which was to be held at UCSC, along with the NOI Program has been <b>postponed</b> due to the present situation in Sri Lanka.
+                    </li>
+                    <li
+                      class="announcements-list-item"
+                    >All registered students will be notified of the rescheduled program via e-mail and SMS.</li>
                     <li
                       class="announcements-list-item"
                     >Registrations have closed. Keep in touch with your mail inbox.</li>
@@ -105,7 +112,10 @@
             <ul>
               <li class="closed">
                 <label>
-                  For more information regarding the program, please see "<router-link :to="'noi'"><span style="color: white;">NOI 2019</span></router-link>" page.
+                  For more information regarding the program, please see "
+                  <router-link :to="'noi'">
+                    <span style="color: white;">NOI 2019</span>
+                  </router-link>" page.
                 </label>
               </li>
             </ul>
