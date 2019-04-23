@@ -9,6 +9,7 @@
               <p class="heading-text">Sign Up</p>
             </div>
             <div class="desc">
+              <p class="required-text">* Registrations for NOI 2019 are closed.</p>
               <p class="desc-text">Sign up for the National Olympiad in Informatics program.</p>
               <p class="required-text">* Required</p>
             </div>
@@ -546,7 +547,8 @@
                   </div>
                   <div class="submit-button">
                     <p style="text-align:right">
-                      <button
+                      <button 
+                        disabled
                         type="submit"
                         id="signup-form-submit-button"
                         class="mdc-button mdc-button--raised mdc-ripple-upgraded"
