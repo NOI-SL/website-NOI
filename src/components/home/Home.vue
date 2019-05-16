@@ -33,16 +33,28 @@
                 </div>
                 <div class="demo-card__secondary mdc-typography--body2">
                   <ul class="announcements-list">
-                    <li class="announcements-list-item">
+                    <!-- <li class="announcements-list-item">
                       The last session of
                       <b>Monitored C++ Training program</b> which was to be held at UCSC, along with the NOI Program has been <b>postponed</b> due to the present situation in Sri Lanka.
+                    </li>-->
+                    <li class="announcements-list-item">
+                      The Online Qualifier Round for the NOI 2019 contest will be hosted on the HackerRank platform for <b>48&nbsp;hours, from 12 AM, 17<sup>th</sup> of May to 12 AM, 19<sup>th</sup> of May</b>. <b>(Friday and Saturday)</b> 
+                      <br> <span style="color:rgb(110, 110, 110);"><sup> </sup>Please find the link below.</span>
                     </li>
-                    <li
-                      class="announcements-list-item"
-                    >All registered students will be notified of the rescheduled program via e-mail and SMS.</li>
-                    <li
-                      class="announcements-list-item"
-                    >Registrations have closed. Keep in touch with your mail inbox.</li>
+                    <li class="announcements-list-item" style="text-align:center;border:0;padding-bottom:5px;">
+                      <a target="_blank" href="https://www.hackerrank.com/noi-2019-selection-test">
+                          <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded resource-pp-link-btn" style="height:unset;padding-top:5px;padding-bottom:5px">
+                            <span class="mdc-button__label">NOI Online Qualifier Round</span>
+                          </button>
+                        </a>
+                    </li>
+                    <li class="announcements-list-item text-light">
+                      All registered students will be notified of the rescheduled program via e-mail and SMS.
+                    </li>
+                    <!-- <li class="announcements-list-item">
+                      Registrations have closed. Keep in touch with your mail inbox.
+                    </li>-->
+                    <li class="announcements-list-item text-light">Keep in touch with your mail inbox.</li>
                   </ul>
                 </div>
               </div>
