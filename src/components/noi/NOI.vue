@@ -254,7 +254,7 @@
               </div>
             </div>
             <!-- [  -->
-            <div class="timeline-item active">
+            <div class="timeline-item">
               <div class="timeline-item-inner">
                 <div class="container-left">
                   <div class="container-left-inner">
@@ -272,13 +272,6 @@
                             <li>The qualifier round will consist of 6 problems, where students have to write computer programs to solve in a given period.</li>
                             <li>Programming languages allowed: C, C++, Java, Pascal.</li>
                             <li>This round would take place in May 2019.</li>
-                            <li style="border:0;text-align:center">
-                              <a target="_blank" href="https://www.hackerrank.com/noi-2019-selection-test">
-                                <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded resource-pp-link-btn" style="height:unset;padding-top:5px;padding-bottom:5px">
-                                  <span class="mdc-button__label">NOI Online Qualifier Round</span>
-                                </button>
-                              </a>
-                            </li>
                           </ul>
                           <!-- <ul>
                             <li>A month long training camp will be held during weekends for selected students from the IQ test, in March 2019.</li>
@@ -329,7 +322,7 @@
               </div>
             </div>
             <!-- ] -->
-            <div class="timeline-item">
+            <div class="timeline-item active">
               <div class="timeline-item-inner">
                 <div class="container-left"></div>
                 <div class="container-middle">

@@ -37,7 +37,7 @@
                       The last session of
                       <b>Monitored C++ Training program</b> which was to be held at UCSC, along with the NOI Program has been <b>postponed</b> due to the present situation in Sri Lanka.
                     </li>-->
-                    <li class="announcements-list-item">
+                    <!-- <li class="announcements-list-item">
                       The Online Qualifier Round for the NOI 2019 contest will be hosted on the HackerRank platform for <b>48&nbsp;hours, from 12 AM, 17<sup>th</sup> of May to 12 AM, 19<sup>th</sup> of May</b>. <b>(Friday and Saturday)</b> 
                       <br> <span style="color:rgb(110, 110, 110);"><sup> </sup>Please find the link below.</span>
                     </li>
@@ -47,14 +47,20 @@
                             <span class="mdc-button__label">NOI Online Qualifier Round</span>
                           </button>
                         </a>
-                    </li>
-                    <li class="announcements-list-item text-light">
-                      All registered students will be notified of the rescheduled program via e-mail and SMS.
-                    </li>
+                    </li>-->
+                    <li
+                      class="announcements-list-item"
+                      style="font-size:1.1em"
+                    >Online qualifiers just finished. Results will be notified soon. Stay tuned! 😎</li>
+                    <li
+                      class="announcements-list-item text-light"
+                    >All registered students will be notified of the rescheduled program via e-mail and SMS.</li>
                     <!-- <li class="announcements-list-item">
                       Registrations have closed. Keep in touch with your mail inbox.
                     </li>-->
-                    <li class="announcements-list-item text-light">Keep in touch with your mail inbox.</li>
+                    <li
+                      class="announcements-list-item text-light"
+                    >Keep in touch with your mail inbox.</li>
                   </ul>
                 </div>
               </div>
