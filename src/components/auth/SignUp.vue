@@ -424,8 +424,8 @@
                       <li>National ID Card</li>
                       <li>Passport</li>
                       <li>
-                        Letter signed by principal (
-                        <a
+                        Letter signed by principal
+                        (<a
                           target="_blank"
                           v-bind:href="item['letter_template'].loc"
                         >Click here to download the Template</a>)
@@ -547,7 +547,7 @@
                   </div>
                   <div class="submit-button">
                     <p style="text-align:right">
-                      <button 
+                      <button
                         disabled
                         type="submit"
                         id="signup-form-submit-button"
