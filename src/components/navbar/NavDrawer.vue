@@ -51,6 +51,12 @@ export default {
           route: "/noi",
           text: "NOI 2019"
         },
+        {
+          id: 2,
+          icon: "",
+          route: "/results",
+          text: "Online Qualifier Results"
+        },
         // {
         //   id: 2,
         //   icon: "",

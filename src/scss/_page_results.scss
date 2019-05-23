@@ -1,0 +1,283 @@
+#results {
+  @extend .page-background;
+
+  .section-1 {
+    position: relative;
+    overflow-x: hidden;
+    // height: calc(100vh + 100px);
+    width: 100%;
+
+    .content {
+      //   height: 100vh;
+      background-color: $mdc-theme-primary;
+      padding-bottom: 70px;
+
+      .heading-container {
+        padding-top: 120px;
+        padding-bottom: 50px;
+
+        .heading-text {
+          font-size: 2em;
+          font-weight: 500;
+          text-align: center;
+          color: white;
+          padding: 0 10px;
+        }
+      }
+
+      .description-container {
+        .description {
+          color: white;
+          margin: 0 0 40px 0;
+        }
+
+        .description.text-center {
+          text-align: center;
+          font-size: 1.2em;
+        }
+
+        .description--t2 {
+          color: white;
+          border: 1px solid darken($color: $mdc-theme-primary, $amount: 15);
+          padding: 1em 10px 0 10px;
+          border-radius: 4px;
+          font-size: 0.9em;
+
+          .des-item {
+            margin-bottom: 20px;
+            .des-item-inner {
+              display: grid;
+              grid-template-columns: 30px auto;
+              .icon-container {
+                color: darken($color: $mdc-theme-primary, $amount: 15);
+              }
+              .text-container {
+                .red {
+                  background-color: rgb(128, 0, 0);
+                  padding: 2px 3px;
+                  border-radius: 3px;
+                }
+                .highlight {
+                  background-color: darken($color: $mdc-theme-primary, $amount: 10);
+                  padding: 2px 3px;
+                  border-radius: 3px;
+                }
+                .text-container-inner-text {
+                  padding-left: 20px;
+                  padding-top: 5px;
+                  line-height: 20px;
+                  button {
+                    height: auto;
+                    padding-bottom: 3px;
+                    padding-top: 3px;
+                    @include mdc-button-filled-accessible($mdc-theme-secondary);
+                    @include mdc-button-ink-color($mdc-theme-primary);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: auto;
+    border-right: 0vw solid transparent;
+    border-left: 100vw solid $mdc-theme-primary;
+    border-bottom: 100px solid transparent;
+  }
+
+  .section-2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: auto;
+    height: 100px;
+    background-color: $mdc-theme-primary;
+  }
+
+  .section-2 {
+    position: relative;
+    overflow: hidden;
+    min-height: 100px;
+
+    .content {
+      .results-container {
+        position: relative;
+        z-index: 1;
+        background-color: white;
+        min-height: 300px;
+        border-radius: 4px;
+        padding-bottom: 20px;
+
+        .heading-container {
+          border-top-left-radius: 3.5px;
+          border-top-right-radius: 3.5px;
+          background-color: darken($color: $mdc-theme-primary, $amount: 10);
+          margin-left: -15px;
+          margin-right: -15px;
+          text-align: center;
+          color: white;
+          font-size: 1.3em;
+          padding: 1em 15px;
+        }
+
+        .subheading-container {
+          background-color: darken($color: $theme-white-primary-bg, $amount: 5);
+          padding: 0.5em 10px;
+          margin: 0.5em -15px;
+        }
+      }
+    }
+
+    .result-item {
+      margin-bottom: 10px;
+      .result-item-inner {
+        .result-item-heading {
+          background-color: $theme-white-primary-bg;
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+          padding: 0.5em 5px;
+          .result-item-heading-inner {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 50px 200px auto 50px;
+            grid-column-gap: 5px;
+            .rank {
+              height: 100%;
+              padding: 5px;
+              .rank-inner {
+                height: 100%;
+                .text {
+                  height: 40px;
+                  width: 40px;
+                  color: white;
+                  background-color: $mdc-theme-primary;
+                  padding: 5px;
+                  display: grid;
+                  justify-content: center;
+                  align-content: center;
+                  border-radius: 50%;
+                }
+              }
+            }
+            .name {
+              display: grid;
+              align-content: center;
+            }
+            .school {
+              display: grid;
+              align-content: center;
+              color: darken($color: $theme-white-primary-bg, $amount: 30);
+              @include width-change-max-width(566px) {
+                opacity: 0;
+              }
+            }
+            .score {
+              display: grid;
+              align-content: center;
+              justify-content: center;
+              span {
+                padding: 3px 5px;
+                background-color: $mdc-theme-primary;
+                color: white;
+                font-size: 0.7em;
+                border-radius: 4px;
+              }
+            }
+          }
+        }
+        .result-item-drop-down {
+          background-color: darken($color: $theme-white-primary-bg, $amount: 5);
+          padding: 0.5em;
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px;
+          .result-item-drop-down-inner {
+            display: grid;
+            grid-template-columns: auto 200px;
+            @include width-change-max-width(768px) {
+              grid-template-columns: unset;
+            }
+            .basic-details {
+              .basic-details-inner {
+                .basic-details-table {
+                  @include width-change-max-width(768px) {
+                    font-size: 0.9em;
+                  }
+                  tr {
+                    td:nth-child(1) {
+                      color: darken($color: $theme-white-primary-bg, $amount: 50);
+                    }
+                    td:nth-child(2) {
+                      width: 20px;
+                      text-align: center;
+                      color: darken($color: $theme-white-primary-bg, $amount: 50);
+                    }
+                  }
+                }
+              }
+            }
+            .rank-details {
+              padding: 5px;
+              .rank-details-inner {
+                height: 100%;
+                display: grid;
+                justify-content: right;
+                align-content: center;
+                @include width-change-max-width(768px) {
+                  justify-content: center;
+                  display: unset;
+                }
+                .rank-details-container {
+                  height: 120px;
+                  width: 120px;
+                  background-color: $mdc-theme-primary;
+                  border-radius: 4px;
+                  display: grid;
+                  align-content: center;
+                  @include width-change-max-width(768px) {
+                    width: 100%;
+                  }
+                  .rank-details-container-inner {
+                    color: white;
+                    .rank-text {
+                      font-size: 3em;
+                      text-align: center;
+                    }
+                    .rank-desc-text {
+                      .rank-desc-text-inner {
+                        font-size: 0.6em;
+                        text-align: center;
+                        .score-text {
+                          .s {
+                          }
+                          .s-desc {
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .result-item.not-completed {
+        .result-item-heading {
+            background-color: rgb(255, 134, 134)
+        }
+    }
+  }
+}
