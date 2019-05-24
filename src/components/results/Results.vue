@@ -132,7 +132,7 @@ export default {
     ResultItem
   },
   mounted() {
-    $.getJSON("../../results/results.json", response => {
+    $.getJSON("./results/results.json", response => {
       this.details = response;
       $('#loading-container').fadeOut(() => {
         $('#result___container').fadeIn()
