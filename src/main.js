@@ -14,6 +14,7 @@ import About from './components/about/About.vue'
 import Contact from './components/contact/Contact.vue'
 import SignUp from './components/auth/SignUp.vue'
 import SignUpResponse from './components/auth/SignUpResponse.vue'
+import Results from './components/results/Results.vue'
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false
@@ -23,13 +24,14 @@ const routes = [
   { path: '/noi', component: NOI },
   { path: '/noi/rulesandregulations', component: NOIRulesAndRegulations },
   { path: '/noi/awards', component: NOIAwards },
-  { path: '/news', component: News},
-  { path: '/resources' , component: Resources},
-  { path: '/ioi' , component: IOI},
+  { path: '/news', component: News },
+  { path: '/resources', component: Resources },
+  { path: '/ioi', component: IOI },
   { path: '/about', component: About },
-  { path: '/contact', component: Contact},
-  { path: '/signup', component:SignUp},
-  { path: '/signup/success', component:SignUpResponse}
+  { path: '/contact', component: Contact },
+  { path: '/signup', component: SignUp },
+  { path: '/signup/success', component: SignUpResponse },
+  { path: '/results', component: Results }
 ]
 
 const router = new VueRouter({
