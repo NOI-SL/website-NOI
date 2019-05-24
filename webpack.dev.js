@@ -84,6 +84,7 @@ module.exports = {
             { from: 'src/**/*.ttf', to: 'fonts/', flatten: true },
             { from: 'src/**/*.png', to: 'img/', flatten: true },
             { from: 'src/**/*.svg', to: 'img/', flatten: true },
+            { from: 'src/**/results.json', to: 'results/', flatten: true },
             { from: 'src/LICENSE', flatten: true },
             { from: 'src/README.md', flatten: true }
         ]),

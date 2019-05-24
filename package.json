@@ -58,6 +58,7 @@
     "@material/typography": "^0.43.0",
     "autoprefixer": "^9.4.4",
     "axios": "^0.18.0",
+    "jquery": "^3.4.1",
     "particles.js": "^2.0.0",
     "smooth-scroll": "^15.0.0",
     "smooth-scrolling": "^2.3.11",
