@@ -109,6 +109,7 @@
     position: relative;
     overflow: hidden;
     min-height: 100px;
+    padding-bottom: 5px;
 
     .content {
       .results-container {
@@ -117,7 +118,7 @@
         background-color: white;
         min-height: 300px;
         border-radius: 4px;
-        padding-bottom: 20px;
+        padding-bottom: 0.5em;
 
         .heading-container {
           border-top-left-radius: 3.5px;
@@ -151,6 +152,7 @@
 
         #result___container {
           display: none;
+          padding-top: 0.5em;
         }
       }
     }
