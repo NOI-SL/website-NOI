@@ -30,7 +30,7 @@
                     >
                       <button class="mdc-button mdc-button--raised">NOI Portal Profile</button>
                     </a>
-                    <b>ON OR BEFORE 25TH OF MAY</b>, or you <b>will NOT be allowed</b> to proceed with the program.
+                    <b>ON OR BEFORE 26<sup>TH</sup> OF MAY</b>, or you <b>will NOT be allowed</b> to proceed with the program.
                   </div>
                 </div>
               </div>
