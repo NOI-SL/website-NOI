@@ -142,6 +142,16 @@
             border-color: darken($color: $mdc-theme-primary, $amount: 10);
             margin: 0 0 10px 0;
         }
+
+        #loading-container {
+          min-height: 300px;
+          display: grid;
+          align-content: center;
+        }
+
+        #result___container {
+          display: none;
+        }
       }
     }
 

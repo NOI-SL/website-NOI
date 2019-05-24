@@ -78,30 +78,44 @@
           <div class="heading-container">
             <p class="heading">Results</p>
           </div>
-          <div class="subheading-container">
-            <p>Contestants who scored above 100</p>
+          <div id="loading-container">
+            <div role="progressbar" class="mdc-linear-progress mdc-linear-progress--indeterminate">
+              <div class="mdc-linear-progress__buffering-dots"></div>
+              <div class="mdc-linear-progress__buffer"></div>
+              <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+                <span class="mdc-linear-progress__bar-inner"></span>
+              </div>
+              <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+                <span class="mdc-linear-progress__bar-inner"></span>
+              </div>
+            </div>
           </div>
+          <div id="result___container">
+            <div class="subheading-container">
+              <p>Contestants who scored above 100</p>
+            </div>
 
-          <div class="result-item-container">
-            <result-item
-              v-for="detail in details"
-              v-bind:key="detail.hacker_id"
-              :isAbove100="true"
-              :details="detail"
-              :isCompleted="detail.isCompleted"
-            />
-          </div>
+            <div class="result-item-container">
+              <result-item
+                v-for="detail in details"
+                v-bind:key="detail.hacker_id"
+                :isAbove100="true"
+                :details="detail"
+                :isCompleted="detail.isCompleted"
+              />
+            </div>
 
-          <br><hr class="devider"><br>
+            <br><hr class="devider"><br>
 
-          <div class="result-item-container">
-            <result-item
-              v-for="detail in details"
-              v-bind:key="detail.hacker_id"
-              :isAbove100="false"
-              :details="detail"
-              :isCompleted="detail.isCompleted"
-            />
+            <div class="result-item-container">
+              <result-item
+                v-for="detail in details"
+                v-bind:key="detail.hacker_id"
+                :isAbove100="false"
+                :details="detail"
+                :isCompleted="detail.isCompleted"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -120,6 +134,9 @@ export default {
   mounted() {
     $.getJSON("../../results/results.json", response => {
       this.details = response;
+      $('#loading-container').fadeOut(() => {
+        $('#result___container').fadeIn()
+      })
     });
   },
   data() {
