@@ -91,10 +91,6 @@
             </div>
           </div>
           <div id="result___container">
-            <div class="subheading-container">
-              <p>Contestants who scored above 100</p>
-            </div>
-
             <div class="result-item-container">
               <result-item
                 v-for="detail in details"
