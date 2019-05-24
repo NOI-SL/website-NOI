@@ -9,7 +9,7 @@
             padding: 5px;
         }
 
-        @include width-change-max-width(1064px) {
+        @include width-change-max-width(1298px) {
             padding: 0;
         }
   
@@ -34,7 +34,7 @@
   
     .mdc-toolbar__section.mdc-toolbar__section--nav-content {
 
-        @include width-change-max-width (1020px) {
+        @include width-change-max-width (1254px) {
             display: none;
         }
         .mdc-tab-bar {
@@ -50,7 +50,7 @@
   
         display: none;
 
-        @include width-change-max-width(1020px) {
+        @include width-change-max-width(1254px) {
             display: block;
         }
     
