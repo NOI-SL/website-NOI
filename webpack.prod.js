@@ -81,6 +81,7 @@ module.exports = {
             { from: 'src/**/*.png', to: 'img/', flatten: true },
             { from: 'src/**/*.svg', to: 'img/', flatten: true },
             { from: 'src/**/results.json', to: 'results/', flatten: true },
+            { from: 'CNAME', flatten: true },
             { from: 'src/LICENSE', flatten: true },
             { from: 'src/README.md', flatten: true }
         ]),

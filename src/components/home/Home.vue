@@ -51,16 +51,13 @@
                     <li
                       class="announcements-list-item"
                       style="font-size:1.1em"
-                    >Online qualifiers just finished. Results will be notified soon. Stay tuned! 😎</li>
-                    <li
-                      class="announcements-list-item text-light"
-                    >All registered students will be notified of the rescheduled program via e-mail and SMS.</li>
+                    >Online Qualifier Round results released! Check <router-link :to="'results'">NOI Qualifier Results</router-link> 😎</li>
                     <!-- <li class="announcements-list-item">
                       Registrations have closed. Keep in touch with your mail inbox.
                     </li>-->
                     <li
                       class="announcements-list-item text-light"
-                    >Keep in touch with your mail inbox.</li>
+                    >Keep in touch with your mail inbox and NOI Portal Forum.</li>
                   </ul>
                 </div>
               </div>
