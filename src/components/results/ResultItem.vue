@@ -30,7 +30,7 @@
         <div class="result-item-drop-down-inner">
           <div class="basic-details">
             <div class="basic-details-inner">
-              <p v-if="!isCompleted" class="warning-text">*Please update your profile.</p>
+              <!-- <p v-if="!isCompleted" class="warning-text">*Please update your profile.</p> -->
               <table class="basic-details-table">
                 <tr>
                   <td>Name</td>
