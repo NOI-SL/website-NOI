@@ -22,7 +22,7 @@
                   The entries marked in
                   <span class="highlight">RED</span> did not have their
                   <span class="highlight">usernames</span> updated through the NOI Portal.
-                  <div class="text-container-inner-text">
+                  <!-- <div class="text-container-inner-text">
                     If you are one of them, add the hackerrank username to your
                     <a
                       target="_blank"
@@ -31,7 +31,7 @@
                       <button class="mdc-button mdc-button--raised">NOI Portal Profile</button>
                     </a>
                     <b>ON OR BEFORE 26<sup>TH</sup> OF MAY</b>, or you <b>will NOT be allowed</b> to proceed with the program.
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
