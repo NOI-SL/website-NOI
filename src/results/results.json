@@ -196,12 +196,12 @@
    "hacker_name": "jayathilakahansa",
    "rank": 16,
    "score": 400,
-   "first_name": "",
-   "last_name": "",
-   "username": "",
-   "gender": "",
-   "school": "",
-   "isCompleted": false
+   "first_name": "Hansa",
+   "last_name": "Jayathilaka",
+   "username": "NONE",
+   "gender": "Male",
+   "school": "Central College Kuliyapitiya",
+   "isCompleted": true
  },
  {
    "hacker_id": 5746437,
@@ -213,31 +213,31 @@
    "username": "yerom.chanaka99",
    "gender": "Male",
    "school": "St.Anns College, Kurunegala",
-   "isCompleted": false
+   "isCompleted": true
  },
  {
    "hacker_id": 6186439,
    "hacker_name": "hirushafernando",
    "rank": 16,
    "score": 400,
-   "first_name": "",
-   "last_name": "",
-   "username": "",
-   "gender": "",
-   "school": "",
-   "isCompleted": false
+   "first_name": "Hirusha",
+   "last_name": "Fernando",
+   "username": "NONE",
+   "gender": "Male",
+   "school": "Maliyadeva College Kuliyapitiya",
+   "isCompleted": true
  },
  {
    "hacker_id": 6186230,
    "hacker_name": "miyurusanjana123",
    "rank": 16,
    "score": 400,
-   "first_name": "",
-   "last_name": "",
-   "username": "",
-   "gender": "",
-   "school": "",
-   "isCompleted": false
+   "first_name": "Miyuru",
+   "last_name": "Udayashan",
+   "username": "NONE",
+   "gender": "Male",
+   "school": "Central College Kuliyapitiya",
+   "isCompleted": true
  },
  {
    "hacker_id": 6076214,
