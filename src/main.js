@@ -14,7 +14,8 @@ import About from './components/about/About.vue'
 import Contact from './components/contact/Contact.vue'
 import SignUp from './components/auth/SignUp.vue'
 import SignUpResponse from './components/auth/SignUpResponse.vue'
-import Results from './components/results/Results.vue'
+// import Results from './components/results/Results.vue'
+import FinalResults from './components/results/FinalResults.vue'
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false
@@ -31,7 +32,7 @@ const routes = [
   { path: '/contact', component: Contact },
   { path: '/signup', component: SignUp },
   { path: '/signup/success', component: SignUpResponse },
-  { path: '/results', component: Results }
+  { path: '/results', component: FinalResults }
 ]
 
 const router = new VueRouter({
