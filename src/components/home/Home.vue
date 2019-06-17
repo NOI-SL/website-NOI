@@ -51,7 +51,7 @@
                     <li
                       class="announcements-list-item"
                       style="font-size:1.1em"
-                    >Online Qualifier Round results released! Check <router-link :to="'results'">NOI Qualifier Results</router-link> 😎</li>
+                    >Final Round results released! Check <router-link :to="'results'">NOI Final Results</router-link> 😎</li>
                     <!-- <li class="announcements-list-item">
                       Registrations have closed. Keep in touch with your mail inbox.
                     </li>-->

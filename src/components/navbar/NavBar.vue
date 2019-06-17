@@ -84,7 +84,7 @@ export default {
           id: 2,
           icon: "",
           route: "/results",
-          text: "Online Qualifier Results"
+          text: "Final Results"
         },
         // {
         //   id: 2,
