@@ -90,7 +90,7 @@
               Another important goal is to bring together exceptionally talented pupils from various countries and to have them share scientific and cultural experiences.
               <br>Sri Lanka has taken part in this competition since 1992. IOI 2018 was held in Japan with the participation of 335 participants from 87 countries around the world.
               <br>
-              <br>IOI 2019 is to be held next year in Azerbaijan (
+              <br>IOI 2019 is to be held in Azerbaijan (
               <a
                 href="https://www.ioi2019.az"
                 target="new"
